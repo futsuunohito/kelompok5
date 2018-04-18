@@ -6,7 +6,7 @@
   <div class="box-header">
     <div class="row">
         <div class="col-sm-8">
-          <h3 class="box-title">List of employees</h3>
+          <h3 class="box-title">Daftar employees</h3>
         </div>
         <div class="col-sm-4">
           <a class="btn btn-primary" href="{{ route('employee-management.create') }}">Add new employee</a>
