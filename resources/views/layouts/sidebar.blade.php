@@ -31,7 +31,20 @@
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu">
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="/"><i class="fa fa-link"></i> <span>Dashboard</span></a></li>
+        <li class="treeview">
+            <a href="#"><i class="glyphicon glyphicon-home"></i> <span>Main Menu</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li class="active"><a href="/"><i class="glyphicon glyphicon-log-in"></i> <span>Beri Bantuan</span></a></li>
+              <li class="active"><a href="/"><i class="glyphicon glyphicon-log-out"></i> <span>Butuh Bantuan</span></a></li>
+            </ul>
+          </li>
+          
+        <li class="active"><a href="/"><i class="fa fa-link"></i> <span>Dashboard jangan diilangin dulu</span></a></li>
+
         <li><a href="{{ url('employee-management') }}"><i class="fa fa-link"></i> <span>Employee Management</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>System Management</span>
