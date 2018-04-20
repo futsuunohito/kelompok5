@@ -22,7 +22,7 @@
             <ul class="nav navbar-nav">
 
                 <!-- message -->
-                <li class="dropdown messages-menu open">
+                <li class="dropdown messages-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                           <i class="fa fa-envelope-o"></i>
                           <span class="label label-success">4</span>
@@ -65,7 +65,7 @@
                 <!-- akhir message -->
 
                 <!-- awal notif -->
-                <li class="dropdown notifications-menu open">
+                <li class="dropdown notifications-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                           <i class="fa fa-bell-o"></i>
                           <span class="label label-warning">10</span>
@@ -139,4 +139,5 @@
 <?php
 }
 ?>
+
 
