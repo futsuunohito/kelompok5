@@ -6,7 +6,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{{ $page_title or "AdminLTE Dashboard" }}</title>
+    <title>{{ $page_title or "Needed | Log in" }}</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
     <link href="{{ asset("/bower_components/AdminLTE/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />
@@ -30,9 +30,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <![endif]-->
 </head>
 <body class="hold-transition login-page">
+  
 <div class="login-box">
   <div class="login-logo">
-    <a href="index.php"><b>Admin</b>LTE</a>
+    <a href="index.php"><b>Need</b>ed</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
@@ -68,14 +69,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <button type="submit" class="btn btn-primary btn-block btn-flat">
                     <i class="fa fa-btn fa-sign-in"></i> Login
                 </button>
-                <a href="{{ url('/register') }}">Register</a>
-                <!-- <a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a> -->
           </div>
         </div>
         <!-- /.col -->
+
+        <div class="social-auth-links text-center">
+          <p>- OR -</p>
+          <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
+            Facebook</a>
+          <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
+            Google+</a>
+        </div>
+        <!-- /.social-auth-links -->
+        <a href="#">I forgot my password</a><br>
+        <a href="{{ url('/register') }}">Register</a>
+                <!-- <a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a> -->
       </div>
-
-
     </form>
   </div>
   <!-- /.login-box-body -->
