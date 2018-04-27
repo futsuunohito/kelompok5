@@ -1,9 +1,11 @@
 # JobPortal Laravel Project
 
-### This is a job portal web app developed by me for my Final semester project. 
+### Pelajari dan Pahami dulu strutur kodenya
 
-### This Application is fully functional as a real life job application.
+### Masih ada yang error
 
-### Anyone interested in this project can edit and use. Also you can develop it more and don't hesitate to send me pull request.
+### sisanya tolong temen2 pake prinsip cocoklogi
 
-## This Project is still under development.
+### ini udah paling sederhana
+
+
