@@ -36,49 +36,65 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="country" class="col-sm-2 control-label">Country: </label>
+                            <label for="country" class="col-sm-2 control-label">Fakultas: </label>
                             <div class="col-sm-10">
                                 <select name="country" id="country" class="form-control">
-                                    <option value="Indonesia"@if($company->country == "Indonesia"){{'selected="selected"'}}@endif>Indonesia</option>
-                                    <option value="USA"@if($company->country == "USA"){{'selected="selected"'}}@endif>USA</option>
-                                    <option value="Australia"@if($company->country == "Australia"){{'selected="selected"'}}@endif>Australia</option>
-                                    <option value="Canada"@if($company->country == "Canada"){{'selected="selected"'}}@endif>Canada</option>
-                                    <!-- belum -->
+                                    <option value="Faperta"@if($company->country == "Faperta"){{'selected="selected"'}}@endif>Fakultas Pertanian</option>
+                                    <option value="Fkh"@if($company->country == "Fkh"){{'selected="selected"'}}@endif>Fakultas Kedokteran Hewan</option>
+                                    <option value="Fpik"@if($company->country == "Fpik"){{'selected="selected"'}}@endif>Fakultas Perikanan dan Ilmu Kelautan</option>
+                                    <option value="Fapet"@if($company->country == "Fapet"){{'selected="selected"'}}@endif>Fakultas Peternakan</option>
+                                    <option value="Fahutan"@if($company->country == "Fahutan"){{'selected="selected"'}}@endif>Fakultas Kehutanan</option>
+                                    <option value="Fateta"@if($company->country == "Fateta"){{'selected="selected"'}}@endif>Fakultas Teknik Pertanian</option>
+                                    <option value="Fmipa"@if($company->country == "Fmipa"){{'selected="selected"'}}@endif>Fakultas Ilmu Pengetahuan Alam</option>
+                                    <option value="Fem"@if($company->country == "Fem"){{'selected="selected"'}}@endif>Fakultas Ekonomi dan Menejemen</option>
+                                    <option value="Fema"@if($company->country == "Fema"){{'selected="selected"'}}@endif>Fakultas Ekologi Manusia</option>
+                                    <option value="SB"@if($company->country == "SB"){{'selected="selected"'}}@endif>Sekolah Bisnis</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="city" class="col-sm-2 control-label">City: </label>
+                            <label for="city" class="col-sm-2 control-label">Alamat tinggal: </label>
                             <div class="col-sm-10">
                                 <select name="city" id="city" class="form-control">
-                                    <option value="Cibanteng"@if($company->city == "Cibanteng"){{'selected="selected"'}}@endif>Cibanteng</option>
-                                    <option value="Dhaka"@if($company->city == "Dhaka"){{'selected="selected"'}}@endif>Dhaka</option>
                                     <option value="Babakan Raya"@if($company->city == "Babakan Raya"){{'selected="selected"'}}@endif>Babakan Raya</option>
+                                    <option value="Babakan Tengah"@if($company->city == "Babakan Tengah"){{'selected="selected"'}}@endif>Babakan Tengah</option>
+                                    <option value="Cibanteng"@if($company->city == "Cibanteng"){{'selected="selected"'}}@endif>Cibanteng</option>
+                                    <option value="Dramaga Cantik"@if($company->city == "Dramaga Cantik"){{'selected="selected"'}}@endif>Dramaga Cantik</option>
+                                    <option value="Puri D'kost"@if($company->city == "Puri D'kost"){{'selected="selected"'}}@endif>Puri D'kost</option>
+                                    <option value="IPB Dramaga"@if($company->city == "IPB Dramaga"){{'selected="selected"'}}@endif>IPB Dramaga</option>
+                                    <option value="IPB Baranangsiang"@if($company->city == "IPB Baranangsiang"){{'selected="selected"'}}@endif>IPB Baranangsiang</option>
                                     <!-- belum -->
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="industry" class="col-sm-2 control-label">Select Company Industry: </label>
+                            <label for="industry" class="col-sm-2 control-label">Category: </label>
                             <div class="col-sm-10">
                                 <select name="industry" id="industry" class="form-control">
-                                    <option value="Bank"@if($company->industry == "Bank"){{'selected="selected"'}}@endif>Bank</option>
-                                    <option value="IT/Software"@if($company->industry == "IT/Software"){{'selected="selected"'}}@endif>IT/Software</option>
-                                    <option value="NGO"@if($company->industry == "NGO"){{'selected="selected"'}}@endif>NGO</option>
-                                    <option value="Insurance company"@if($company->industry == "Insurance company"){{'selected="selected"'}}@endif>Insurance company</option>
+                                    <option value="Design"@if($company->industry == "Design"){{'selected="selected"'}}@endif>Design</option>
+                                    <option value="IT/Software"@if($company->industry == "IT/Software"){{'selected="selected"'}}@endif>Website IT/Software</option>
+                                    <option value="Writing"@if($company->industry == "Writing"){{'selected="selected"'}}@endif>Writing</option>
+                                    <option value="Data Entry"@if($company->industry == "Data Entry"){{'selected="selected"'}}@endif>Data Entry</option>
+                                    <option value="Business/Accounting/Legal"@if($company->industry == "Business/Accounting/Legal"){{'selected="selected"'}}@endif>Business/Accounting/Legal</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="website" class="col-sm-2 control-label">Website: </label>
+                            <label for="website" class="col-sm-2 control-label">Contacs: </label>
                             <div class="col-sm-10">
-                                <input type="text" name="website" value="{{$company->website}}" class="form-control" id="website" placeholder="eg. www.example.com">
+                                <input type="text" name="website" value="{{$company->website}}" class="form-control" id="website" placeholder="Id Line/WhatsApp/LinkedIn">
                             </div>
                         </div>
-                        <div class="col-sm-10 col-sm-offset-2">
+                        <div class="form-group">
+                            <label for="about" class="col-sm-2 control-label">Deskripsi diri: </label>
+                            <div class="col-sm-10">
+                            <textarea class="form-control" rows="4" cols="20" id="about" name="about" placeholder="Deskripsi keahlian, pengalaman, atau prestasi">{{$company->about}}</textarea>
+                            </div>
+                        </div>
+                        <!--<div class="col-sm-10 col-sm-offset-2">
                             <textarea class="form-control" rows="4" cols="20" id="about" name="about" placeholder="Write something about your Company">{{$company->about}}</textarea>
                             <br>
-                        </div>
+                        </div>-->
 
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">

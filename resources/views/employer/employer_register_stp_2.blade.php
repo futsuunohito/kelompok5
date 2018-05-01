@@ -23,9 +23,9 @@
                     <!-- -----------------First section------------------ -->
                     <div class="form-horizontal" id="company_form">
                         <div class="form-group{{$errors->has('name')?' has-error':''}}">
-                            <label for="name" class="col-sm-2 control-label">Name: </label>
+                            <label for="name" class="col-sm-2 control-label">Nama: </label>
                             <div class="col-sm-10">
-                                <input type="text" name="name" value="" class="form-control" id="name" placeholder="Company name" required>
+                                <input type="text" name="name" value="name" class="form-control" id="name" placeholder="Nama Lengkap" required>
                                 @if($errors->has('name'))
                                     <span class="help-block">
                                         <strong>{{$errors->first('name')}}</strong>
@@ -35,16 +35,24 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="country" class="col-sm-2 control-label">Country: </label>
+                            <label for="country" class="col-sm-2 control-label">Fakultas: </label>
                             <div class="col-sm-10">
                                 <select name="country" id="country" class="form-control">
-                                        <option value="Indonesia">Indonesia</option>
-                                        <option value="Others">Others</option>
+                                        <option value="Faperta">Fakultas Pertanian</option>
+                                        <option value="Fkh">Fakultas Kedokteran Hewan</option>
+                                        <option value="Fpik">Fakultas Perikanan dan Ilmu Kelautan</option>
+                                        <option value="Fapet">Fakultas Peternakan</option>
+                                        <option value="Fahutan">Fakultas Kehutanan</option>
+                                        <option value="Fateta">Fakultas Teknik Pertanian</option>
+                                        <option value="Fmipa">Fakultas Ilmu Pengetahuan Alam</option>
+                                        <option value="Fem">Fakultas Ekonomi dan Menejemen</option>
+                                        <option value="Fema">Fakultas Ekologi Manusia</option>
+                                        <option value="SB">Sekolah Bisnis</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="city" class="col-sm-2 control-label">City: </label>
+                            <label for="city" class="col-sm-2 control-label">Alamat Tinggal: </label>
                             <div class="col-sm-10">
                                 <select name="city" id="city" class="form-control">
                                         <option value="Babakan Raya">Babakan Raya</option>
@@ -58,26 +66,34 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="industry" class="col-sm-2 control-label">Select Company Industry: </label>
+                            <label for="industry" class="col-sm-2 control-label">Category : </label>
                             <div class="col-sm-10">
                                 <select name="industry" id="industry" class="form-control">
-                                        <option value="Accounting">Accounting</option>
-                                        <option value="IT/Software">IT/Software</option>
-                                        <option value="Marketing">Marketing</option>
+                                        <option value="Design">Design</option>
+                                        <option value="IT/Software">Website IT/Software</option>
+                                        <option value="Writing">Writing</option>
+                                        <option value="Data Entry">Data Entry</option>
+                                        <option value="Business/Accounting/Legal">Business/Accounting/Legal</option>
                                         <!-- sisanya ambil dari seeker find jobs-->
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="website" class="col-sm-2 control-label">Website: </label>
+                            <label for="website" class="col-sm-2 control-label">Contacs: </label>
                             <div class="col-sm-10">
-                                <input type="text" name="website" value="" class="form-control" id="website" placeholder="eg. www.example.com">
+                                <input type="text" name="website" value="" class="form-control" id="website" placeholder="Id Line/WhatsApp/LinkedIn">
                             </div>
                         </div>
-                        <div class="col-sm-10 col-sm-offset-2">
-                            <textarea class="form-control" rows="4" cols="20" id="about" name="about" placeholder="Write something about your Company"></textarea>
-                            <br>
+                        <div class="form-group">
+                            <label for="about" class="col-sm-2 control-label">Deskripsi diri: </label>
+                            <div class="col-sm-10">
+                            <textarea class="form-control" rows="4" cols="20" id="about" name="about" placeholder="Deskripsi keahlian, pengalaman, atau prestasi"></textarea>
+                            </div>
                         </div>
+                        <!-- <div class="col-sm-10 col-sm-offset-2">
+                            <textarea class="form-control" rows="4" cols="20" id="about" name="about" placeholder="Deskripsi pengalaman atau prestasi"></textarea>
+                            <br>
+                        </div> -->
 
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
