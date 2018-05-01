@@ -7,7 +7,13 @@
         <div class="row">
             <div class="col-lg-2">
                 <img src="{{asset('storage/images/'.$user->image)}}" alt="..." class="img-thumbnail" style="height: 180px; width: 500px;">
-                <a href="" class="btn-s btn-default" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> Edit Profile Picture </a>           
+                <br>
+                    <form action="{{route('employer.company_image')}}" method="post" enctype="multipart/form-data">
+                    {{csrf_field()}}
+                        <input type="file" name="image">
+                        <br>
+                        <input type="submit" class="btn-s btn-primary" id="upload" value="EDIT PROFILE PICTURE">
+                    </form>           
             </div>
             <div class="col-lg-10">
                 <p>Hello . . . <strong style="font-family: Courier; font-size:30px">{{$user->name}}!</strong></p>

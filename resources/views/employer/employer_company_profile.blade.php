@@ -14,6 +14,7 @@
                     <br>
                     <form action="{{route('employer.company_image')}}" method="post" enctype="multipart/form-data">
                     {{csrf_field()}}
+                    {{ method_field('put') }}
                         <input type="file" name="image">
                         <br>
                         <input type="submit" class="btn btn-primary" id="upload" value="UPLOAD">
