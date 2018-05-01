@@ -7,6 +7,7 @@
         <div class="row">
             <div class="col-lg-2">
                 <img src="{{asset('storage/images/'.$user->image)}}" alt="..." class="img-thumbnail" style="height: 180px; width: 500px;">
+                <a href="" class="btn-s btn-default" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> Edit Profile Picture </a>
             </div>
             <div class="col-lg-10">
                 <h3>{{$user->name}}</h3>

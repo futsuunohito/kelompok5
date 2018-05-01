@@ -10,7 +10,7 @@
             <br>
             <div class="row">
                 <div class="col-lg-2">
-                    <img src="{{asset('storage/company_images/'.$company->image)}}" alt="Company Brand Image" class="img-thumbnail img-responsive" style="height: 180px; width: 500px;">
+                    <img src="{{asset('public/company_images/'.$company->image)}}" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
                     <br>
                     <form action="{{route('employer.company_image')}}" method="post" enctype="multipart/form-data">
                     {{csrf_field()}}

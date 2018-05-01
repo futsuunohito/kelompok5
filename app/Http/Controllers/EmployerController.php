@@ -57,7 +57,7 @@ class EmployerController extends Controller
     	$company_image = $request->file('image');
     	if($request->hasFile('image')){
     		$image_original_name = $company_image->getClientOriginalName();
-    		Storage::putFileAs('public/company_images/', $company_image, $image_original_name);
+    		Storage::putFileAs('/public/company_images/', $company_image, $image_original_name);
     	}
     	Company::where('user_id', Auth::id())->update(['image'=>$image_original_name]);
 

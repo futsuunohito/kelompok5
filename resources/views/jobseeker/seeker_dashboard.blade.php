@@ -12,7 +12,7 @@
                     <a href="" class="btn-s btn-default" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> Edit Profile Picture </a>
                 </div>
                 <div class="col-lg-10">
-                <p>Hello . . . <strong style="font-family: Brush Script MT; font-size:45px">{{$user->name}}!</strong></p>
+                <p>Hello . . . <strong style="font-family: Courier; font-size:30px">{{$user->name}}!</strong></p>
                     <p>Welcome to your personal workspace</p>
                     <div>
                         <!-- <a href="{{route('seeker.edit_cv')}}" class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> EDIT MY CV</a> -->

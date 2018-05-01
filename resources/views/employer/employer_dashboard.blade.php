@@ -13,14 +13,15 @@
         @endif
             <div class="row" style="margin-top: 20px;">
                 <div class="col-lg-2">
-                    <img src="{{asset('storage/company_images/'.$company->image)}}" alt="Brand Image" class="img-thumbnail" style="height: 180px; width: 500px;">
+                    <img src="{{asset('public/company_images/'.$company->image)}}" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
+                    <a href="" class="btn-s btn-default" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> Edit Profile Picture </a>
                 </div>
                 <div class="col-lg-10">
-                    <h1>{{$company->name}}</h1>
-                    <p>Welcome to your company's workspace [ <strong>{{$user->name}}</strong> ]</p>
+                    <p>Hello . . . <strong style="font-family: Courier; font-size:30px">{{$user->name}}!</strong></p>
+                    <p>Welcome to your workspace</p>
                     <div>
                         <a href="{{route('employer.post_job')}}" class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-arrow-circle-up"></i> POST A JOB</a>
-                        <a href="/employer/cv-list" class="btn btn-default" style="border-radius: 0;"><i class="fa fa-database"></i> SEARCH CV DATABASE</a>
+                        <a href="/employer/cv-list" class="btn btn-primary" style="border-radius: 0;"><i class="fa fa-database"></i> SEARCH CV DATABASE</a>
                     </div>
                 </div>
             </div>

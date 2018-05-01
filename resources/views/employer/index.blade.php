@@ -6,10 +6,10 @@
 
     <section id="emp_home_first_section" class="top">
         <div class="container-fluid">
-        <h1 align="center" class="first_sec_h1" style="font-family: Brush Script MT; font-size: 75px">Need!</h1>
-            <p align="center" style="font-family: Impact">
+        <h1 align="center" class="first_sec_h1" style="font-family: Brush Script MT; font-size: 80px">Need!</h1>
+            <p align="center" style="font-family: Impact; font-size: 16px">
                 We Rise By Lifting Others</p>
-            <div class="container home_search">
+            <div class="container home_search" style="margin-top: 35px">
                 <div class="row">
                     <div class="col-lg-6 col-lg-offset-3">
                         <div class="row" style="text-align: center;">
@@ -35,7 +35,7 @@
         <!-- first container-fluid ends here -->
     </section>
 
-    <section style="margin-top: 100px;">
+    <section style="margin-top: 50px;">
         <div class="container">
             <div class="row">
                     <div class="row">
@@ -90,14 +90,14 @@
                           </div>
 
             </div>
-            <div class="row" align="center" style="margin-bottom:20px;">
+            <!-- <div class="row" align="center" style="margin-bottom:20px;">
                 <div class="col-lg-4 col-lg-offset-4 more_btn">
                     <h2>Find Exceptional People</h2>
                     <br>
                     <a href="{{route('employer.register')}}" class="btn btn-info btn-lg">SIGN UP NOW</a>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- first container ends here -->
     </section>
 @endsection
