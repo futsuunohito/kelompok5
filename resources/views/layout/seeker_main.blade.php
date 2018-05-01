@@ -75,7 +75,7 @@
                                     {{ Auth::user()->name }}
                                 </a>
                             </li>
-                            <li><a href="{{route('seeker.settings')}}">Settings</a></li>
+                            <li><a href="{{route('seeker.settings')}}" style="font-size: 10px">Change Password</a></li>
                             <li>
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="glyphicon glyphicon-off" style="padding-right: 5px;"></i>Logout</a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

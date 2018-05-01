@@ -8,8 +8,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
-                    <h3 style="font-weight: 700; margin-left: 100px;">Hello</h3>
-                    <p style="margin-left: 100px;"><strong>We want to know about your personal informationx</strong></p>
+                    <h3 style="font-weight: 700; margin-left: 100px;">Welcome!</h3>
+                    <p style="margin-left: 100px;"><strong>We want to know about your personal information</strong></p>
                     <form action="{{route('reg_stp_2')}}" method="post" class="form-horizontal">
                     {{csrf_field()}}
                         <div class="form-group{{$errors->has('phone')? ' has-error': ''}}">

@@ -27,7 +27,7 @@ Route::group(['middleware'=>['auth','seeker']], function(){
 	Route::post('seeker/work', 'SeekerController@work');
 	Route::post('seeker/skill', 'SeekerController@skill')->name('seeker.skill');
 	Route::get('seeker/edit-cv', 'SeekerController@showEditCv')->name('seeker.edit_cv');
-	Route::post('seeker/edit-cv', 'SeekerController@storeEditCv');
+	Route::post('seeker/edit-cv', 'SeekerController@storeEditCv')->name('seeker.edit');
 	Route::post('seeker/image', 'SeekerController@profileImageUpload')->name('proimage_upload');
 	Route::post('seeker/about', 'SeekerController@aboutMe')->name('seeker.about');
 	Route::post('seeker/links', 'SeekerController@links')->name('seeker.link');

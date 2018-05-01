@@ -14,8 +14,8 @@
                 <p><strong>Email: </strong>{{$user->email}}</p>
                 <p><strong>Phone: </strong>{{$user->phone}}</p>
                 <div> 
-                    <a href="{{route('personal.info')}}" class="btn btn-default"> Edit Profile </a>
-                    <a href="{{route('seeker.edit_cv')}}" class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> EDIT MY CV</a>
+                    <a href="{{route('personal.info')}}" class="btn btn-primary"class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> Edit Personal Information </a>
+                     <!-- <a href="{{route('seeker.edit_cv')}}" class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> EDIT MY CV</a> -->
                     {{-- <a href="" class="btn btn-default" style="border-radius: 0;"><i class="fa fa-download"></i> DOWNLOAD AS PDF</a> --}}
                 </div>
             </div>
@@ -25,17 +25,22 @@
         <br>
         <!-- row ends here -->
         
+
+
+            <!-- row ends here -->
+        
         <div class="row">
             <div class="col-lg-12">
-                <h4><Strong>About me</Strong></h4>
+                <h4><Strong>About me</Strong><button name="personal_2" data-toggle="modal" data-target="#myModalAboutMe"class="btn-xs btn-warning" style="border-radius: 0; margin-left: 20px"><i class="fa fa-pencil-square-o"></i>EDIT</button></h4>
                 <p>{{$activity->about_me}}</p>
             </div>
+
+            
             </div> <!-- row ends here---- -->
             
             <div class="row">
                 <div class="col-lg-12">
                     <!-- <h4><strong>Work experience</strong> <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModalCompany">+ ADD COMPANY/POSITION</button></h4> -->
-
 
 
             <div class="row">
@@ -46,9 +51,13 @@
                             Company/Position
                         </div>
                         <div class="panel-body" id="works">
+                        
                             <ul class="list-group">
                             @foreach($works as $work)
                                 <li class="list-group-item"><strong>Title:</strong> {{$work->job_title}}
+                                <div class="col-lg-6 pull-right">
+                                        <button type="submit" id="delete_btn" class="btn-s btn-danger">DELETE</button>
+                                </div>
                                 <ul>
                                     <li><strong>Company name:</strong> {{$work->company_name}}</li>
                                     <li><strong>Position:</strong> {{$work->job_role}}</li>
@@ -165,7 +174,7 @@
                                                             <button type="submit" class="byn btn-xs btn-danger">Delete</button>
                                                             </form> --}}
                                                             <div class="col-lg-6 pull-right">
-                                                                <button type="submit" id="delete_btn" class="btn btn-default" style="color: red;">DELETE</button>
+                                                                <button type="submit" id="delete_btn" class="btn-s btn-danger">DELETE</button>
                                                             </div>
                                                         </div>
                                                         {{-- <input type="hidden" id="{{$skill->id}}"> --}}
@@ -360,6 +369,37 @@
             </div>
         </div>
 
+        <!-- Modal for ABOUT ME -->
+
+  <div class="modal fade" id="myModalAboutMe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">About Me</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-horizontal">
+
+                            <div class="form-group">
+                                <label for="about_me" class="col-sm-1 control-label">About Me: </label>
+                                <div class="col-sm-11" id="about">
+
+                                    <textarea name="about_me" class="form-control" rows="4" cols="20" id="about_me" placeholder="Write something about yourself">{{$activity->about_me}}</textarea>
+                                    <br>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" id="about_me_btn" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
                         @endsection
 
