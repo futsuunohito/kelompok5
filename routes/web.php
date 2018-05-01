@@ -18,11 +18,11 @@ Route::group(['middleware'=>['auth','seeker']], function(){
 	Route::get('personal-info', function(){
 	return view('jobseeker.seeker_register_stp2');
 	})->name('reg_stp_2');
-	Route::post('personal-info', 'SeekerController@personalInfo');
+	Route::post('personal-info', 'SeekerController@personalInfo')->name('personal.info');
 	Route::get('seeker/edu', function(){
 		return view('jobseeker.seeker_register_stp3');
 	})->name('seeker.edu');
-	Route::post('seeker/edu', 'SeekerController@education');
+	Route::post('seeker/edu', 'SeekerController@education')->name('seeker.edu');
 	Route::get('seeker/work', 'SeekerController@showWorkAndSkillForm')->name('seeker.work');
 	Route::post('seeker/work', 'SeekerController@work');
 	Route::post('seeker/skill', 'SeekerController@skill')->name('seeker.skill');
@@ -33,14 +33,14 @@ Route::group(['middleware'=>['auth','seeker']], function(){
 	Route::post('seeker/links', 'SeekerController@links')->name('seeker.link');
 	Route::post('seeker/attachment', 'SeekerController@attachments')->name('seeker.attachment');
 	Route::get('seeker/dashboard', 'SeekerController@showSeekerDashboard')->name('seeker.dashboard');
-	Route::get('seeker/cv-view', 'SeekerController@seekerCvView');
+	Route::get('seeker/cv-view', 'SeekerController@seekerCvView')->name('seeker.view');
 	Route::get('seeker/job/apply/{id}', 'SeekerController@showApplyJobForm');
 	Route::get('seeker/apply/successfull/{id}', 'SeekerController@appliedToJob');
 	Route::get('seeker/job/delete/{id}', 'SeekerController@deleteJob');
 	Route::get('seeker/settings', 'SeekerController@showUserSettings')->name('seeker.settings');
 	Route::post('seeker/settings', 'SeekerController@storeUserSettings');
 	Route::get('seeker/download-cv/{id}', 'SeekerController@downloadCV');
-	
+    /* Route::delete('/seeker/{skill}/delete', 'PostController@skilldestroy')->name('skill.destroy'); */
 });
 
 Route::get('seeker/find-jobs', 'SeekerController@showFindJobs')->name('seeker.find_jobs');

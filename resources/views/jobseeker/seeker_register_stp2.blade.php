@@ -8,8 +8,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
-                    <h3 style="font-weight: 700; margin-left: 100px;">Welcome!</h3>
-                    <p style="margin-left: 100px;"><strong>Complete your profile to apply</strong></p>
+                    <h3 style="font-weight: 700; margin-left: 100px;">Hello</h3>
+                    <p style="margin-left: 100px;"><strong>We want to know about your personal informationx</strong></p>
                     <form action="{{route('reg_stp_2')}}" method="post" class="form-horizontal">
                     {{csrf_field()}}
                         <div class="form-group{{$errors->has('phone')? ' has-error': ''}}">
@@ -41,7 +41,7 @@
                         <div class="form-group">
                             <div class="col-sm-offset-4 col-sm-8">
                                <p style="text-align: right;">* Mandatory field</p>
-                                <button type="submit" class="btn btn-warning form-control" style="text-transform: uppercase;border-radius:0;">Proceed to Education</button><br><br><br>
+                                <button type="submit" class="btn btn-warning form-control" style="text-transform: uppercase;border-radius:0;">Save Changes</button><br><br><br>
                             </div>
                         </div>
                     </form>

@@ -56,7 +56,7 @@
                                     <li class=""><a href="/employer">Home <span class="sr-only">(current)</span></a></li>
                                     @if(!Auth::guest())
                                     <li><a href="{{route('employer.dashboard')}}">Dashboard</a></li>
-                                    <li><a href="/employer/cv-list">CV Search</a></li>
+                                    <li><a href="{{route('employer_cv_view')}}">CV Search</a></li>
                                     <li><a href="{{route('employer.company_profile')}}">Company profile</a></li>
                                     @endif
                                     <li><a href="{{route('employer.post_job')}}">Post a Job</a></li>
@@ -70,7 +70,7 @@
                                 <li id="for_emp"><a href="/">For Jobseeker</a></li>
                             @else
                                 <li>
-                                    <a>
+                                    <a href="{{route('employer.dashboard')}}">
                                         {{ Auth::user()->name }}
                                     </a>
                                 </li>
@@ -103,7 +103,7 @@
    <!-- -Footer tarts here- -->
    <footer class="main-footer">
         <div class="container">
-            <h2><i class="glyphicon glyphicon-send"></i> <strong>  Ne</strong><small>ed</small></h2>
+            <h2><i class="glyphicon glyphicon-send"></i> <strong>  Need! </strong></h2>
             <div class="row foot_links">
                 <div class="col-lg-3">
                     <h5>Job Seekers</h5>
@@ -134,7 +134,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12 copyright">
-                    <p>&copy; 2018 - Cinta Dunia. All Rights</p>
+                    <p>&copy; 2018 - Kelompok 5. All Rights</p>
                 </div>
             </div>
         </div>

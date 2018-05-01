@@ -34,13 +34,13 @@ class SeekerController extends Controller
     	 Activity::where('user_id', Auth::id())->update(['location'=>$request->location]);
     	}
 
-    	return redirect()->route('seeker.edu');
+    	return redirect()->route('seeker.view');
     }
 
     public function education(Request $request){
     	Activity::where('user_id', Auth::id())->update(['college'=>$request->college, 'degree'=>$request->degree, 'field'=>$request->field, 'grade'=>$request->grade, 'country'=>$request->country, 'language'=>$request->language, 'interest'=>$request->interest]);
 
-    	return redirect()->route('seeker.work');
+    	return redirect()->route('seeker.view');
     }
     //Shows Work and skill form 
     public function showWorkAndSkillForm(){
@@ -81,6 +81,13 @@ class SeekerController extends Controller
     	$newSkill->save();
 
     	return $request->all();
+    }
+    //DELETE SKILL
+    public function skilldestroy(Skill $skills)
+    {
+        $skills->delete();
+
+        return redirect()->route('seeker.view');/*->withDanger('Post berhasil dihapus');*/
     }
     //show edit cv form
     public function showEditCv(){

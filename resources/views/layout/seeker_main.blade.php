@@ -47,7 +47,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/"><i class="glyphicon glyphicon-send"></i>  <strong>  Ne</strong><small>ed</small></a>
+                        <a class="navbar-brand" href="/home"><i class="glyphicon glyphicon-send"></i>  <strong>  Need! </strong></a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,9 +57,8 @@
                                 <ul class="nav navbar-nav ">
                                     <li class=""><a href="/">Home <span class="sr-only">(current)</span></a></li>
                                     @if(!Auth::guest())
-                                        <li><a href="/seeker/dashboard">Dashboard</a></li>
-                                        <li><a href="{{route('seeker.edit_cv')}}">My CV</a></li>
-                                        <li><a href="{{route('seeker.settings')}}">Settings</a></li>
+                                        <li><a href="{{route('seeker.dashboard')}}">Dashboard</a></li>
+
                                     @endif
                                     <li><a href="{{route('seeker.find_jobs')}}">Find jobs</a></li>
                                 </ul>
@@ -72,10 +71,11 @@
                             <li id="for_emp"><a href="/employer">For Employer</a></li>
                         @else
                             <li>
-                                <a>
+                                <a href="{{route('seeker.view')}}">
                                     {{ Auth::user()->name }}
                                 </a>
                             </li>
+                            <li><a href="{{route('seeker.settings')}}">Settings</a></li>
                             <li>
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="glyphicon glyphicon-off" style="padding-right: 5px;"></i>Logout</a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -104,7 +104,7 @@
          {{--     Footer tarts here    --}}
     <footer class=""main-footer>
         <div class="container">
-            <h2><i class="glyphicon glyphicon-send"></i> <strong>  Ne</strong><small>ed</small></h2>
+            <h2><i class="glyphicon glyphicon-send"></i> <strong>  Need! </strong></h2>
             <div class="row foot_links">
                 <div class="col-lg-3">
                     <h5>Job Seekers</h5>
@@ -135,7 +135,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12 copyright">
-                    <p>&copy; 2018 - Cinta Dunia. All Rights</p>
+                    <p>&copy; 2018 - Kelompok 5. All Rights</p>
                 </div>
             </div>
         </div>

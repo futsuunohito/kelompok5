@@ -21,6 +21,15 @@
                                     </span>
                             @endif
                         </div>
+                        <div class="form-group{{$errors->has('phone')?' has-error': ''}}">
+                            <label for="phone">Phone Number</label>
+                            <input type="text" class="form-control" id="phone" placeholder="Enter your phone no." name="phone">
+                            @if($errors->has('phone'))
+                                <span class="help-block">
+                                    <strong>{{$errors->first('phone')}}</strong>
+                                </span>
+                            @endif
+                        </div>
                         <div class="form-group{{$errors->has('email') ? ' has-error': ''}}">
                             <label for="email">Email address</label>
                             <input type="email" class="form-control" name="email" value="{{old('email')}}" id="email" placeholder="Enter email" required>
@@ -43,15 +52,7 @@
                             <label for="confirm-password">Confirm Password</label>
                             <input type="password" name="password_confirmation" class="form-control" id="confirm-password" placeholder="Confirm password">
                         </div>
-                        <div class="form-group{{$errors->has('phone')?' has-error': ''}}">
-                            <label for="phone">Phone Number</label>
-                            <input type="text" class="form-control" id="phone" placeholder="Enter your phone no." name="phone">
-                            @if($errors->has('phone'))
-                                <span class="help-block">
-                                    <strong>{{$errors->first('phone')}}</strong>
-                                </span>
-                            @endif
-                        </div>
+
                         <input type="hidden" name="employer" value="1">
 
                         <input type="submit" class="btn btn-warning form-control" value="Sign up as employer" style="text-transform: uppercase;border-radius:0;">

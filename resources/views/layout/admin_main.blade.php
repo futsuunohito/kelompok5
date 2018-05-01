@@ -46,7 +46,7 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand" href="/"><i class="glyphicon glyphicon-send"></i>  <strong>  Ne</strong><small>ed</small></a>
+                                <a class="navbar-brand" href="/"><i class="glyphicon glyphicon-send"></i>  <strong>  Need! </strong></a>
                             </div>
         
                             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -102,7 +102,7 @@
         <!-- -Footer tarts here- -->
         <footer class="main-footer">
                 <div class="container">
-                    <h2><i class="glyphicon glyphicon-send"></i> <strong>  Ne</strong><small>ed</small></h2>
+                    <h2><i class="glyphicon glyphicon-send"></i> <strong>  Need! </strong></h2>
                     <div class="row foot_links">
                         <div class="col-lg-3">
                             <h5>Job Seekers</h5>
@@ -133,7 +133,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-12 copyright">
-                            <p>&copy; 2018 - Cinta Dunia. All Rights</p>
+                            <p>&copy; 2018 - Kelompok 5. All Rights</p>
                         </div>
                     </div>
                 </div>

@@ -9,13 +9,14 @@
             <div class="row">
                 <div class="col-lg-2">
                     <img src="{{asset('storage/images/'.$user->image)}}" alt="Profile Image" class="img-thumbnail" style="height: 180px; width: 500px;">
+                    <a href="" class="btn btn-default"> Edit Profile Picture </a>
                 </div>
                 <div class="col-lg-10">
-                    <h1>{{$user->name}}</h1>
+                    <h1 style="font-weight: bold">{{$user->name}}</h1>
                     <p>Welcome to your personal workspace</p>
                     <div>
                         <a href="{{route('seeker.edit_cv')}}" class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> EDIT MY CV</a>
-                        <a href="/seeker/cv-view" class="btn btn-default" style="border-radius: 0;"><i class="fa fa-eye"></i> VIEW MY CV</a>
+                        <a href="{{route('seeker.view')}}" class="btn btn-default" style="border-radius: 0;"><i class="fa fa-eye"></i> VIEW MY CV</a>
                     </div>
                 </div>
             </div>

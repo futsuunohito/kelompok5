@@ -6,9 +6,9 @@
 
     <section id="emp_home_first_section" class="top">
         <div class="container-fluid">
-                <h1 align="center" class="first_sec_h1">Pencari Duid</h1>
-                <p align="center">
-                    "Need adalah aplikasi lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eleifend at turpis ac ornare. Donec orci odio, iaculis quis faucibus convallis, gravida at mi."</p>
+        <h1 align="center" class="first_sec_h1" style="font-family: Brush Script MT; font-size: 75px">Need!</h1>
+            <p align="center" style="font-family: Impact">
+                We Rise By Lifting Others</p>
             <div class="container home_search">
                 <div class="row">
                     <div class="col-lg-6 col-lg-offset-3">
