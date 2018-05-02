@@ -9,7 +9,7 @@
                 <img src="{{asset('storage/images/'.$user->image)}}" alt="..." class="img-thumbnail" style="height: 180px; width: 500px;">
             </div>
             <div class="col-lg-10">
-                <strong style="font-size:30px"><i  class="fa fa-circle text-success"></i>{{$user->name}}</strong>
+                <strong style="font-size:30px"><i  class="fa fa-circle text-success"></i>     {{$user->name}}</strong>
                 <br>
                 <p><strong>Lives in </strong>{{$activity->location}}</p>
                 <p><strong>Email: </strong>{{$user->email}}</p>

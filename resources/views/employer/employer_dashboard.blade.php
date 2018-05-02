@@ -22,7 +22,7 @@
                     </form>
                 </div>
                 <div class="col-lg-10">
-                    <p>Hello . . . <strong style="font-family: Courier; font-size:30px">{{$user->name}}!</strong></p>
+                    <strong style="font-size:30px"><i  class="fa fa-circle text-success"></i>    {{$user->name}}</strong>
                     <p>Welcome to your workspace</p>
                     <div>
                         <a href="{{route('employer.post_job')}}" class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-arrow-circle-up"></i> POST A JOB</a>
