@@ -7,16 +7,10 @@
         <div class="row">
             <div class="col-lg-2">
                 <img src="{{asset('storage/images/'.$user->image)}}" alt="..." class="img-thumbnail" style="height: 180px; width: 500px;">
-                <br>
-                    <form action="{{route('employer.company_image')}}" method="post" enctype="multipart/form-data">
-                    {{csrf_field()}}
-                        <input type="file" name="image">
-                        <br>
-                        <input type="submit" class="btn-s btn-primary" id="upload" value="EDIT PROFILE PICTURE">
-                    </form>           
             </div>
             <div class="col-lg-10">
-                <p>Hello . . . <strong style="font-family: Courier; font-size:30px">{{$user->name}}!</strong></p>
+                <strong style="font-size:30px"><i  class="fa fa-circle text-success"></i>{{$user->name}}</strong>
+                <br>
                 <p><strong>Lives in </strong>{{$activity->location}}</p>
                 <p><strong>Email: </strong>{{$user->email}}</p>
                 <p><strong>Phone: </strong>{{$user->phone}}</p>
@@ -125,7 +119,7 @@
                                     <li><strong>Field of Study:</strong> {{$activity->field}}</li>
                                     {{-- <li><strong>From:</strong> </li>
                                     <li><strong>To:</strong> </li> --}}
-                                    <li><strong>Grade:</strong>{{$activity->grade}}</li>
+                                    <li><strong>Grade: </strong>{{$activity->grade}}</li>
                                 </ul>
                                 </li>
 
@@ -172,8 +166,8 @@
                                                         <div class="row">
                                                             <div class="col-lg-6">
                                                                 <strong>Skill: </strong>{{$skill->name}}<br>
-                                                        <strong>Level: </strong>{{$skill->level}}<br>
-                                                        <strong>Experience: </strong>{{$skill->experience}}
+                                                                <strong>Level: </strong>{{$skill->level}}<br>
+                                                                <strong>Experience: </strong>{{$skill->experience}}
                                                             </div>
                                                             {{--<form action="{{ route('post.destroy', $post) }}" method="post">
                                                             {{ csrf_field() }}

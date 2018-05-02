@@ -45,7 +45,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/"><i class="glyphicon glyphicon-send"></i>  <strong>  Ne</strong><small>ed</small></a>
+                        <a class="navbar-brand" href="/"><i class="glyphicon glyphicon-send"></i>  <strong>  Need!</strong></a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->

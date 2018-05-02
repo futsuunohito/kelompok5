@@ -6,7 +6,7 @@
     <section id="home_first_section" class="top" style="margin-top: 50px;">
         <div class="container-fluid">
             <h1 align="center" class="first_sec_h1" style="font-family: Brush Script MT; font-size: 80px">Need!</h1>
-            <p align="center" style="font-family: Impact; font-size: 16px">
+            <p align="center" style="font-size: 16px">
                 We Rise By Lifting Others</p>
             <div class="container home_search">
                 <div class="row">

@@ -14,13 +14,11 @@
             <div class="row" style="margin-top: 20px;">
                 <div class="col-lg-2">
                     <img src="{{asset('public/company_images/'.$company->image)}}" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
-                    <br>
-                    <form action="{{route('employer.company_image')}}" method="post" enctype="multipart/form-data">
-                    {{csrf_field()}}
-                    {{ method_field('put') }}
-                        <input type="file" name="image">
-                        <br>
-                        <input type="submit" class="btn-s btn-primary" id="upload" value="EDIT PROFILE PICTURE">
+                        <div> 
+                            <a href="{{route('personal.info')}}" class="btn btn-primary"class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> Edit Personal Information </a>
+                            <!-- <a href="{{route('seeker.edit_cv')}}" class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> EDIT MY CV</a> -->
+                            {{-- <a href="" class="btn btn-default" style="border-radius: 0;"><i class="fa fa-download"></i> DOWNLOAD AS PDF</a> --}}
+                        </div>
                     </form>
                 </div>
                 <div class="col-lg-10">

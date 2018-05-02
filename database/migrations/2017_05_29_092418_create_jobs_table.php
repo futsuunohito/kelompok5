@@ -28,9 +28,8 @@ class CreateJobsTable extends Migration
             $table->string('degree');
             $table->string('experience');
             $table->string('language');
-            $table->string('skill');
+            $table->string('skill');    
             $table->tinyInteger('posted');
-            $table->tinyInteger('drafted');
             $table->timestamps();
         });
     }
