@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-lg-offset-3">
-				<h3>Send email to this job seeker</h3><br>
+				<h3 style="text-align: center">Send email to this job seeker</h3><br>
 				<form method="post" action="/employer/email/send" class="form-horizontal">
 				{{csrf_field()}}
 					<div class="form-group">

@@ -105,7 +105,7 @@
 
             <div class="row">
                 <div class="col-lg-12" id="edu">
-                    <h4><strong>Your Education</strong></h4>
+                    <h4 style="text-align:center"><strong>Your Education</strong></h4>
                     @foreach($activities as $activity)
                     <div class="row">
                         <div class="col-lg-6">
@@ -139,6 +139,7 @@
                                 <label for="country">Country</label>
                                 <select name="country" class="form-control" id="country">
                                 @foreach($activities as $activity)
+                                    <option value="Indonesia"@if($activity->country == "Indonesia"){{'selected="selected"'}}@endif>Indonesia</option>
                                     <option value="Bangladesh"@if($activity->country == "Bangladesh"){{'selected="selected"'}}@endif>Bangladesh</option>
                                     <option value="India"@if($activity->country == "India"){{'selected="selected"'}}@endif>India</option>
                                     <option value="USA"@if($activity->country == "USA"){{'selected="selected"'}}@endif>USA</option>

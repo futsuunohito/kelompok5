@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
-                   <h4><strong>Your Education</strong></h4>
+                   <h4 style="text-align: center"><strong>Your Education</strong></h4>
                     <form action="{{route('seeker.edu')}}" method="post">
                     {{csrf_field()}}
                         <div class="form-group">

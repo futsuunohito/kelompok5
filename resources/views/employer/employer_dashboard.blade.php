@@ -4,10 +4,18 @@
 
 @section('content')
 
+<script>
+    window.setTimeout(function() {
+    $(".alert").fadeTo(200, 0).slideUp(200, function(){
+        $(this).remove(); 
+    });
+}, 2000);
+</script>
+
     <section class="top" style="margin-top: 50px;">
         <div class="container">
         @if(session('msg'))
-        <div class="alert alert-success">
+        <div class="alert alert-success" style="width:50%; margin-top: 10px; margin: auto; text-align:center">
             {{session('msg')}}
         </div>
         @endif
@@ -26,7 +34,9 @@
                     <strong style="font-size:26px"><i  class="fa fa-circle text-success"></i>    {{$user->name}}</strong>
                     <br>
                     <br>
-                    <p>Welcome to your workspace!</p>
+                    <p><strong>Faculty: </strong>{{$company->country}}</p>
+                    <p><strong>Lives in: </strong>{{$company->city}}</p>
+                    <p><strong>Phone Number: </strong>{{$company->website}}</p>
                     <div>
                         <a href="{{route('employer.post_job')}}" class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-arrow-circle-up"></i> POST A JOB</a>
                         <a href="/employer/cv-list" class="btn btn-primary" style="border-radius: 0;"><i class="fa fa-database"></i> SEARCH CV DATABASE</a>

@@ -99,7 +99,7 @@ class EmployerController extends Controller
     	$newJob->user_id = Auth::id();
     	$newJob->save();
 
-    	return redirect()->route('employer.dashboard');
+    	return redirect()->route('employer.dashboard')->with('msg',"Job Posted Successfully");;
     }
     //show the Employer Dashboard 
     public function showEmployerDashboard(){

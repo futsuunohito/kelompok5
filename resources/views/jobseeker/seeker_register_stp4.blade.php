@@ -141,7 +141,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" id="save" class="btn btn-primary" data-dismiss="modal">SAVE</button>
+                        <button href="{{ route('seeker.view') }}"type="button" id="save" class="btn btn-primary" data-dismiss="modal">SAVE</button>
                     </div>
                 </div>
             </div>

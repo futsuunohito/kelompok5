@@ -6,25 +6,24 @@
 
     <section class="top" style="margin-top: 50px;">
         <div class="container">
-                <div class="row">
-                        <div class="col-lg-6 col-lg-offset-3">
-                            <form class="form-inline" action="/seeker/keyword-wise-jobs" method="get">
-                            {{csrf_field()}}
-                              <div class="form-group">
-                                    <div class="input-group margin">
-                                            <input type="text" class="form-control" name="searchQuery" class="form-control" placeholder="masih salah Search" value="{{ old('searchQuery') }}" style="padding-left: 20px;padding-right: 400px;">
-                                                <span class="input-group-btn">
-                                                  <button type="submit" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
-                                                </span>
-                                            </div>
-                                </div>
-                            </form>
+        
+            <!-- <div class="row">
+                <div class="col-lg-6 col-lg-offset-3">
+                    <form class="form-inline" action="/seeker/keyword-wise-jobs" method="get">
+                    {{csrf_field()}}
+                        <div class="form-group">
+                            <div class="input-group margin">
+                                    <input type="text" class="form-control" name="searchQuery" class="form-control" placeholder="masih salah Search" value="{{ old('searchQuery') }}" style="padding-left: 20px;padding-right: 400px;">
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                                        </span>
+                                    </div>
                         </div>
-                    </div>
-       
-            
+                    </form>
+                </div>
+            </div> -->
 
-            <div class="row top">
+            <div class="row top" style="margin-top:18px">
                 <div class="col-lg-4">
                     <div class="box box-primary">
                         <div class="box-header with-border">
@@ -128,7 +127,6 @@
                                         <input type="checkbox" name="category[]" value="Engineer/Architect"> Engineer/Architect
                                     </label>
                                 </div>
-
                                 
                                     <div class="box-footer">
                                             <input type="submit" class="btn btn-success" value="Search">
@@ -137,7 +135,6 @@
                             
                         </div>
                     </div>
-              
             </div>
 <!-- ---------Section for Jobs--------------------------- -->
                 <div class="col-lg-6 ">

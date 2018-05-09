@@ -140,6 +140,7 @@
     </footer>
     <script src="{{asset('/js/jquery-1.11.3.min.js')}}"></script>
     <script src="{{asset('/js/bootstrap.min.js')}}"></script>
+    
     @yield('script')
 
     <!-- REQUIRED JS SCRIPTS -->

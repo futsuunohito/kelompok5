@@ -4,9 +4,9 @@
 
 @section('content')
 
-    <section class="top" style="margin-top: 55px;">
+    <section class="top" style="margin-top: 50px;">
         <div class="container">
-            <div class="row">
+            <div class="row" style="margin-top: 15px;">
                 <div class="col-lg-2">
                     <img src="{{asset('storage/images/'.$user->image)}}" alt="Profile Image" class="img-thumbnail" style="height: 180px; width: 500px;">
                     <br>

@@ -18,6 +18,7 @@
                         <input type="file" name="image">
                         <br>
                         <input type="submit" class="btn btn-primary" id="upload" value="UPLOAD">
+
                     </form>
                 </div>
                 <div class="col-lg-10">
@@ -98,7 +99,7 @@
 
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                            <a href="{{route('employer.dashboard')}}" id="save" class="btn btn-warning">Save Changes</a>
+                                <a href="{{ route('employer.dashboard')}}" id="save" class="btn btn-warning"> SAVE CHANGES </a>
                             </div>
                         </div>
                     </div>
@@ -137,7 +138,7 @@
                 var website = $('#website').val();
                 var about = $('#about').val();
 
-                $.post('{{route('employer.company')}}',{'_token':$('input[name=_token]').val(),'name':name,'country':country,'city':city,'industry':industry,'website':website,'about':about}, function(data) {
+                $.post('{{route('employer.dashboard')}}',{'_token':$('input[name=_token]').val(),'name':name,'country':country,'city':city,'industry':industry,'website':website,'about':about}, function(data) {
                     $('#company_form').load(location.href + ' #company_form');
                     console.log(data);
                 });
