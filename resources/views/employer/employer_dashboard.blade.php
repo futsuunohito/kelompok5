@@ -13,17 +13,20 @@
         @endif
             <div class="row" style="margin-top: 20px;">
                 <div class="col-lg-2">
-                    <img src="{{asset('public/company_images/'.$company->image)}}" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
+                <img src="public/images/burung.jpg" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;"/>
                         <div> 
-                            <a href="{{route('personal.info')}}" class="btn btn-primary"class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> Edit Personal Information </a>
+                            <br>
+                            <a href="{{route('employer.company_profile')}}" class="btn btn-primary"class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> Edit Your Profile </a>
                             <!-- <a href="{{route('seeker.edit_cv')}}" class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> EDIT MY CV</a> -->
                             {{-- <a href="" class="btn btn-default" style="border-radius: 0;"><i class="fa fa-download"></i> DOWNLOAD AS PDF</a> --}}
                         </div>
-                    </form>
                 </div>
+            
                 <div class="col-lg-10">
-                    <strong style="font-size:30px"><i  class="fa fa-circle text-success"></i>    {{$user->name}}</strong>
-                    <p>Welcome to your workspace</p>
+                    <strong style="font-size:26px"><i  class="fa fa-circle text-success"></i>    {{$user->name}}</strong>
+                    <br>
+                    <br>
+                    <p>Welcome to your workspace!</p>
                     <div>
                         <a href="{{route('employer.post_job')}}" class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-arrow-circle-up"></i> POST A JOB</a>
                         <a href="/employer/cv-list" class="btn btn-primary" style="border-radius: 0;"><i class="fa fa-database"></i> SEARCH CV DATABASE</a>

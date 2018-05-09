@@ -72,7 +72,7 @@ Route::group(['middleware'=>['auth', 'employer']], function(){
 	Route::get('/employer/cv-list', 'EmployerController@allCvList')->name('employer_cv_view');
 	Route::get('employer/download-cv/{id}', 'EmployerController@downloadCV');
 	// Route::get('/htmltopview/{id}',array('as'=>'htmltopdfview','uses'=>'EmployerController@htmltopdfview'));
-
+//
 });
 //========================================================================================
 //Admin normal routes

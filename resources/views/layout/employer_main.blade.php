@@ -57,7 +57,6 @@
                                     @if(!Auth::guest())
                                     <li><a href="{{route('employer.dashboard')}}">Dashboard</a></li>
                                     <li><a href="{{route('employer_cv_view')}}">CV Search</a></li>
-                                    <li><a href="{{route('employer.company_profile')}}">Company profile</a></li>
                                     @endif
                                     <li><a href="{{route('employer.post_job')}}">Post a Job</a></li>
                                 </ul>
@@ -74,6 +73,7 @@
                                         {{ Auth::user()->name }}
                                     </a>
                                 </li>
+                                <li><a href="{{route('employer.company_profile')}}">Change profile</a></li>
                                 <li>
                                     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="glyphicon glyphicon-off" style="padding-right: 5px;"></i>Logout</a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -121,7 +121,6 @@
                     <p><a href="">Terms of service for employers</a></p>
                 </div>
                 <div class="col-lg-3">
-                    <h5>About Us</h5>
                     <p><a href="">About us</a></p>
                     <p><a href="">Privacy policy</a></p>
                     <p><a href="/contact">Contact Us</a></p>

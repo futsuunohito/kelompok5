@@ -76,7 +76,7 @@
                                 </a>
                             </li>
                             <li><a href="{{route('seeker.settings')}}" style="font-size: 10px">Change Password</a></li>
-                            <li>
+                            <li>    
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="glyphicon glyphicon-off" style="padding-right: 5px;"></i>Logout</a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     {{ csrf_field() }}
@@ -85,7 +85,6 @@
                         @endif
                     </ul>
                         </div>
-
                     </div>
                     <!-- /.navbar-collapse -->
                 </div>
@@ -102,7 +101,7 @@
         </div>
 
          {{--     Footer tarts here    --}}
-    <footer class=""main-footer>
+    <footer class="main-footer">
         <div class="container">
             <h2><i class="glyphicon glyphicon-send"></i> <strong>  Need! </strong></h2>
             <div class="row foot_links">
@@ -122,7 +121,6 @@
                     <p><a href="">Terms of service for employers</a></p>
                 </div>
                 <div class="col-lg-3">
-                    <h5>About Us</h5>
                     <p><a href="">About us</a></p>
                     <p><a href="">Privacy policy</a></p>
                     <p><a href="/contact">Contact Us</a></p>

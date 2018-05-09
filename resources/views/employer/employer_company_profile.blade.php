@@ -6,7 +6,7 @@
 
     <section class="top" style="margin-top: 50px;">
         <div class="container-fluid">
-            <h3 style="text-align:center;"><strong>Create a New Company</strong></h3>
+            <h3 style="text-align:center;"><strong>Personal Information</strong></h3>
             <br>
             <div class="row">
                 <div class="col-lg-2">
@@ -14,7 +14,7 @@
                     <br>
                     <form action="{{route('employer.company_image')}}" method="post" enctype="multipart/form-data">
                     {{csrf_field()}}
-                    {{ method_field('put') }}
+                    <!-- {{ method_field('put') }} -->
                         <input type="file" name="image">
                         <br>
                         <input type="submit" class="btn btn-primary" id="upload" value="UPLOAD">
@@ -80,7 +80,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="website" class="col-sm-2 control-label">Contacs: </label>
+                            <label for="website" class="col-sm-2 control-label">Phone Number: </label>
                             <div class="col-sm-10">
                                 <input type="text" name="website" value="{{$company->website}}" class="form-control" id="website" placeholder="Id Line/WhatsApp/LinkedIn">
                             </div>
@@ -98,9 +98,7 @@
 
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" id="save" class="btn btn-warning">Save</button>
-                                <br>
-                                <br>
+                            <a href="{{route('employer.dashboard')}}" id="save" class="btn btn-warning">Save Changes</a>
                             </div>
                         </div>
                     </div>

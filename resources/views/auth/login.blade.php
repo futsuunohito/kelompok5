@@ -33,8 +33,8 @@
                 <br>
                 <p><strong>Not a member?</strong></p>
                 <div class="row">
-                  <div class="col-lg-6"><a class="btn btn-primary form-control" style="text-transform: uppercase;border-radius:0;">Sign up as Job Seeker</a></div>
-                  <div class="col-lg-6"><a class="btn btn-default form-control" style="text-transform: uppercase;border-radius:0;">Sign up as Employer</a></div>
+                  <div class="col-lg-6"><a href="{{ route('seeker.register')}}" class="btn btn-primary form-control" style="text-transform: uppercase;border-radius:0;">Sign up as Job Seeker</a></div>
+                  <div class="col-lg-6"><a href="{{ route('employer.register')}}" class="btn btn-default form-control" style="text-transform: uppercase;border-radius:0;">Sign up as Employer</a></div>
                 </div>
                 <br>
                  <br><br><br>

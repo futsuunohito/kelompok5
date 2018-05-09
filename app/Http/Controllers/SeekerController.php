@@ -84,7 +84,7 @@ class SeekerController extends Controller
     }
     public function deleteSkill($id){
     	$skill = skill::where('id', $id)->delete();
-    	return redirect()->route('employer.dashboard');
+    	return redirect()->route('seeker.dashboard');
     }
 
     //DELETE SKILL

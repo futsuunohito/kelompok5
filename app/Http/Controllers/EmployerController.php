@@ -43,15 +43,18 @@ class EmployerController extends Controller
     		$newCompany->city = $request->city;
     		$newCompany->industry = $request->industry;
     		$newCompany->website = $request->website;
-    		$newCompany->about = $request->about;
+            $newCompany->about = $request->about;
+            $newCompany->image = $request->image;
     		$newCompany->user_id = Auth::id();
     		$newCompany->save();
     	}else{
-    		Company::where('user_id', Auth::id())->update(['name'=>$request->name,'country'=>$request->country,'city'=>$request->city,'industry'=>$request->industry,'website'=>$request->website,'about'=>$request->about]);
+    		Company::where('user_id', Auth::id())->update(['name'=>$request->name,'country'=>$request->country,'city'=>$request->city,'industry'=>$request->industry,'website'=>$request->website,'about'=>$request->about,'image'=>$request->image]);
     	}
     	
     	return $request->all();
     }
+
+
     //store employer company image
     public function storeCompanyImage(Request $request){
     	$company_image = $request->file('image');
@@ -103,7 +106,7 @@ class EmployerController extends Controller
     	$activeJobs = Job::where('user_id', Auth::id())->get();
     	$user = User::where('id', Auth::id())->where('employer','1')->first();
     	$company = Company::where('user_id', Auth::id())->first();
-    	return view('employer.employer_dashboard', compact('activeJobs','user','company'));
+        return view('employer.employer_dashboard', compact('activeJobs','user','company'));
     }
     //Delete a Job from dashboard
     public function deleteJob($id){

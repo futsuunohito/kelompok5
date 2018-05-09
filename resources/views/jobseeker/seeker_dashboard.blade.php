@@ -4,22 +4,19 @@
 
 @section('content')
 
-    <section class="top" style="margin-top: 50px;">
+    <section class="top" style="margin-top: 55px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-2">
                     <img src="{{asset('storage/images/'.$user->image)}}" alt="Profile Image" class="img-thumbnail" style="height: 180px; width: 500px;">
                     <br>
-                    <form action="{{route('employer.company_image')}}" method="post" enctype="multipart/form-data">
-                    {{csrf_field()}}
-                        <input type="file" name="image">
-                        <br>
-                        <input type="submit" class="btn-s btn-primary" id="upload" value="EDIT PROFILE PICTURE">
-                    </form>
+                    <input type="submit" class="btn-s btn-primary" id="upload" value="EDIT PROFILE PICTURE" style="margin-top: 8px">
                 </div>
                 <div class="col-lg-10">
-                    <strong style="font-size:30px"><i  class="fa fa-circle text-success"></i>     {{$user->name}}</strong>
-                    <p>Welcome to your personal workspace</p>
+                    <strong style="font-size:26px"><i  class="fa fa-circle text-success"></i>     {{$user->name}}</strong>
+                    <br>
+                    <br>
+                    <p>Welcome to your personal workspace!</p>
                     <div>
                         <!-- <a href="{{route('seeker.edit_cv')}}" class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> EDIT MY CV</a> -->
                         <a href="{{route('seeker.view')}}" class="btn btn-primary" style="border-radius: 0;"><i class="fa fa-eye"></i> VIEW MY CV</a>

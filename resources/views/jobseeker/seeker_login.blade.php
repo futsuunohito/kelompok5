@@ -8,7 +8,7 @@
        <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4 col-lg-offset-4">
-               <h4 align="center"><strong>Log in and Explore yourself !</strong></h4>
+                <h4 style="text-align:center"><strong>Log in and Explore yourself !</strong></h4>
                 <form class="form-horizontal" role="form" method="POST" action="{{ route('seeker.login') }}">
                 {{csrf_field()}}
                   <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -34,7 +34,13 @@
                 </form>
                 <br>
                 <p><strong>Not a member?</strong></p>
-                <button type="submit" class="btn btn-primary form-control" style="text-transform: uppercase;border-radius:0;">Sign up</button> <br><br><br>
+                <div class="row">
+                  <div class="col-lg-6"><a href="{{ route('seeker.register')}}" class="btn btn-primary form-control" style="text-transform: uppercase;border-radius:0;">Sign up as Job Seeker</a></div>
+                  <div class="col-lg-6"><a href="{{ route('employer.register')}}" class="btn btn-default form-control" style="text-transform: uppercase;border-radius:0;">Sign up as Employer</a></div>
+                  <br>
+                  <br>
+                  <br>
+                </div>
             </div>
         </div>
         </div>

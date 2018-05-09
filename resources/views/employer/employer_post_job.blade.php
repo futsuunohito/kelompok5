@@ -137,7 +137,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-lg-2 col-lg-offset-4">
+                            <div class="col-lg-2 col-lg-offset-5">
                                 <input type="submit" class="btn btn-warning" style="border-radius: 0;" value="POST JOB NOW">
                                 <br><br>
                             </div>
