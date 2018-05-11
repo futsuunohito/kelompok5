@@ -12,7 +12,7 @@
                 <strong style="font-size:26px"><i  class="fa fa-circle text-success"></i>     {{$user->name}}</strong>
                 <br>
                 <br>
-                <p><strong>Lives in </strong>{{$activity->location}}</p>
+                <p><strong>Lives in: </strong>{{$activity->location}}</p>
                 <p><strong>Email: </strong>{{$user->email}}</p>
                 <p><strong>Phone: </strong>{{$user->phone}}</p>
                 <div> 
