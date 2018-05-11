@@ -3,6 +3,11 @@
 @section('title', 'Home')
 
 @section('content')
+<head>
+    <link rel="stylesheet" type="text/css" href="css/need.css">
+</head>
+
+<body>
     <section id="home_first_section" class="top" style="margin-top: 50px;">
         <div class="container-fluid">
             <h1 align="center" class="first_sec_h1" style="font-family: Brush Script MT; font-size: 80px; color: #407AB5">Need!</h1>
@@ -32,6 +37,7 @@
             </div>
         </div>
     </section>
+</body>
     
     <section>
         <div class="container">
