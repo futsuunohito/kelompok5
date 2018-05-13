@@ -171,9 +171,9 @@ class SeekerController extends Controller
     }
     //show seeker home page
     public function index(){
-    	return view('admin.index');
+    	return view('jobseeker.seeker_login');
     }
-    
+
     public function test(){
         return view('admin.test');
     }
