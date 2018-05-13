@@ -173,6 +173,11 @@ class SeekerController extends Controller
     public function index(){
     	return view('admin.index');
     }
+    
+    public function test(){
+        return view('admin.test');
+    }
+
     //Seeker Job view page
     public function viewJob($id){
         $jobData = Job::find($id);

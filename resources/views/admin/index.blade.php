@@ -13,6 +13,7 @@
 <body class="background">
     <div class="container">
         <div class="row">
+        <!-- <a href="{{route('admin.test')}}"> TEST </a> -->
             <br><br><br><br><br><br><br>
         <div class="col-md-offset-4 col-md-4 col-centered">
             <form class="form-horizontal" role="form" method="POST" action="{{ route('seeker.login') }}">
@@ -47,7 +48,7 @@
                   <br>
                   <br>
                   <br>
-                </div>
+                 </div>
             </div>
 
 

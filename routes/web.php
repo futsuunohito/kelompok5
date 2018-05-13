@@ -21,7 +21,7 @@ Route::group(['middleware'=>['auth','seeker']], function(){
 	Route::post('personal-info', 'SeekerController@personalInfo')->name('personal.info');
 	Route::get('seeker/edu', function(){
 		return view('jobseeker.seeker_register_stp3');
-	})->name('seeker.edu');
+	})->name('seeker.edu');	
 	Route::post('seeker/edu', 'SeekerController@education')->name('seeker.edu');
 	Route::get('seeker/work', 'SeekerController@showWorkAndSkillForm')->name('seeker.work');
 	Route::post('seeker/work', 'SeekerController@work');
@@ -112,3 +112,4 @@ Route::post('employer-login', 'Auth\LoginController@employerLogin');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('admin/test', 'SeekerController@test')->name('admin.test');
