@@ -8,9 +8,7 @@
         <div class="container">
             <div class="row" style="margin-top: 15px;">
                 <div class="col-lg-2">
-                <img src="https://ididnthavemyglasseson.files.wordpress.com/2013/12/579182_226496094141418_209009517_n.jpg" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
-                    <br>
-                    <input type="submit" class="btn-s btn-primary" id="upload" value="EDIT PROFILE PICTURE" style="margin-top: 8px">
+                    <img src="https://ididnthavemyglasseson.files.wordpress.com/2013/12/579182_226496094141418_209009517_n.jpg" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
                 </div>
                 <div class="col-lg-10">
                     <strong style="font-size:26px"><i  class="fa fa-circle text-success"></i>     {{$user->name}}</strong>
@@ -61,7 +59,7 @@
                                     <td>{{$job->city}}</td>
                                     <td>{{$job->pivot->created_at->format('d-M-Y')}}</td>
                                     <td><a href="/seeker/job/delete/{{$job->id}}" class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-trash"></i> DELETE</a></td>
-                                    <td><a href="/seeker/job/view/{{$job->id}}" class="btn btn-default" style="border-radius: 0;"><i class="fa fa-eye"></i> VIEW APPLICATION</a></td>
+                                    <td><a href="/seeker/job/view/{{$job->id}}" class="btn btn-primary" target="_blank" style="border-radius: 0;"><i class="fa fa-eye"></i> VIEW APPLICATION</a></td>
                                 </tr>
                             @endforeach
                             </tbody>

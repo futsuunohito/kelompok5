@@ -1,5 +1,5 @@
 .background{
-	background-image: url('http://www.designphase.net/sites/default/files/freelance.jpg');
+	background-image: url('https://s-media-cache-ak0.pinimg.com/originals/c9/68/02/c9680250cead9f73bedb61d07795512c.jpg');
 	background-repeat: no-repeat;
     /* Full height */
     height: 100%; 
@@ -8,4 +8,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.button-text{
+    font-weight: bold;
+    font-size: 18px;
 }

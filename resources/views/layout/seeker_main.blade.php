@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     @yield('h')
     <title>@yield('title')</title>
+    <link rel="stylesheet" type="text/css" href="css/dropdown.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('/css/custom.css')}}"> -->
@@ -66,9 +71,26 @@
                             <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
+                            <br><div class="pull-left" class="dropdown">
+                                <button class="pull-left" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="font-size: 14px">Login as 
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu" style="background-color: #c0c0c0;">
+                                    <li><a href="{{route('seeker.login')}}" style="color: black; text-align: center">Job Seeker</a></li>
+                                    <li><a href="{{route('employer.login')}}" style="color: black; text-align: center">Employer</a></li>
+                                </ul>
+                            </div>
+                            <!-- <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:#ffffff; font-size:15px; font-weight:bold; font-family:Monospace">
+                                    Login <span class="caret"></span>
+                                </a>
+                                <div class="dropdown-content">
+                                    <li><a href="{{route('seeker.login')}}">Login as Jobseeker</a></li>
+                                    <li><a href="{{route('employer.login')}}">Login as Employer</a></li>
+                                </div>
+                            </div>
                             <li><a href="{{ route('seeker.login') }}">Login</a></li>
                             <li><a href="{{ route('seeker.register') }}">Sign Up</a></li>
-                            <li id="for_emp"><a href="/employer">For Employer</a></li>
+                            <li id="for_emp"><a href="{{route('employer.login')}}">For Employer</a></li> -->
                         @else
                             <li>
                                 <a href="{{route('seeker.view')}}">
@@ -109,16 +131,16 @@
                     <h5>Job Seekers</h5>
                     <p><a href="{{route('seeker.edit_cv')}}">Post your CV</a></p>
                     <p><a href="{{route('seeker.find_jobs')}}">Advanced job search</a></p>
-                    <p><a href="">Tips for finding jobs</a></p>
+                    <!-- <p><a href="">Tips for finding jobs</a></p>
                     <p> <a href="">Create a perfect CV</a></p>
-                    <p><a href="">Terms of service for job seekers</a></p>
+                    <p><a href="">Terms of service for job seekers</a></p> -->
                 </div>
                 <div class="col-lg-3">
                     <h5>Employers</h5>
                     <p><a href="{{route('employer.post_job')}}">Post a job</a></p>
                     <p><a href="{{route('employer_cv_view')}}">CV search</a></p>
-                    <p><a href="">Tips for recruiting</a></p>
-                    <p><a href="">Terms of service for employers</a></p>
+                    <!-- <p><a href="">Tips for recruiting</a></p>
+                    <p><a href="">Terms of service for employers</a></p> -->
                 </div>
                 <div class="col-lg-3">
                     <p><a href="">About us</a></p>

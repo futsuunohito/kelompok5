@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>@yield('title')</title>
+    <link rel="stylesheet" type="text/css" href="css/dropdown.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
      <!-- <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('/css/custom.css')}}"> -->
@@ -64,9 +69,17 @@
 
                             <ul class="nav navbar-nav navbar-right">
                             @if(Auth::guest())
-                                <li><a href="{{route('employer.register')}}">Sign up</a></li>
+                            <br><div class="pull-left" class="dropdown">
+                                <button class="pull-left" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="font-size: 14px">Login as 
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu" style="background-color: #c0c0c0;">
+                                    <li><a href="{{route('seeker.login')}}" style="color: black; text-align: center">Job Seeker</a></li>
+                                    <li><a href="{{route('employer.login')}}" style="color: black; text-align: center">Employer</a></li>
+                                </ul>
+                            </div>
+                                <!-- <li><a href="{{route('employer.register')}}">Sign up</a></li>
                                 <li><a href="{{route('employer.login')}}">Log in</a></li>
-                                <li id="for_emp"><a href="/">For Jobseeker</a></li>
+                                <li id="for_emp"><a href="/">For Jobseeker</a></li> -->
                             @else
                                 <li>
                                     <a href="{{route('employer.dashboard')}}">

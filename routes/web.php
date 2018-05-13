@@ -22,6 +22,7 @@ Route::group(['middleware'=>['auth','seeker']], function(){
 	Route::get('seeker/edu', function(){
 		return view('jobseeker.seeker_register_stp3');
 	})->name('seeker.edu');	
+	Route::get('seeker/info', 'SeekerController@showInfo')->name('seeker.info');
 	Route::post('seeker/edu', 'SeekerController@education')->name('seeker.edu');
 	Route::get('seeker/work', 'SeekerController@showWorkAndSkillForm')->name('seeker.work');
 	Route::post('seeker/work', 'SeekerController@work');

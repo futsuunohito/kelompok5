@@ -11,7 +11,7 @@
                   <h3>{{$jobData->title}}</h3>
                 <p><i class="fa fa-eye-slash"></i> {{$jobData->user->company->name}}</p>
                 <p><strong>Application Deadline: </strong>{{$jobData->deadline}}</p>
-                
+                <br>
                 <div class="row">
                     <div class="col-lg-6">
                         <div>

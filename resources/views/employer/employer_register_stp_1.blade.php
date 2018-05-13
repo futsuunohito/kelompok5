@@ -8,8 +8,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-4">
-                    <h4><strong>Sign up for Job Board</strong></h4>
-                    <p><strong>Join today and find top talent for your company</strong></p>
+                    <h4 ><strong>Sign up today and find person to help you!</strong></h4>
                     <form  role="form" action="{{route('employer.register')}}" method="post">
                     {{csrf_field()}}
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
