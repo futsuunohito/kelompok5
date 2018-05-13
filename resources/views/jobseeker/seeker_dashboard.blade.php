@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row" style="margin-top: 15px;">
                 <div class="col-lg-2">
-                    <img src="{{asset('storage/images/'.$user->image)}}" alt="Profile Image" class="img-thumbnail" style="height: 180px; width: 500px;">
+                <img src="https://ididnthavemyglasseson.files.wordpress.com/2013/12/579182_226496094141418_209009517_n.jpg" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
                     <br>
                     <input type="submit" class="btn-s btn-primary" id="upload" value="EDIT PROFILE PICTURE" style="margin-top: 8px">
                 </div>

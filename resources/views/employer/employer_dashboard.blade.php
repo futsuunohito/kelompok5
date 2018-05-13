@@ -21,7 +21,7 @@
         @endif
             <div class="row" style="margin-top: 20px;">
                 <div class="col-lg-2">
-                <img src="public/images/burung.jpg" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;"/>
+                <img src="https://ididnthavemyglasseson.files.wordpress.com/2013/12/579182_226496094141418_209009517_n.jpg" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
                         <div> 
                             <br>
                             <a href="{{route('employer.company_profile')}}" class="btn btn-primary"class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> Edit Your Profile </a>
