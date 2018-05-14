@@ -11,7 +11,7 @@
                 <div class="col-lg-offset-1 col-lg-2">
                 <img src="" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
                     <br>
-                    <form action="{{route('#')}}" method="post" enctype="multipart/form-data">
+                    <form action="#" method="post" enctype="multipart/form-data">
                     {{csrf_field()}}
                     <!-- {{ method_field('put') }} -->
                         <input type="file" name="image">

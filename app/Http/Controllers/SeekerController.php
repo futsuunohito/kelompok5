@@ -51,7 +51,8 @@ class SeekerController extends Controller
     }
 
     public function seekerIndex(){
-        return view('jobseeker.index');
+        
+        return view('jobseeker.seeker_home');
     }
     
     public function education(Request $request){

@@ -60,7 +60,7 @@
                         <div class="row">
                             <div class="col-lg-5 col-lg-offset-3">
                                 <ul class="nav navbar-nav ">
-                                    <li class=""><a href="/seeker/index">Home <span class="sr-only">(current)</span></a></li>
+                                    <li class=""><a href="#">Home <span class="sr-only">(current)</span></a></li>
                                     @if(!Auth::guest())
                                         <li><a href="{{route('seeker.dashboard')}}">Dashboard</a></li>
 
@@ -71,12 +71,12 @@
                             <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <br><div class="pull-left" class="dropdown">
-                                <button class="pull-left" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="font-size: 14px">Login as 
-                                <span class="caret"></span></button>
-                                <ul class="dropdown-menu" style="background-color: #c0c0c0;">
-                                    <li><a href="{{route('seeker.login')}}" style="color: black; text-align: center">Job Seeker</a></li>
-                                    <li><a href="{{route('employer.login')}}" style="color: black; text-align: center">Employer</a></li>
+                        <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Login As 
+                                <span class="caret"></span></a>
+                                <ul class="dropdown-menu" style="background-color: #3c8dbc;">
+                                    <li><a href="{{route('seeker.login')}}" style="color: white; text-align: center">Helper</a></li>
+                                    <li><a href="{{route('employer.login')}}" style="color: white; text-align: center">Seeker</a></li>
                                 </ul>
                             </div>
                             <!-- <div class="dropdown">

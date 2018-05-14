@@ -25,6 +25,7 @@ class CreateActivitiesTable extends Migration
             $table->string('interest')->nullable();
             $table->string('country')->default('Bangladesh');
             $table->string('about_me')->nullable();
+            $table->string('image')->nullable();
             $table->string('gender')->nullable();
             $table->timestamps();
         });
