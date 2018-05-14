@@ -23,6 +23,7 @@ Route::group(['middleware'=>['auth','seeker']], function(){
 		return view('jobseeker.seeker_register_stp3');
 	})->name('seeker.edu');	
 	Route::get('seeker/info', 'SeekerController@showInfo')->name('seeker.info');
+	Route::post('seeker/image', 'SeekerController@storeImage')->name('seeker.image');
 	Route::post('seeker/edu', 'SeekerController@education')->name('seeker.edu');
 	Route::get('seeker/work', 'SeekerController@showWorkAndSkillForm')->name('seeker.work');
 	Route::post('seeker/work', 'SeekerController@work');
@@ -58,7 +59,7 @@ Route::get('/employer', 'EmployerController@index');
 Route::group(['middleware'=>['auth', 'employer']], function(){
 	Route::get('/employer/company-profile', 'EmployerController@createCompanyProfile')->name('employer.company_profile');
 	Route::post('/employer/company', 'EmployerController@storeCompanyProfile')->name('employer.company');
-	Route::post('/employer/image', 'EmployerController@storeCompanyImage')->name('employer.company_image');
+	Route::post('/employer/image', 'EmployerController@storeImage')->name('employer.image');
 	Route::get('/employer/post-job', 'EmployerController@showPostJobForm')->name('employer.post_job');
 	Route::post('/employer/post-job', 'EmployerController@storePostedJob');
 	Route::get('/employer/dashboard', 'EmployerController@showEmployerDashboard')->name('employer.dashboard');

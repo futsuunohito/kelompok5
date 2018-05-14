@@ -56,11 +56,11 @@ class EmployerController extends Controller
 
 
     //store employer company image
-    public function storeCompanyImage(Request $request){
-    	$company_image = $request->file('image');
+    public function storeImage(Request $request){
+    	$user_image = $request->file('image');
     	if($request->hasFile('image')){
-    		$image_original_name = $company_image->getClientOriginalName();
-    		Storage::putFileAs('/public/company_images/', $company_image, $image_original_name);
+    		$image_original_name = $user_image->getClientOriginalName();
+    		Storage::putFileAs('/img/', $user_image, $image_original_name);
     	}
     	Company::where('user_id', Auth::id())->update(['image'=>$image_original_name]);
 

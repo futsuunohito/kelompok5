@@ -27,14 +27,27 @@ class SeekerController extends Controller
     	//If this user id doesn't exist then create one row with this 'user_id' in Activity table
     	if(Activity::where('user_id', Auth::id())->get()->isEmpty()){
 	    	$personalInfo->location = $request->location;
-	    	$personalInfo->user_id = Auth::id();
+            $personalInfo->user_id = Auth::id();
+            $personalInfo->image = $request->image;
 	    	$personalInfo->save();
     	}else{
     		//else if this 'user_id' already  exist in this table then just update it.
-    	 Activity::where('user_id', Auth::id())->update(['location'=>$request->location]);
+    	 Activity::where('user_id', Auth::id())->update(['location'=>$request->location,'image'=>$request->image]);
     	}
 
     	return redirect()->route('seeker.view');
+    }
+
+    //store jobseeker image
+    public function storeImage(Request $request){
+    	$user_image = $request->file('image');
+    	if($request->hasFile('image')){
+    		$image_original_name = $user_image->getClientOriginalName();
+    		Storage::putFileAs('/img/', $user_image, $image_original_name);
+    	}
+    	Company::where('user_id', Auth::id())->update(['image'=>$image_original_name]);
+
+    	return redirect()->route('jobseeker.seeker_info');
     }
 
     public function education(Request $request){

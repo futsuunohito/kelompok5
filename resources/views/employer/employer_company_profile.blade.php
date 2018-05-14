@@ -10,9 +10,9 @@
             <br>
             <div class="row">
                 <div class="col-lg-2">
-                <img src="https://ididnthavemyglasseson.files.wordpress.com/2013/12/579182_226496094141418_209009517_n.jpg" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
+                <img src="{{asset('/img/'.$company->image)}}" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
                     <br>
-                    <form action="{{route('employer.company_image')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{route('employer.image')}}" method="post" enctype="multipart/form-data">
                     {{csrf_field()}}
                     <!-- {{ method_field('put') }} -->
                         <input type="file" name="image">
