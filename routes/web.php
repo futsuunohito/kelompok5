@@ -22,7 +22,7 @@ Route::group(['middleware'=>['auth','seeker']], function(){
 	Route::get('seeker/edu', function(){
 		return view('jobseeker.seeker_register_stp3');
 	})->name('seeker.edu');
-	Route::get('seeker/index', 'SeekerController@seekerIndex')->name('seeker.index');	
+	Route::post('seeker/home', 'SeekerController@seekerIndex')->name('seeker.index');	
 	Route::get('seeker/info', 'SeekerController@showInfo')->name('seeker.info');
 	Route::post('seeker/image', 'SeekerController@storeImage')->name('seeker.image');
 	Route::post('seeker/edu', 'SeekerController@education')->name('seeker.edu');
@@ -43,6 +43,7 @@ Route::group(['middleware'=>['auth','seeker']], function(){
 	Route::get('seeker/settings', 'SeekerController@showUserSettings')->name('seeker.settings');
 	Route::post('seeker/settings', 'SeekerController@storeUserSettings');
 	Route::get('seeker/download-cv/{id}', 'SeekerController@downloadCV');
+	Route::post('seeker/activity', 'SeekerController@storeActivityProfile')->name('seeker.activity');
     /* Route::delete('/seeker/{skill}/delete', 'PostController@skilldestroy')->name('skill.destroy'); */
 });
 

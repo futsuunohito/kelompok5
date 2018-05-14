@@ -51,7 +51,8 @@
                         <button type="submit" class="btn btn-warning form-control" style="text-transform:uppercase;border-radius:0;">SAVE CHANGES</button><br><br><br>
                     </form>
                 </div>
-            </div><!-- row ends here -->
+            </div>
+            <!-- row ends here -->
 
         </div>
     </section>

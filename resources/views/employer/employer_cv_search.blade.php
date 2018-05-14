@@ -13,6 +13,7 @@
                 @foreach($users as $user)
                     <div class="box box-default" style="margin-top: 20px;">
                         <div class="box-header with-border">
+                            <img src="/img/kucing.jpg" alt="Profile Picture" class="img-circle" style="height: 30px; width: 30px;">
                             <h3 class="panel-title">{{$user->name}}</h3>
                         </div>
                         <div class="panel-body">

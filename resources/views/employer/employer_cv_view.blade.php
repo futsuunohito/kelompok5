@@ -6,7 +6,8 @@
         <h3><strong>Public CV View</strong></h3>
         <div class="row">
             <div class="col-lg-2">
-                <img src="{{asset('storage/images/'.$user->image)}}" alt="..." class="img-thumbnail" style="height: 180px; width: 500px;">
+                <img src="/img/kucing.jpg" alt="..." class="img-thumbnail" style="height: 180px; width: 500px;">
+                <!-- <img src="{{asset('storage/images/'.$user->image)}}" alt="..." class="img-thumbnail" style="height: 180px; width: 500px;"> -->
             </div>
             <div class="col-lg-10">
                 <strong style="font-size:26px">     {{$user->name}}</strong>
@@ -16,7 +17,7 @@
                 <p><strong>Email: </strong>{{$user->email}}</p>
                 <p><strong>Phone: </strong>{{$user->phone}}</p>
                 <div> 
-                    <a href="{{route('personal.info')}}" class="btn btn-primary"class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> Edit Personal Information </a>
+                    <!-- <a href="{{route('personal.info')}}" class="btn btn-primary"class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> Edit Personal Information </a> -->
                      <!-- <a href="{{route('seeker.edit_cv')}}" class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> EDIT MY CV</a> -->
                     {{-- <a href="" class="btn btn-default" style="border-radius: 0;"><i class="fa fa-download"></i> DOWNLOAD AS PDF</a> --}}
                 </div>
@@ -212,20 +213,7 @@
                                 </div>
                                 </div> <!-- row ends here -->
                                 
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <h4><strong>Attachments</strong></h4>
-                                        @foreach($attachments as $attachment)
-                                        <a href="/seeker/download-cv/{{$attachment->id}}">{{$attachment->name}}</a> <br>
-                                        @endforeach
-                                        <h4><strong>Links</strong></h4>
-                                        @foreach($links as $link)
-                                        <a href="http://{{$link->url}}" target="_blank">{{$link->name}}</a><br>
-                                        @endforeach
-                                        <br><br><br>
-                                    </div>
-                                </div>
-                            </div>
+
                             <!--First container-fluid ends here -->
                         </section>
 

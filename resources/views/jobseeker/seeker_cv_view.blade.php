@@ -72,70 +72,14 @@
 
                             <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModalCompany">+ ADD COMPANY/POSITION</button>
 
-                           {{--  <div class="checkbox">
-                                <label style="color: darkblue;">
-                                    <input type="checkbox"> No Prior Experience
-                                </label>
-                            </div> --}}
                         </div>
                     </div>
                 </div>
             </div>
             <!-- row ends here -->
 
-                    <!-- @foreach($works as $work)
-                    <div class="row">
-                        <table class="table">
-                            <tr>
-                                <div class="col-lg-3">
-                                    <p><strong>Job title: </strong>{{$work->job_title}}</p>
-                                    <p><strong>Company: </strong>{{$work->company_name}}</p>
-                                </div>
-                                <div class="col-lg-3">
-                                    <p><strong>Industry: </strong>{{$work->industry}}</p>
-                                    <p><strong>Job role: </strong>{{$work->job_role}}</p>
-                                </div>
-                                <p><strong>Activities: </strong>{{$work->activity}}</p>
-                            </tr>
-                        </table>
-                    </div>
-                    @endforeach
-                </div>
-                </div> -->
-                <!-- row ends here --- -->
                 
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4><strong>Education</strong></h4>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            Education Background
-                        </div>
-                        <div class="panel-body" id="works">
-                            <ul class="list-group">
 
-                                <li class="list-group-item"><strong>Institution Name:</strong> {{$activity->college}}
-                                <ul>
-                                    <li><strong>Field of Study:</strong> {{$activity->field}}</li>
-                                    {{-- <li><strong>From:</strong> </li>
-                                    <li><strong>To:</strong> </li> --}}
-                                    <li><strong>Grade: </strong>{{$activity->grade}}</li>
-                                </ul>
-                                </li>
-
-                            </ul>
-
-                            <a href="{{route('seeker.edu')}}"><button type="button" class="btn btn-warning" >+EDIT EDUCATION INFO</button></a>
-
-                           {{--  <div class="checkbox">
-                                <label style="color: darkblue;">
-                                    <input type="checkbox"> No Prior Experience
-                                </label>
-                            </div> --}}
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!-- row ends here -->
                 
                 <!-- <div class="row">
@@ -208,6 +152,40 @@
                             </div> -->
                             <!-- row ends here -->
 
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4><strong>Education</strong></h4>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Education Background
+                        </div>
+                        <div class="panel-body" id="edu">
+                            <ul class="list-group">
+
+                                <li class="list-group-item"><strong>Institution Name:</strong> {{$activity->college}}
+                                <ul>
+                                    <li><strong>Field of Study:</strong> {{$activity->field}}</li>
+                                    {{-- <li><strong>From:</strong> </li>
+                                    <li><strong>To:</strong> </li> --}}
+                                    <li><strong>Grade: </strong>{{$activity->grade}}</li>
+                                </ul>
+                                </li>
+
+                            </ul>
+
+                            <a href="{{route('seeker.edu')}}"><button type="button" class="btn btn-warning" >+EDIT EDUCATION INFO</button></a>
+
+                           {{--  <div class="checkbox">
+                                <label style="color: darkblue;">
+                                    <input type="checkbox"> No Prior Experience
+                                </label>
+                            </div> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
                     <div class="row">
                         <div class="col-lg-12">
                             <h4><strong>Languages</strong></h4>
@@ -223,7 +201,7 @@
                                 </div>
                                 </div> <!-- row ends here -->
                                 
-                                <div class="row">
+            {{--                <div class="row">
                                     <div class="col-lg-12">
                                         <h4><strong>Attachments</strong></h4>
                                         @foreach($attachments as $attachment)
@@ -236,7 +214,7 @@
                                         <br><br><br>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                             <!--First container-fluid ends here -->
                         </section>
 
@@ -402,7 +380,7 @@
             </div>
         </div>
 
-                        @endsection
+@endsection
 
 
 

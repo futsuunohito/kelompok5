@@ -28,16 +28,29 @@ class SeekerController extends Controller
     	if(Activity::where('user_id', Auth::id())->get()->isEmpty()){
 	    	$personalInfo->location = $request->location;
             $personalInfo->user_id = Auth::id();
-            $personalInfo->image = $request->image;
 	    	$personalInfo->save();
     	}else{
     		//else if this 'user_id' already  exist in this table then just update it.
-    	 Activity::where('user_id', Auth::id())->update(['location'=>$request->location,'image'=>$request->image]);
+    	 Activity::where('user_id', Auth::id())->update(['location'=>$request->location]);
     	}
 
     	return redirect()->route('seeker.view');
     }
-
+    //store Company profile data
+    public function storeActivityProfile(Request $request){
+    	$this->validate($request,[
+    		'name' => 'required',
+    		]);
+    	$newActivity = new Activity;
+    	if(Activity::where('user_id', Auth::id())->get()->isEmpty()){
+            $newActivity->image = $request->image;
+    		$newActivity->save();
+    	}else{
+    		Activity::where('user_id', Auth::id())->update(['image'=>$request->image]);
+    	}
+    	
+    	return $request->all();
+    }
     //store jobseeker image
     public function storeImage(Request $request){
     	$user_image = $request->file('image');
@@ -45,13 +58,14 @@ class SeekerController extends Controller
     		$image_original_name = $user_image->getClientOriginalName();
     		Storage::putFileAs('/img/', $user_image, $image_original_name);
     	}
-    	Company::where('user_id', Auth::id())->update(['image'=>$image_original_name]);
+    	Activity::where('user_id', Auth::id())->update(['image'=>$image_original_name]);
 
     	return redirect()->route('jobseeker.seeker_info');
     }
 
     public function seekerIndex(){
-        return view('jobseeker.index');
+
+        return view('jobseeker.seeker_home');
     }
     
     public function education(Request $request){

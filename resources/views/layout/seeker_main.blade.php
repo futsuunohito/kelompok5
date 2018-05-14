@@ -60,7 +60,7 @@
                         <div class="row">
                             <div class="col-lg-5 col-lg-offset-3">
                                 <ul class="nav navbar-nav ">
-                                    <li class=""><a href="/seeker/index">Home <span class="sr-only">(current)</span></a></li>
+                                    <li class=""><a href="#">Home <span class="sr-only">(current)</span></a></li>
                                     @if(!Auth::guest())
                                         <li><a href="{{route('seeker.dashboard')}}">Dashboard</a></li>
 
