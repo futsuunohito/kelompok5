@@ -11,7 +11,7 @@
                 <div class="col-lg-offset-1 col-lg-2">
                 <img src="" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
                     <br>
-                    <form action="{{route('employer.company_image')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{route('#')}}" method="post" enctype="multipart/form-data">
                     {{csrf_field()}}
                     <!-- {{ method_field('put') }} -->
                         <input type="file" name="image">
@@ -53,7 +53,7 @@
                         <div class="form-group">
                             <div class="col-sm-offset-4 col-sm-8">
                                <p style="text-align: right;">* Mandatory field</p>
-                                <button type="submit" class="btn btn-warning form-control" style="text-transform: uppercase;border-radius:0;">Save Changes</button><br><br><br>
+                                <button type="submit" class="btn btn-warning form-control" style="text-transform: uppercase;border-radius:0;">SUBMIT</button><br><br><br>
                             </div>
                         </div>
                     </form>

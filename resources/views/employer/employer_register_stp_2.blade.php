@@ -12,7 +12,7 @@
                 <div class="col-lg-2">
                     <img src="" alt="Company Brand Image" class="img-thumbnail img-responsive" style="height: 180px; width: 500px;">
                     <br>
-                    <form action="{{route('employer.company_image')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{route('employer.image')}}" method="post" enctype="multipart/form-data">
                     {{csrf_field()}}
                         <input type="file" name="image">
                         <br>

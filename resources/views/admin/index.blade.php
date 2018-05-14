@@ -37,7 +37,7 @@
           <ul class="list-inline" id="options">
             <li class="option">
               <button class="material-button option1" type="button">
-                <a href="{{ route('seeker.login')}}" target="_blank"><span class="button-text" aria-hidden="true"> seeker </span></a>
+                <a href="{{ route('seeker.login')}}"><span class="button-text" aria-hidden="true"> seeker </span></a>
               </button>
             </li>
             <li class="option">
@@ -47,7 +47,7 @@
             </li>
             <li class="option">
               <button class="material-button option3" type="button">
-                <a href="{{ route('employer.login')}}" target="_blank"><span class="button-text" aria-hidden="true"> helper </span></a>
+                <a href="{{ route('employer.login')}}"><span class="button-text" aria-hidden="true"> helper </span></a>
               </button>
             </li>
           </ul>

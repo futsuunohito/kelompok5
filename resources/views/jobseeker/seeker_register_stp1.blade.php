@@ -48,7 +48,7 @@
                     </form>
                     <br>
                     <p><strong>Already a member?</strong></p>
-                    <button type="submit" class="btn btn-primary form-control" style="text-transform: uppercase;border-radius:0;">Log In</button>
+                    <a  href="{{ route('seeker.login')}}"><button type="submit" class="btn btn-primary form-control" style="text-transform: uppercase;border-radius:0;">Log In</button></a>
                     <br>
                     <br>
                     <br>

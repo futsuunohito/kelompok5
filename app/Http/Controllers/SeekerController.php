@@ -50,6 +50,10 @@ class SeekerController extends Controller
     	return redirect()->route('jobseeker.seeker_info');
     }
 
+    public function seekerIndex(){
+        return view('jobseeker.index');
+    }
+    
     public function education(Request $request){
     	Activity::where('user_id', Auth::id())->update(['college'=>$request->college, 'degree'=>$request->degree, 'field'=>$request->field, 'grade'=>$request->grade, 'country'=>$request->country, 'language'=>$request->language, 'interest'=>$request->interest]);
 

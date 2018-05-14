@@ -55,7 +55,7 @@ class EmployerController extends Controller
     }
 
 
-    //store employer company image
+    //store employer image
     public function storeImage(Request $request){
     	$user_image = $request->file('image');
     	if($request->hasFile('image')){
