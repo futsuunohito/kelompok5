@@ -63,10 +63,6 @@ class SeekerController extends Controller
     
     public function education(Request $request){
     	Activity::where('user_id', Auth::id())->update(['college'=>$request->college, 'degree'=>$request->degree, 'field'=>$request->field, 'grade'=>$request->grade, 'country'=>$request->country, 'language'=>$request->language, 'interest'=>$request->interest]);
-<<<<<<< HEAD
-=======
-
->>>>>>> 467cc3983090da865d499707580621bab6ef258d
     	return redirect()->route('seeker.view')->with('msg',"Education Updated Successfully");;
     }
     //Shows Work and skill form 
