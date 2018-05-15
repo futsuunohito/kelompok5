@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\Activity;
 use App\Attachment;
 use App\Company;
@@ -14,7 +12,6 @@ use Illuminate\Filesystem\putFileAs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-
 class SeekerController extends Controller
 {
     public function personalInfo(Request $request){
@@ -22,7 +19,6 @@ class SeekerController extends Controller
     		'phone' => 'required|max:14',
     		]);
     	User::where('id', Auth::id())->update(['phone'=>$request->phone]);
-
     	$personalInfo = new Activity;
     	//If this user id doesn't exist then create one row with this 'user_id' in Activity table
     	if(Activity::where('user_id', Auth::id())->get()->isEmpty()){
@@ -33,7 +29,6 @@ class SeekerController extends Controller
     		//else if this 'user_id' already  exist in this table then just update it.
     	 Activity::where('user_id', Auth::id())->update(['location'=>$request->location]);
     	}
-
     	return redirect()->route('seeker.view');
     }
     //store Company profile data
@@ -59,10 +54,8 @@ class SeekerController extends Controller
     		Storage::putFileAs('/img/', $user_image, $image_original_name);
     	}
     	Activity::where('user_id', Auth::id())->update(['image'=>$image_original_name]);
-
     	return redirect()->route('jobseeker.seeker_info');
     }
-
     public function seekerIndex(){
         
         return view('jobseeker.seeker_home');
@@ -70,14 +63,16 @@ class SeekerController extends Controller
     
     public function education(Request $request){
     	Activity::where('user_id', Auth::id())->update(['college'=>$request->college, 'degree'=>$request->degree, 'field'=>$request->field, 'grade'=>$request->grade, 'country'=>$request->country, 'language'=>$request->language, 'interest'=>$request->interest]);
+<<<<<<< HEAD
+=======
 
+>>>>>>> 467cc3983090da865d499707580621bab6ef258d
     	return redirect()->route('seeker.view')->with('msg',"Education Updated Successfully");;
     }
     //Shows Work and skill form 
     public function showWorkAndSkillForm(){
     	$works = Work::where('user_id', Auth::id())->get();
     	$skills = Skill::where('user_id', Auth::id())->get();
-
     	return view('jobseeker.seeker_register_stp4', compact('works','skills'));
     }
     //Posted Works data are stored here
@@ -98,7 +93,6 @@ class SeekerController extends Controller
     	// $newWork->to = $request->to;
     	$newWork->user_id = Auth::id();
     	$newWork->save();
-
     	return $request->all();
     	
     }
@@ -110,19 +104,16 @@ class SeekerController extends Controller
     	$newSkill->experience = $request->experience;
     	$newSkill->user_id = Auth::id();
     	$newSkill->save();
-
     	return $request->all();
     }
     public function deleteSkill($id){
     	$skill = skill::where('id', $id)->delete();
     	return redirect()->route('seeker.dashboard');
     }
-
     //DELETE SKILL
     public function skilldestroy(Skill $skills)
     {
         $skills->delete();
-
         return redirect()->route('seeker.view');/*->withDanger('Post berhasil dihapus');*/
     }
     //show edit cv form
@@ -133,7 +124,6 @@ class SeekerController extends Controller
     	$activities = Activity::where('user_id', Auth::id())->get();
     	$links = Link::where('user_id', Auth::id())->get();
     	$attachments = Attachment::where('user_id', Auth::id())->get();
-
     	return view('jobseeker.seeker_edit_cv', compact('works','skills','user','activities','links','attachments'));
     }
     //store Edit_CV personal data
@@ -172,7 +162,6 @@ class SeekerController extends Controller
     	$newAttachment->document = $doc_orginal_name;
     	$newAttachment->user_id = Auth::id();
     	$newAttachment->save();
-
     	return redirect()->route('seeker.edit_cv');
     }
     //store Links data
@@ -182,7 +171,6 @@ class SeekerController extends Controller
     	$newLink->url = $request->url;
     	$newLink->user_id = Auth::id();
     	$newLink->save();
-
     	return $request->all();
     }
     //Show seeker Dashboard page
@@ -204,11 +192,9 @@ class SeekerController extends Controller
     public function index(){
     	return view('jobseeker.index');
     }
-
     public function showInfo(){
         return view('jobseeker.seeker_info');
     }
-
     //Seeker Job view page
     public function viewJob($id){
         $jobData = Job::find($id);
@@ -264,7 +250,6 @@ class SeekerController extends Controller
         $old_password = bcrypt($request->old_password);
         echo $old_password;
         $new_password = $request->new_password;
-
         if($old_password === $user->password){
             $user->password = bcrypt($new_password);
         }
@@ -280,5 +265,4 @@ class SeekerController extends Controller
      public function contact(){
          return view('contact');
      }
-
 }//controller ends here
