@@ -32,13 +32,13 @@
                   </div>
                   <input type="hidden" name="employer" value="1">
         
-                  <button type="submit" class="btn btn-warning form-control" style="text-transform: uppercase;border-radius:0;">Log in as Employer</button>
+                  <button type="submit" class="btn btn-warning form-control" style="text-transform: uppercase;border-radius:0;">Log in as Seeker</button>
                 </form>
                 <br>
                 <p style="text-align: center;"><strong>Not a member yet?</strong></p>
                 <div class="row">
-                  <div class="col-lg-6"><a href="{{ route('employer.register')}}" class="btn btn-primary form-control" style="text-transform: uppercase;border-radius:0;">Sign up as Employer</a></div>
-                  <div class="col-lg-6"><a href="{{ route('seeker.register')}}" class="btn btn-default form-control" style="text-transform: uppercase;border-radius:0;">Sign up as Job Seeker</a></div>
+                  <div class="col-lg-6"><a href="{{ route('employer.register')}}" class="btn btn-primary form-control" style="text-transform: uppercase;border-radius:0;">Sign up as Seeker</a></div>
+                  <div class="col-lg-6"><a href="{{ route('seeker.register')}}" class="btn btn-default form-control" style="text-transform: uppercase;border-radius:0;">Sign up as Helper</a></div>
                   <br>
                   <br>
                   <br>

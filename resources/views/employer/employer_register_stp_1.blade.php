@@ -54,7 +54,7 @@
 
                         <input type="hidden" name="employer" value="1">
 
-                        <input type="submit" class="btn btn-warning form-control" value="Sign up as employer" style="text-transform: uppercase;border-radius:0;">
+                        <input type="submit" class="btn btn-warning form-control" value="Sign up as seeker" style="text-transform: uppercase;border-radius:0;">
                     </form>
                     <br>
                     <p><strong>Already a member?</strong></p>

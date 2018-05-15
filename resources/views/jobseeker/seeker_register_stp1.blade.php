@@ -44,7 +44,7 @@
                         </div>
                         <input type="hidden" name="seeker" value="1">
                         
-                        <button type="submit" class="btn btn-warning form-control" style="text-transform: uppercase;border-radius:0;">Sign up as job seeker</button>
+                        <button type="submit" class="btn btn-warning form-control" style="text-transform: uppercase;border-radius:0;">Sign up as Helper</button>
                     </form>
                     <br>
                     <p><strong>Already a member?</strong></p>
