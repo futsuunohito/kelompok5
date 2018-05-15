@@ -1,5 +1,7 @@
 @extends('layout.seeker_main')
+
 @section('title', 'Apply now')
+
 @section('content')
 <section class="top" style="margin-top: 50px;">
     <div class="container">
@@ -24,13 +26,12 @@
                 </div>
                 <div class="form-group top">
                     <div class="col-sm-offset-5 col-sm-12">
-                    <br>
+                    <br><br><br>
                         <a href="/seeker/apply/successfull/{{$job->id}}" class="btn btn-lg btn-warning">SEND</a><br><br><br>
                     </div>
                 </div>
             </div>
-            </div><!-- row ends here -->
-
-            </div><!-- First container ends here -->
-        </section>
-        @endsection
+        </div>
+    </div>
+</section>
+@endsection

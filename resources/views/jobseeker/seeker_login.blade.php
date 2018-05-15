@@ -49,7 +49,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/"><i class="glyphicon glyphicon-send"></i>  <strong>  Need! </strong></a>
+                        <a class="navbar-brand" href="{{route('welcome.page')}}"><i class="glyphicon glyphicon-send"></i>  <strong>  Need! </strong></a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,7 +57,7 @@
                         <div class="row">
                             <div class="col-lg-5 col-lg-offset-3">
                                 <ul class="nav navbar-nav ">
-                                    <li class=""><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                                    <li class=""><a href="/">Home <span class="sr-only">(current)</span></a></li>
                                     @if(!Auth::guest())
                                         <li><a href="{{route('seeker.dashboard')}}">Dashboard</a></li>
 

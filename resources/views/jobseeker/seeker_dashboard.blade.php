@@ -58,7 +58,8 @@
                                     <td>{{$job->industry}}</td>
                                     <td>{{$job->city}}</td>
                                     <td>{{$job->pivot->created_at->format('d-M-Y')}}</td>
-                                    <td><a href="/seeker/job/delete/{{$job->id}}" class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-trash"></i> DELETE</a></td>
+                                    <!-- <td><a href="/seeker/job/delete/{{$job->id}}" class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-trash"></i> DELETE</a></td> -->
+                                    <td><a href="#" class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-trash"></i> DELETE</a></td>
                                     <td><a href="/seeker/job/view/{{$job->id}}" class="btn btn-primary" target="_blank" style="border-radius: 0;"><i class="fa fa-eye"></i> VIEW APPLICATION</a></td>
                                 </tr>
                             @endforeach

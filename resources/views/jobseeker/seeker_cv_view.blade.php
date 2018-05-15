@@ -1,8 +1,24 @@
 @extends('layout.seeker_main')
+
 @section('title', 'Jobseeker CV')
+
 @section('content')
+
+<script>
+    window.setTimeout(function() {
+    $(".alert").fadeTo(200, 0).slideUp(200, function(){
+        $(this).remove(); 
+    });
+}, 2000);
+</script>
+
 <section class="top" style="margin-top: 50px;">
     <div class="container">
+    @if(session('msg'))
+    <div class="alert alert-success" style="width:50%; margin-top: 10px; margin: auto; text-align:center">
+        {{session('msg')}}
+    </div>
+    @endif
         <h3><strong>My Profile</strong></h3>
         <div class="row">
             <div class="col-lg-2">
@@ -59,7 +75,7 @@
                                 <div class="col-lg-6 pull-right">
                                         <button type="submit" id="delete_btn" class="btn-s btn-danger">DELETE</button>
                                 </div>
-                                <ul>
+                                <ul> 
                                     <li><strong>Company name:</strong> {{$work->company_name}}</li>
                                     <li><strong>Position:</strong> {{$work->job_role}}</li>
                                     {{-- <li><strong>From:</strong> </li>

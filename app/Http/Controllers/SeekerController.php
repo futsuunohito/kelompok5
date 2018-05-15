@@ -71,7 +71,7 @@ class SeekerController extends Controller
     public function education(Request $request){
     	Activity::where('user_id', Auth::id())->update(['college'=>$request->college, 'degree'=>$request->degree, 'field'=>$request->field, 'grade'=>$request->grade, 'country'=>$request->country, 'language'=>$request->language, 'interest'=>$request->interest]);
 
-    	return redirect()->route('seeker.view');
+    	return redirect()->route('seeker.view')->with('msg',"Education Updated Successfully");;
     }
     //Shows Work and skill form 
     public function showWorkAndSkillForm(){
@@ -202,7 +202,7 @@ class SeekerController extends Controller
     }
     //show seeker home page
     public function index(){
-    	return view('admin.index');
+    	return view('jobseeker.index');
     }
 
     public function showInfo(){
@@ -229,14 +229,15 @@ class SeekerController extends Controller
     public function appliedToJob($id){
         $user = User::find(Auth::id());
         $user->many_job()->attach($id);
-        return redirect()->route('seeker.find_jobs');
+        return redirect()->route('seeker.find_jobs')->with('msg',"Job Applied Successfully");
     }
     //seeker delete an applied job from dashboard
     public function deleteJob($id){
         $user = User::find(Auth::id());
         $user->many_job()->detach($id);
-         return redirect()->route('seeker.dashboard');
+        return redirect()->route('seeker.dashboard');
      } 
+
      //Show Category wise jobs
      public function showCategoryWiseJobs(Request $request){
         $jobs = Job::whereIn('industry', $request->category)->get();

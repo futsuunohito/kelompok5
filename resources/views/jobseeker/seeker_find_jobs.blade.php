@@ -4,9 +4,21 @@
 
 @section('content')
 
+<script>
+    window.setTimeout(function() {
+    $(".alert").fadeTo(200, 0).slideUp(200, function(){
+        $(this).remove(); 
+    });
+}, 2000);
+</script>
+
     <section class="top" style="margin-top: 50px;">
         <div class="container">
-        
+        @if(session('msg'))
+        <div class="alert alert-success" style="width:50%; margin-top: 10px; margin: auto; text-align:center">
+            {{session('msg')}}
+        </div>
+        @endif
             <!-- <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
                     <form class="form-inline" action="/seeker/keyword-wise-jobs" method="get">
