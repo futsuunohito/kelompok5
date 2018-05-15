@@ -64,11 +64,7 @@ class SeekerController extends Controller
     }
 
     public function seekerIndex(){
-<<<<<<< HEAD
-
-=======
         
->>>>>>> 92816dad3330005d8ea8f531408769421638ae38
         return view('jobseeker.seeker_home');
     }
     

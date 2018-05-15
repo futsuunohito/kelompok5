@@ -107,6 +107,10 @@
     <!--Nav Ends Here -->
    
     <div class="content-wrapper" style="margin-top: 50px;">
+            @section('content')
+                @show
+            </div>
+
        <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4 col-lg-offset-4">
@@ -141,11 +145,13 @@
                 <div class="row">
                   <div class="col-lg-6"><a href="{{ route('employer.register')}}" class="btn btn-primary form-control" style="text-transform: uppercase;border-radius:0;">Sign up as Seeker</a></div>
                   <div class="col-lg-6"><a href="{{ route('seeker.register')}}" class="btn btn-default form-control" style="text-transform: uppercase;border-radius:0;">Sign up as Helper</a></div>
-                  <br><br><br>
+                  <br>
+                  <br>
+                  <br>
                 </div>
             </div>
-        </div>   
-</div>
+        </div>
+        </div>    
 
    <!-- -Footer tarts here- -->
    <footer class="main-footer">
