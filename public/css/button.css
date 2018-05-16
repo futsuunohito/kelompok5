@@ -7,7 +7,7 @@ body {
 }
 
 .button-text{
-    color: white;
+    color:#68ACC1;
     font-size: 14px;
 }
 
@@ -26,8 +26,8 @@ body {
     width: 70px;
     height: 70px;
     font-size: 1.5em;
-    color: #fff;
-    background: #2C98DE;
+    color: #68ACC1;
+    background: #ffff;
     border: none;
     border-radius: 50%;
     box-shadow: 0 3px 6px rgba(0,0,0,.275);
