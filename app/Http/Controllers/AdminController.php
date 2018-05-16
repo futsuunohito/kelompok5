@@ -13,6 +13,9 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+    public function welcome(){
+        return view('admin.index');
+    }
 	//view all posted jobs 
     public function dashboard(){
     	 $jobs = Job::where('posted', 1)->get();
