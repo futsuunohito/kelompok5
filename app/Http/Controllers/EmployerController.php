@@ -44,14 +44,13 @@ class EmployerController extends Controller
     		$newCompany->industry = $request->industry;
     		$newCompany->website = $request->website;
             $newCompany->about = $request->about;
-            $newCompany->image = $request->image;
     		$newCompany->user_id = Auth::id();
     		$newCompany->save();
     	}else{
-    		Company::where('user_id', Auth::id())->update(['name'=>$request->name,'country'=>$request->country,'city'=>$request->city,'industry'=>$request->industry,'website'=>$request->website,'about'=>$request->about,'image'=>$request->image]);
+    		Company::where('user_id', Auth::id())->update(['name'=>$request->name,'country'=>$request->country,'city'=>$request->city,'industry'=>$request->industry,'website'=>$request->website,'about'=>$request->about]);
     	}
-    	
-    	return $request->all();
+
+        return redirect()->route('employer.dashboard')->with('msg',"Profile Changed Successfully");
     }
 
 
@@ -64,7 +63,7 @@ class EmployerController extends Controller
     	}
     	Company::where('user_id', Auth::id())->update(['image'=>$image_original_name]);
 
-    	return redirect()->route('employer.company_profile');
+    	return redirect()->route('employer.dashboard')->with('msg',"Profile Picture Changed Successfully");
     }
     //show Post Job Form
     public function showPostJobForm(){
@@ -74,32 +73,20 @@ class EmployerController extends Controller
     public function storePostedJob(Request $request){
     	$this->validate($request, [
     		'title'=>'required',
-    		'description'=>'required',
-    		'requirement'=>'required',
     		'deadline'=>'required',
-    		'language'=>'required',
     		'skill'=>'required',
     		]);
     	$newJob = new Job;
 
     	$newJob->title = $request->title;
-    	$newJob->description = $request->description;
-    	$newJob->requirement = $request->requirement;
-    	$newJob->industry = $request->industry;
     	$newJob->salary = $request->salary;
-    	$newJob->city = $request->city;
-    	$newJob->country = $request->country;
     	$newJob->deadline = $request->deadline;
-    	$newJob->career_level = $request->career_level;
-    	$newJob->degree = $request->degree;
-    	$newJob->experience = $request->experience;
-    	$newJob->language = $request->language;
     	$newJob->skill = $request->skill;
     	$newJob->posted = 1;
     	$newJob->user_id = Auth::id();
     	$newJob->save();
 
-    	return redirect()->route('employer.dashboard')->with('msg',"Job Posted Successfully");;
+    	return redirect()->route('employer.dashboard')->with('msg',"Job Posted Successfully");
     }
     //show the Employer Dashboard 
     public function showEmployerDashboard(){
@@ -111,7 +98,7 @@ class EmployerController extends Controller
     //Delete a Job from dashboard
     public function deleteJob($id){
     	$job = Job::where('id', $id)->delete();
-    	return redirect()->route('employer.dashboard');
+    	return redirect()->route('employer.dashboard')->with('msg-danger',"Job Deleted Successfully");
     }
     //show Edit job form 
     public function showEditJobForm($id){
@@ -122,16 +109,13 @@ class EmployerController extends Controller
     public function storeEditedJob(Request $request, $id){
     	$this->validate($request, [
     		'title'=>'required',
-    		'description'=>'required',
-    		'requirement'=>'required',
     		'deadline'=>'required',
-    		'language'=>'required',
     		'skill'=>'required',
     		]);
 
-    	Job::where('id',$id)->update(['title'=>$request->title,'description'=>$request->description,'requirement'=>$request->requirement,'industry'=>$request->industry,'salary'=>$request->salary,'city'=>$request->city,'country'=>$request->country,'deadline'=>$request->deadline,'career_level'=>$request->career_level,'degree'=>$request->degree,'experience'=>$request->experience,'language'=>$request->language,'skill'=>$request->skill]);
+    	Job::where('id',$id)->update(['title'=>$request->title,'salary'=>$request->salary,'deadline'=>$request->deadline,'skill'=>$request->skill]);
 
-    	return redirect()->route('employer.dashboard');
+    	return redirect()->route('employer.dashboard')->with('msg',"Job Edited Successfully");
     }
     //View Job page for employer
     public function viewJob($id){

@@ -15,8 +15,7 @@
     <section class="top" style="margin-top: 50px;">
         <div class="container">
         @if(session('msg'))
-        <div class="alert alert-success" style="width:50%; margin-top: 10px; margin: auto; text-align:center">
-            {{session('msg')}}
+        <div class="alert alert-success" style="font-size: 16px; width:50%; margin-top: 10px; margin-left: 25%; text-align:center">
         </div>
         @endif
             <div class="row" style="margin-top: 20px;">

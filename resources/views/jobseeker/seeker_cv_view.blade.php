@@ -15,14 +15,14 @@
 <section class="top" style="margin-top: 50px;">
     <div class="container">
     @if(session('msg'))
-    <div class="alert alert-success" style="width:50%; margin-top: 10px; margin: auto; text-align:center">
+    <div class="alert alert-success" style="font-size: 16px; width:50%; margin-top: 10px; margin-left: 25%; text-align:center">
         {{session('msg')}}
     </div>
     @endif
         <h3><strong>My Profile</strong></h3>
         <div class="row">
             <div class="col-lg-2">
-                <img src="https://ididnthavemyglasseson.files.wordpress.com/2013/12/579182_226496094141418_209009517_n.jpg" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
+                <img src="/img/mimiperi.jpg" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
             </div>
             <div class="col-lg-10">
                 <strong style="font-size:26px"><i  class="fa fa-circle text-success"></i>     {{$user->name}}</strong>

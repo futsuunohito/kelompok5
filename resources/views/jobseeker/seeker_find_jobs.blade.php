@@ -15,7 +15,7 @@
     <section class="top" style="margin-top: 50px;">
         <div class="container">
         @if(session('msg'))
-        <div class="alert alert-success" style="width:50%; margin-top: 10px; margin: auto; text-align:center">
+        <div class="alert alert-success" style="font-size: 16px; width:50%; margin-top: 10px; margin-left: 25%; text-align:center">
             {{session('msg')}}
         </div>
         @endif
@@ -151,15 +151,15 @@
 <!-- ---------Section for Jobs--------------------------- -->
                 <div class="col-lg-6 ">
                 @foreach($jobs as $job)
-                    <div class="box box-default">
-                        <div class="box-header with-border">
-                            <h3 class="panel-title">{{$job->title}}</h3>
+                    <div class="box box-primary">
+                        <div class="box-header with-border" style="text-align: center">
+                        <h3 class="panel-title" style="font-weight: bold;"> <img src="{{asset('/img/'.$job->user->company->image)}}" alt="Profile Picture" class="img-circle" style="height: 30px; width: 30px;"> {{$job->user->company->name}}</h3>
                         </div>
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-lg-4"><i class="glyphicon glyphicon-briefcase"></i> {{$job->user->company->name}}</div> 
+                                <div class="col-lg-4"><i class="glyphicon glyphicon-briefcase"></i> {{$job->title}}</div> 
                                 {{-- here the relationship is job belongs to one user->and user has one company --}}
-                                <div class="col-lg-4"><i class="fa fa-location-arrow"></i> {{$job->city}}</div>
+                                <div class="col-lg-4"><i class="fa fa-dollar"></i> {{$job->salary}}</div>
                                 <div class="col-lg-3">
                                     <div class="form-group">
                                         <div class="col-sm-offset-6 col-sm-5">

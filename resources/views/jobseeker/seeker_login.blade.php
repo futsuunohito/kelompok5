@@ -1,4 +1,4 @@
-@extends('layout.seeker_main')
+@extends('layout.seeker_navbar')
 
 @section('title', 'Log in')
 
@@ -38,9 +38,6 @@
                 <div class="row">
                   <div class="col-lg-6"><a href="{{ route('seeker.register')}}" class="btn btn-primary form-control" style="text-transform: uppercase;border-radius:0;">Sign up as Helper</a></div>
                   <div class="col-lg-6"><a href="{{ route('employer.register')}}" class="btn btn-default form-control" style="text-transform: uppercase;border-radius:0;">Sign up as Seeker</a></div>
-                  <br>
-                  <br>
-                  <br>
                 </div>
             </div>
         </div>

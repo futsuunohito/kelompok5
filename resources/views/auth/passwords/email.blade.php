@@ -8,7 +8,7 @@
                 <div class="panel-heading">Reset Password</div>
                 <div class="panel-body">
                     @if (session('status'))
-                        <div class="alert alert-success">
+                    <div class="alert alert-success" style="font-size: 16px; width:50%; margin-top: 10px; margin-left: 25%; text-align:center">
                             {{ session('status') }}
                         </div>
                     @endif

@@ -96,7 +96,6 @@
                             <textarea class="form-control" rows="4" cols="20" id="about" name="about" placeholder="Write something about your Company">{{$company->about}}</textarea>
                             <br>
                         </div>-->
-
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <a href="{{ route('employer.dashboard')}}" id="save" class="btn btn-warning"> SAVE CHANGES </a>
