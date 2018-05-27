@@ -18,17 +18,17 @@
                         <div class="form-group">
                             <label for="degree_level">Degree Level</label>
                              <select name="degree_level" class="form-control" id="degree_level">
-                                <option value="Bachelor">Bachelor</option>
-                                <option value="Master's">Master's</option>
-                                <option value="Diploma">Diploma</option>
-                                <option value="SSC/HSC">SSC/HSC</option>
+                                <option value="D3">D3</option>
+                                <option value="S1">S1</option>
+                                <option value="S2">S2</option>
+                                <option value="S3">S3</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="field">Field of Study</label>
                             <input type="text" name="field" class="form-control" id="field" placeholder="Field of study">
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="grade">Grade</label>
                             <input type="text" name="grade" class="form-control" id="grade" placeholder="Grade (i.e A, 100%)">
                         </div>
@@ -46,7 +46,7 @@
                          <div class="form-group">
                             <label for="interest">Interests and Activities</label>
                             <input type="text" name="interest" class="form-control" id="interest" placeholder="Interests and activities">
-                        </div>
+                        </div> -->
                         
                         <button type="submit" class="btn btn-warning form-control" style="text-transform:uppercase;border-radius:0;">SAVE CHANGES</button><br><br><br>
                     </form>

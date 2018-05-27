@@ -20,13 +20,6 @@ class CreateActivitiesTable extends Migration
             $table->string('college')->nullable();
             $table->string('degree')->nullable();
             $table->string('field')->nullable();
-            $table->string('grade')->nullable();
-            $table->string('language')->nullable();
-            $table->string('interest')->nullable();
-            $table->string('country')->default('Bangladesh');
-            $table->string('about_me')->nullable();
-            $table->string('image')->nullable();
-            $table->string('gender')->nullable();
             $table->timestamps();
         });
     }

@@ -135,8 +135,6 @@ class EmployerController extends Controller
         $activity = Activity::where('user_id', $id)->first();
         $works = Work::where('user_id', $id)->get();
         $skills = Skill::where('user_id', $id)->get();
-        $attachments = Attachment::where('user_id', $id)->get();
-        $links = Link::where('user_id', $id)->get();
         return view('employer.employer_cv_view', compact('user','activity','works','skills','attachments','links'));
     } 
     //show the Email to seeker form 

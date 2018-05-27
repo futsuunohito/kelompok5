@@ -117,10 +117,10 @@
                                 <label for="degree_level">Degree Level</label>
                                 <select name="degree" class="form-control" id="degree_level">
                                     @foreach($activities as $activity)
-                                    <option value="Bachelor"@if($activity->degree == "Bachelor"){{' selected="selected"'}}@endif>Bachelor</option>
-                                    <option value="Master's"@if($activity->degree == "Master's"){{' selected="selected"'}}@endif>Master's</option>
-                                    <option value="Diploma"@if($activity->degree == "Diploma"){{' selected="selected"'}}@endif>Diploma</option>
-                                    <option value="SSC/HSC"@if($activity->degree == "SSC/HSC"){{' selected="selected"'}}@endif>SSC/HSC</option>
+                                    <option value="D3"@if($activity->degree == "D3"){{' selected="selected"'}}@endif>Bachelor</option>
+                                    <option value="S1"@if($activity->degree == "S1"){{' selected="selected"'}}@endif>Master's</option>
+                                    <option value="S2"@if($activity->degree == "S2"){{' selected="selected"'}}@endif>Diploma</option>
+                                    <option value="S3"@if($activity->degree == "S3"){{' selected="selected"'}}@endif>SSC/HSC</option>
                                     @endforeach
                                 </select>
                             </div>

@@ -62,7 +62,7 @@ class SeekerController extends Controller
     }
     
     public function education(Request $request){
-    	Activity::where('user_id', Auth::id())->update(['college'=>$request->college, 'degree'=>$request->degree, 'field'=>$request->field, 'grade'=>$request->grade, 'country'=>$request->country, 'language'=>$request->language, 'interest'=>$request->interest]);
+    	Activity::where('user_id', Auth::id())->update(['college'=>$request->college, 'degree'=>$request->degree, 'field'=>$request->field]);
     	return redirect()->route('seeker.view')->with('msg',"Education Updated Successfully");;
     }
     //Shows Work and skill form 
@@ -118,9 +118,7 @@ class SeekerController extends Controller
     	$skills = Skill::where('user_id', Auth::id())->get();
     	$user = User::find(Auth::id());
     	$activities = Activity::where('user_id', Auth::id())->get();
-    	$links = Link::where('user_id', Auth::id())->get();
-    	$attachments = Attachment::where('user_id', Auth::id())->get();
-    	return view('jobseeker.seeker_edit_cv', compact('works','skills','user','activities','links','attachments'));
+    	return view('jobseeker.seeker_edit_cv', compact('works','skills','user','activities'));
     }
     //store Edit_CV personal data
     public function storeEditCv(Request $request){
@@ -180,9 +178,7 @@ class SeekerController extends Controller
     	$activity = Activity::where('user_id', Auth::id())->first();
     	$works = Work::where('user_id', Auth::id())->get();
     	$skills = Skill::where('user_id', Auth::id())->get();
-    	$attachments = Attachment::where('user_id', Auth::id())->get();
-    	$links = Link::where('user_id', Auth::id())->get();
-    	return view('jobseeker.seeker_cv_view', compact('user','activity','works','skills','attachments','links'));
+    	return view('jobseeker.seeker_cv_view', compact('user','activity','works','skills'));
     }
     //show seeker home page
     public function index(){
