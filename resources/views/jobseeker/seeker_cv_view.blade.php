@@ -28,10 +28,10 @@
                 <strong style="font-size:26px"><i  class="fa fa-circle text-success"></i>     {{$user->name}}</strong>
                 <br>
                 <br>
-                <p><strong>Lives in: </strong>{{$activity->location}}</p>
+                <p><strong>Lives in: </strong>{{$user->location}}</p>
                 <p><strong>Email: </strong>{{$user->email}}</p>
                 <p><strong>Phone: </strong>{{$user->phone}}</p>
-                <div> 
+                <div>
                     <a href="{{route('seeker.info')}}" class="btn btn-primary"class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> Edit Personal Information </a>
                      <!-- <a href="{{route('seeker.edit_cv')}}" class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-pencil-square-o"></i> EDIT MY CV</a> -->
                     {{-- <a href="" class="btn btn-default" style="border-radius: 0;"><i class="fa fa-download"></i> DOWNLOAD AS PDF</a> --}}
@@ -47,10 +47,7 @@
             <!-- row ends here -->
         
         <div class="row">
-            <div class="col-lg-12">
-                <!-- <h4><Strong>About me</Strong><button name="personal_2" data-toggle="modal" data-target="#myModalAboutMe"class="btn-xs btn-warning" style="border-radius: 0; margin-left: 20px"><i class="fa fa-pencil-square-o"></i>EDIT</button></h4> -->
-                <p style="text-align:center; font-weight: bold; font-size: 17px">{{$activity->about_me}}</p>
-            </div>
+
 
             
             </div> <!-- row ends here---- -->
@@ -94,79 +91,47 @@
             </div>
             <!-- row ends here -->
 
-                
-
-            <!-- row ends here -->
-                
-                <!-- <div class="row">
-                    <div class="col-lg-12">
-                        <h4><strong>Education</strong> <a href="{{route('seeker.edu')}}"><button type="button" class="btn btn-warning" >+EDIT EDUCATION INFO</button></h4></a>
-                        <h5><strong>{{$activity->college}}</strong></h5>
-                        <p>{{$activity->degree}}</p>
-                        <p>Field of study: <strong>{{$activity->field}}</strong></p>
-                        <p>Grade: <strong>{{$activity->grade}}</strong></p>
-                    </div>
-                    </div>  -->
-                    <!-- row ends here ---- -->
-                    
-                        
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h4><strong>Skills</strong></h4>    
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="panel panel-primary">
-                                            <div class="panel-heading">
-                                                Skills
-                                            </div>
-                                            <div class="panel-body" id="skill">
-                                                <ul class="list-group">
-                                                @foreach($skills as $skill)
-                                                    <li class="list-group-item">
-                                                        <div class="row">
-                                                            <div class="col-lg-6">
-                                                                <strong>Skill: </strong>{{$skill->name}}<br>
-                                                                <strong>Level: </strong>{{$skill->level}}<br>
-                                                                <strong>Experience: </strong>{{$skill->experience}}
-                                                            </div>
-                                                            {{--<form action="{{ route('post.destroy', $post) }}" method="post">
-                                                            {{ csrf_field() }}
-                                                            {{ method_field('DELETE') }}
-                                                            <button type="submit" class="byn btn-xs btn-danger">Delete</button>
-                                                            </form> --}}
-                                                            <div class="col-lg-6 pull-right">
-                                                                <button type="submit" id="delete_btn" class="btn-s btn-danger">DELETE</button>
-                                                            </div>
-                                                        </div>
-                                                        {{-- <input type="hidden" id="{{$skill->id}}"> --}}
-                                                    </li>
-                                                @endforeach
-                                                </ul>
-
-                                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModalSkills">+ ADD SKILLS</button>
-
-                                            </div>
-                                        </div>
-                                    </div>
+            
+            <!-- row ends here ---- -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4><strong>Skills</strong></h4>    
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    Skills
                                 </div>
-
-
-                                <!-- <table class="table">
+                                <div class="panel-body" id="skill">
+                                    <ul class="list-group">
                                     @foreach($skills as $skill)
-                                    <tr><td><li>
-                                        <p><strong>{{$skill->name}}</strong></p>
-                                        <div class="col-lg-2">
-                                            <p><strong>Level: </strong>{{$skill->level}}</p>
-                                        </div>
-                                        <div class="col-lg-2">
-                                            <p><strong>Experience: </strong>{{$skill->experience}}</p>
-                                        </div></li>
-                                    </td></tr>
+                                        <li class="list-group-item">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <strong>Skill: </strong>{{$skill->name}}<br>
+                                                    <strong>Level: </strong>{{$skill->level}}<br>
+                                                    <strong>Experience: </strong>{{$skill->experience}}
+                                                </div>
+                                                {{--<form action="{{ route('post.destroy', $post) }}" method="post">
+                                                {{ csrf_field() }}
+                                                {{ method_field('DELETE') }}
+                                                <button type="submit" class="byn btn-xs btn-danger">Delete</button>
+                                                </form> --}}
+                                                <div class="col-lg-6 pull-right">
+                                                    <button type="submit" id="delete_btn" class="btn-s btn-danger">DELETE</button>
+                                                </div>
+                                            </div>
+                                            {{-- <input type="hidden" id="{{$skill->id}}"> --}}
+                                        </li>
                                     @endforeach
-                                </table>
+                                    </ul>
+
+                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModalSkills">+ ADD SKILLS</button>
+
+                                </div>
                             </div>
-                            </div> -->
-                            <!-- row ends here -->
+                        </div>
+                    </div>
 
             <div class="row">
                 <div class="col-lg-12">
@@ -178,10 +143,10 @@
                         <div class="panel-body" id="edu">
                             <ul class="list-group">
 
-                                <li class="list-group-item"><strong>Institution Name:</strong> {{$activity->college}}
+                                <li class="list-group-item"><strong>Institution Name:</strong> IPB
                                 <ul>
-                                    <li><strong>Field of Study:</strong> {{$activity->field}}</li>
-                                    <li><strong>Degree Level: </strong>{{$activity->degree}}</li>
+
+
                                 </ul>
                                 </li>
 
@@ -198,22 +163,6 @@
                     </div>
                 </div>
             </div>
-
-            
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h4><strong>Languages</strong></h4>
-                            <p>{{$activity->language}}</p>
-                        </div>
-                        </div>
-                        <!-- row ends here ---- -->
-                                                    
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <h4><strong>Interests &amp; Activities</strong></h4>
-                                    <p>{{$activity->interest}}</p>
-                                </div>
-                                </div> <!-- row ends here -->
 
                             <!--First container-fluid ends here -->
                         </section>
@@ -360,15 +309,6 @@
                     <div class="modal-body">
                         <div class="form-horizontal">
 
-                            <div class="form-group">
-                                <label for="about_me" class="col-sm-1 control-label">About Me: </label>
-                                <div class="col-sm-11" id="about">
-
-                                    <textarea name="about_me" class="form-control" rows="4" cols="20" id="about_me" placeholder="Write something about yourself">{{$activity->about_me}}</textarea>
-                                    <br>
-
-                                </div>
-                            </div>
 
                         </div>
                     </div>
@@ -440,14 +380,9 @@ jQuery(document).ready(function($) {
             });
             //Education data ajax
             $('#edu_save').click(function(event) {
-                var clg = $('#college').val();
                 var degree = $('#degree_level').val();
                 var field = $('#field').val();
-                var grade = $('#grade').val();
-                var country = $('#country').val();
-                var language = $('#language').val();
-                var interest = $('#interest').val();
-                $.post('{{route('seeker.edu')}}',{'_token':$('input[name=_token]').val(), 'college':clg, 'degree':degree, 'field':field, 'grade':grade, 'country':country, 'language':language, 'interest':interest}, function(data) {
+                $.post('{{route('seeker.edu')}}',{'_token':$('input[name=_token]').val(), 'degree':degree, 'field':field, function(data) {
                     $('#edu').load(location.href + ' #edu');
                     console.log(data);
                 });

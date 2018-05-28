@@ -41,8 +41,6 @@
                             <thead>
                                 <tr>
                                     <th>Job Title</th>
-                                    <th>Company</th>
-                                    <th>Industry</th>
                                     <th>Location</th>
                                     <th>Applied Date</th>
                                     <th></th>
@@ -54,8 +52,6 @@
                             @foreach($user->many_job as $job)
                                 <tr>
                                     <td>{{$job->title}}</td>
-                                    <td>{{$job->user->company->name}}</td>
-                                    <td>{{$job->industry}}</td>
                                     <td>{{$job->city}}</td>
                                     <td>{{$job->pivot->created_at->format('d-M-Y')}}</td>
                                     <!-- <td><a href="/seeker/job/delete/{{$job->id}}" class="btn btn-warning" style="border-radius: 0;"><i class="fa fa-trash"></i> DELETE</a></td> -->

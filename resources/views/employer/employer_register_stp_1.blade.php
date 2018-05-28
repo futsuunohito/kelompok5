@@ -20,6 +20,24 @@
                                     </span>
                             @endif
                         </div>
+                        <div class="form-group{{ $errors->has('location') ? ' has-error' : '' }}">
+                            <label for="location">Location</label>
+                            <input type="text" class="form-control" id="location" name="location" value="{{ old('location') }}" placeholder="Enter your location"  required autofocus>
+                            @if ($errors->has('location'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('location') }}</strong>
+                                    </span>
+                            @endif
+                        </div>
+                        <div class="form-group{{ $errors->has('faculty') ? ' has-error' : '' }}">
+                            <label for="location">Faculty</label>
+                            <input type="text" class="form-control" id="faculty" name="faculty" value="{{ old('faculty') }}" placeholder="Enter your faculty"  required autofocus>
+                            @if ($errors->has('faculty'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('faculty') }}</strong>
+                                    </span>
+                            @endif
+                        </div>
                         <div class="form-group{{$errors->has('phone')?' has-error': ''}}">
                             <label for="phone">Phone Number</label>
                             <input type="text" class="form-control" id="phone" placeholder="Enter your phone no." name="phone">

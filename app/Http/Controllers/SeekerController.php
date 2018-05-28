@@ -62,7 +62,7 @@ class SeekerController extends Controller
     }
     
     public function education(Request $request){
-    	Activity::where('user_id', Auth::id())->update(['college'=>$request->college, 'degree'=>$request->degree, 'field'=>$request->field]);
+    	Activity::where('user_id', Auth::id())->update(['degree'=>$request->degree, 'field'=>$request->field]);
     	return redirect()->route('seeker.view')->with('msg',"Education Updated Successfully");;
     }
     //Shows Work and skill form 
@@ -142,29 +142,6 @@ class SeekerController extends Controller
     public function aboutMe(Request $request){
     	$about = $request->about_me;
     	Activity::where('user_id', Auth::id())->update(['about_me'=>$about]);
-    	return $request->all();
-    }
-    //store Attachments data
-    public function attachments(Request $request){
-    	$doc = $request->file('document');
-    	if($request->hasFile('document')){
-    		$doc_orginal_name = $doc->getClientOriginalName();
-    		Storage::putFileAs('public/attachments', $doc, $doc_orginal_name);
-    	}
-    	$newAttachment = new Attachment;
-    	$newAttachment->name = $request->doc_name;
-    	$newAttachment->document = $doc_orginal_name;
-    	$newAttachment->user_id = Auth::id();
-    	$newAttachment->save();
-    	return redirect()->route('seeker.edit_cv');
-    }
-    //store Links data
-    public function links(Request $request){
-    	$newLink = new Link;
-    	$newLink->name = $request->link_name;
-    	$newLink->url = $request->url;
-    	$newLink->user_id = Auth::id();
-    	$newLink->save();
     	return $request->all();
     }
     //Show seeker Dashboard page

@@ -66,7 +66,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="industry" class="col-sm-2 control-label">Category : </label>
                             <div class="col-sm-10">
                                 <select name="industry" id="industry" class="form-control">
@@ -76,22 +76,22 @@
                                         <option value="Data Mining">Data Mining</option>
                                         <option value="Business/Accounting">Business/Accounting</option>
                                         <option value="Others">Others</option>
-                                        <!-- sisanya ambil dari seeker find jobs-->
+                                        sisanya ambil dari seeker find jobs
                                 </select>
                             </div>
-                        </div>
-                        <div class="form-group">
+                        </div> -->
+                        <!-- <div class="form-group">
                             <label for="website" class="col-sm-2 control-label">Phone Number: </label>
                             <div class="col-sm-10">
                                 <input type="text" name="website" value="" class="form-control" id="website" placeholder="Enter Your Phone Number">
                             </div>
-                        </div>
-                        <div class="form-group">
+                        </div> -->
+                        <!-- <div class="form-group">
                             <label for="about" class="col-sm-2 control-label">About Me: </label>
                             <div class="col-sm-10">
                             <textarea class="form-control" rows="4" cols="20" id="about" name="about" placeholder="Skill, Experience, and Achievement"></textarea>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- <div class="col-sm-10 col-sm-offset-2">
                             <textarea class="form-control" rows="4" cols="20" id="about" name="about" placeholder="Deskripsi pengalaman atau prestasi"></textarea>
                             <br>

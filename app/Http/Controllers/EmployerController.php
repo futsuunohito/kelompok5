@@ -29,7 +29,7 @@ class EmployerController extends Controller
         	$company = Company::where('user_id', Auth::id())->first();
         	return view('employer.employer_company_profile', compact('company'));
         }
-        return view('employer.employer_register_stp_2');
+        return view('employer.employer_dashboard');
     }
     //store Company profile data
     public function storeCompanyProfile(Request $request){
@@ -41,13 +41,10 @@ class EmployerController extends Controller
     		$newCompany->name = $request->name;
     		$newCompany->country = $request->country;
     		$newCompany->city = $request->city;
-    		$newCompany->industry = $request->industry;
-    		$newCompany->website = $request->website;
-            $newCompany->about = $request->about;
     		$newCompany->user_id = Auth::id();
     		$newCompany->save();
     	}else{
-    		Company::where('user_id', Auth::id())->update(['name'=>$request->name,'country'=>$request->country,'city'=>$request->city,'industry'=>$request->industry,'website'=>$request->website,'about'=>$request->about]);
+    		Company::where('user_id', Auth::id())->update(['name'=>$request->name,'country'=>$request->country,'city'=>$request->city]);
     	}
 
         return redirect()->route('employer.dashboard')->with('msg',"Profile Changed Successfully");
