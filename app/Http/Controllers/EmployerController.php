@@ -23,13 +23,16 @@ class EmployerController extends Controller
     public function index(){
     	return view('employer.index');
     }
+    public function registerStep2(){
+        return view('employer.employer_register_stp_2');
+    }
     //show Company profile creation page
     public function createCompanyProfile(){
         if(!Company::where('user_id', Auth::id())->get()->isEmpty()){
         	$company = Company::where('user_id', Auth::id())->first();
-        	return view('employer.employer_company_profile', compact('company'));
+        	return view('employer.employer_register_stp_2', compact('company'));
         }
-        return view('employer.employer_dashboard');
+        return view('employer.employer_register_stp_2');
     }
     //store Company profile data
     public function storeCompanyProfile(Request $request){
@@ -38,15 +41,12 @@ class EmployerController extends Controller
     		]);
     	$newCompany = new Company;
     	if(Company::where('user_id', Auth::id())->get()->isEmpty()){
-    		$newCompany->name = $request->name;
-    		$newCompany->country = $request->country;
-    		$newCompany->city = $request->city;
+            $newCompany->name = $request->name;
     		$newCompany->user_id = Auth::id();
     		$newCompany->save();
     	}else{
-    		Company::where('user_id', Auth::id())->update(['name'=>$request->name,'country'=>$request->country,'city'=>$request->city]);
+    		Company::where('user_id', Auth::id())->update(['name'=>$request->name]);
     	}
-
         return redirect()->route('employer.dashboard')->with('msg',"Profile Changed Successfully");
     }
 
@@ -60,7 +60,7 @@ class EmployerController extends Controller
     	}
     	Company::where('user_id', Auth::id())->update(['image'=>$image_original_name]);
 
-    	return redirect()->route('employer.dashboard')->with('msg',"Profile Picture Changed Successfully");
+    	return redirect()->route('employer.reg_stp2')->with('msg',"Profile Picture Changed Successfully");
     }
     //show Post Job Form
     public function showPostJobForm(){

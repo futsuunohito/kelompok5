@@ -30,7 +30,7 @@
         </div>
         @endif
             <div class="row" style="margin-top: 20px;">
-                {{-- <div class="col-lg-2">
+                <div class="col-lg-2">
                     <img src="{{asset('/img/'.$company->image)}}" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
                         <br>
                         <form action="{{route('employer.image')}}" method="post" enctype="multipart/form-data">
@@ -38,7 +38,7 @@
                             <input type="file" name="image" class="btn-xs" style="margin-top: 5px;">
                             <input type="submit" class="btn-xs btn-danger" style="margin-top: 5px;" id="upload" value="UPLOAD">
                         </form>
-                    </div>      --}}
+                    </div>
                 <div class="col-lg-10">
                     <strong style="font-size:26px"><i  class="fa fa-circle text-success"></i>    {{$user->name}}</strong>
                     <br>

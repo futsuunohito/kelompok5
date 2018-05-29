@@ -69,20 +69,16 @@ class SeekerController extends Controller
     public function showWorkAndSkillForm(){
     	$works = Work::where('user_id', Auth::id())->get();
     	$skills = Skill::where('user_id', Auth::id())->get();
-    	return view('jobseeker.seeker_register_stp4', compact('works','skills'));
+    	return view('jobseeker.seeker_dashboard', compact('works','skills'));
     }
     //Posted Works data are stored here
     public function work(Request $request){
     	
     	$this->validate($request, [
     		'job_title'=>'required',
-    		'company_name'=>'required'
     		]);
     	$newWork = new Work;
     	$newWork->job_title = $request->job_title;
-    	$newWork->company_name = $request->company_name;
-    	$newWork->country = $request->country;
-    	$newWork->industry = $request->industry;
     	$newWork->job_role = $request->job_role;
     	$newWork->activity = $request->activity;
     	// $newWork->from = $request->from;

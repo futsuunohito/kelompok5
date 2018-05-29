@@ -9,7 +9,7 @@
             <h3 style="text-align:center;"><strong>Personal Information</strong></h3>
             <div class="row">
                 <div class="col-lg-offset-1 col-lg-2">
-                    <img src="/img/mimiperi.jpg" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
+                    <img src="/img/user.jpg" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
                     <br>
                     <form action="#" method="post" enctype="multipart/form-data">
                     {{csrf_field()}}

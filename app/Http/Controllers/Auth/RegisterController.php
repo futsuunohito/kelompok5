@@ -69,7 +69,7 @@ class RegisterController extends Controller
         $this->guard()->login($user);
 
         return $this->registered($request, $user)
-                        ?: redirect()->route('employer.company_profile');
+                        ?: redirect()->route('employer.reg_stp2');
     }
     //Handle Job Seeker registration
      public function seekerRegister(Request $request)
@@ -81,11 +81,11 @@ class RegisterController extends Controller
         $this->guard()->login($user);
 
         return $this->registered($request, $user)
-                        ?: redirect()->route('reg_stp_2');//this will redirect the route 
+                        ?: redirect()->route('seeker.dashboard');//this will redirect the route 
                             //to where i want to redirect after jobseeker registration 
                                 //with logged in
     }
-    
+   
 //---------------------------------------------------------------------
     /**
      * Get a validator for an incoming registration request.

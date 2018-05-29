@@ -60,6 +60,7 @@ Route::get('/contact', 'SeekerController@contact');
 Route::get('/employer', 'EmployerController@index');
 
 Route::group(['middleware'=>['auth', 'employer']], function(){
+	Route::get('/employer/registerstep2', 'EmployerController@registerStep2')->name('employer.reg_stp2');
 	Route::get('/employer/company-profile', 'EmployerController@createCompanyProfile')->name('employer.company_profile');
 	Route::post('/employer/company', 'EmployerController@storeCompanyProfile')->name('employer.company');
 	Route::post('/employer/image', 'EmployerController@storeImage')->name('employer.image');
