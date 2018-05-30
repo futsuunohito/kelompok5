@@ -60,9 +60,9 @@
                           <ul class="nav navbar-nav navbar-right">
                                 <!-- Authentication Links -->
                                 @if (Auth::guest())
+                                    <li id="for_emp"><a href="/employer">Seeker</a></li>
                                     <li><a href="{{ route('seeker.login') }}" class="btn btn-round btn-default">Login</a></li>
                                     <li><a href="{{ route('seeker.register') }}" class="btn btn-round btn-default">Sign Up</a></li>
-                                    <li id="for_emp"><a href="/employer">For Employer</a></li>
                                 @else
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

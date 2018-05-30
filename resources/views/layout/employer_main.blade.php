@@ -36,7 +36,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                           </button>
-                          <a class="navbar-brand" href="{{route('welcome.page')}}"> NEED!</a>
+                          <a class="navbar-brand" href="/employer"> NEED!</a>
                         </div>
                     
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -58,9 +58,9 @@
                           <ul class="nav navbar-nav navbar-right">
                                 <!-- Authentication Links -->
                                 @if (Auth::guest())
+                                     <li id="for_emp"><a href="/">Employer</a></li>
                                     <li><a href="{{route('employer.login')}}" class="btn btn-round btn-default">Login</a></li>
                                     <li><a href="{{route('employer.register')}}" class="btn btn-round btn-default">Sign Up</a></li>
-                                    <li id="for_emp"><a href="/">For Jobseeker</a></li>
                                 @else
                                 <li>
                                         <a href="{{route('employer.dashboard')}}">
@@ -83,7 +83,7 @@
                     </nav>
 
                     <div class='blurred-container'>
-                    <div class="motto" style="padding-top:5px;">
+                    <div class="motto" style="padding-top:5px; ">
                             <h1 style="color:white;"><b>@yield('title')</b></h1>
         
                         </div>
@@ -96,7 +96,7 @@
             </div> <!-- end menu-dropdown -->
         
    
-    <div class="content-wrapper" style="margin-top: 50px;">
+    <div class="content-wrapper" style="margin-top: 50px; margin-bottom:50px;">
             @section('content')
                 @show
             </div>
