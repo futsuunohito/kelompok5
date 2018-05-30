@@ -8,11 +8,10 @@
 </head>
 
 <body>
-    <section id="home_first_section" class="top" style="margin-top: 50px;">
+  <!--  <section id="home_first_section" class="top" style="margin-top: 50px;">
         <div class="container-fluid">
         <br><br>
         <h1 align="center"><img src="https://3.bp.blogspot.com/-dqSQLXBnaas/Wvuq85ST7sI/AAAAAAAACrk/Ym4tbxJtogMxae_P8wZ0RUiVSSq2TC2TgCLcBGAs/s1600/logo.png" width="200px"> </h1>
-            <<!-- h1 align="center" class="first_sec_h1" style="font-family: Brush Script MT; font-size: 80px; color: #407AB5">Need!</h1> -->
             <p align="center" style="font-size: 18px; font-weight: bold">
                 We Rise By Lifting Others</p>
             <div class="container home_search">
@@ -45,4 +44,5 @@
         <div class="container">
         </div>
     </section>
+-->
 @endsection

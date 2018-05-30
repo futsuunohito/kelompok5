@@ -56,11 +56,7 @@
                                   </ul>
                             </li>
                           </ul>
-                           <form class="navbar-form navbar-left navbar-search-form" role="search">                  
-                             <div class="form-group">
-                                  <input type="text" value="" class="form-control" placeholder="Search...">
-                             </div> 
-                          </form>
+            
                           <ul class="nav navbar-nav navbar-right">
                                 <!-- Authentication Links -->
                                 @if (Auth::guest())
@@ -94,30 +90,6 @@
             
                       </div><!-- /.container-fluid -->
                     </nav>        
-                    <div class="wrapper">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-12" style="padding-top: 200px;">
-                                                <h2 style="color:aliceblue;">NEED!</h2><br/>
-                                                <p style="color:aliceblue;">
-                                                    We Rise By Lifting Others
-                                                </p><br/>
-                                                <form class="form-inline" action="/seeker/keyword-wise-jobs" method="get">
-                                                    {{csrf_field()}}
-                                                      <div class="form-group">
-                                                            <div class="input-group margin">
-                                                                    <input type="text" class="form-control" name="searchQuery" class="form-control" placeholder="Keywords" value="{{ old('searchQuery') }}" style="padding-right: 50px;">
-                                                                        <span class="input-group-btn">
-                                                                          <button type="submit" class="btn btn-block btn-lg btn-info">Find jobs!</button>
-                                                                        </span>
-                                                                    </div>
-                                                        </div>
-                                                    </form>
-                                            </div>
-                                    </div>
-                                </div>
-                            </div>
-
                 </div><!--  end navbar -->
             
             </div> <!-- end menu-dropdown -->
