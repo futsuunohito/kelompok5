@@ -60,7 +60,7 @@
                           <ul class="nav navbar-nav navbar-right">
                                 <!-- Authentication Links -->
                                 @if (Auth::guest())
-                                    <li><a href="{{ route('seeker.login') }}">Login</a></li>
+                                    <li><a href="{{ route('seeker.login') }}" class="btn btn-round btn-default">Login</a></li>
                                     <li><a href="{{ route('seeker.register') }}" class="btn btn-round btn-default">Sign Up</a></li>
                                     <li id="for_emp"><a href="/employer">For Employer</a></li>
                                 @else
@@ -103,9 +103,11 @@
         </div>
 
          {{--     Footer tarts here    --}}
+
+    <div class="parallax-pro">
     <footer class="main-footer">
         <div class="container">
-            <h2><i class="glyphicon glyphicon-send"></i> <strong>  Need! </strong></h2>
+            <h2><strong>  NEED! </strong></h2>
             <div class="row foot_links">
                 <div class="col-lg-3">
                     <h5>Job Seekers</h5>
@@ -140,6 +142,7 @@
             </div>
         </div>
     </footer>
+</div>
 <!-- REQUIRED JS SCRIPTS -->
 
 <script src="{{asset('/KIT/jquery/jquery-1.10.2.js')}} " type="text/javascript"></script>
