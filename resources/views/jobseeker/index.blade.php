@@ -4,7 +4,6 @@
 
 @section('content')
 <body>
-
         <div class="main">
                 <div class="container tim-container">
                     <div id="extras">
@@ -16,7 +15,7 @@
                                 </div>
                             </div>
                             <div class="col-md-5 col-sm-12">
-                                            <h1 class="text-center">About Need
+                                            <h1 class="text-center">About <strong>NEED!</strong>
                                             
                                             <small class="subtitle">Get to know us</small></h1>
                                             <hr>

@@ -89,8 +89,18 @@
                         </div><!-- /.navbar-collapse -->
             
                       </div><!-- /.container-fluid -->
-                    </nav>        
+                    </nav>
+
+                    <div class='blurred-container'>
+                    <div class="motto" style="padding-top:5px;">
+                            <h1 style="color:white;"><b>@yield('title')</b></h1>
+        
+                        </div>
+                    </div>
+
                 </div><!--  end navbar -->
+
+                
             
             </div> <!-- end menu-dropdown -->
             
