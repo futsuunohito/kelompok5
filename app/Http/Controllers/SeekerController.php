@@ -153,9 +153,10 @@ class SeekerController extends Controller
     	$skills = Skill::where('user_id', Auth::id())->get();
     	return view('jobseeker.seeker_cv_view', compact('user','activity','works','skills'));
     }
+
     //show seeker home page
     public function index(){
-    	return view('admin.index');
+    	return view('jobseeker.index'); //tadinya jobseeker.index -> admin.index
     }
     public function showInfo(){
         return view('jobseeker.seeker_info');

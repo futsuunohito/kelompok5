@@ -4,119 +4,127 @@
     <meta charset="UTF-8">
     @yield('h')
     <title>@yield('title')</title>
-    <link rel="stylesheet" type="text/css" href="css/dropdown.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset('/css/custom.css')}}"> -->
 
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    <!-- Bootstrap 3.3.2 -->
-    <link href="{{ asset("/bower_components/AdminLTE/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />
-    <!-- Font Awesome Icons -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <!-- Ionicons -->
-    <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-    <!-- Theme style -->
-    <link href="{{ asset("/bower_components/AdminLTE/dist/css/AdminLTE.min.css")}}" rel="stylesheet" type="text/css" />
-    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
-          page. However, you can choose any other skin. Make sure you
-          apply the skin class to the body tag so the changes take effect.
-    -->
-    <link href="{{ asset("/bower_components/AdminLTE/dist/css/skins/skin-blue.min.css")}}" rel="stylesheet" type="text/css" />
-    <!-- DataTables -->
-    <link rel="stylesheet" href="{{ asset("/bower_components/AdminLTE/plugins/datatables/dataTables.bootstrap.css")}}" rel="stylesheet" type="text/css" />
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+    <link rel="icon" type="image/png" href="{{ asset("/KIT/assets/img/favicon.png") }}">	
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+	
+    <link href="{{ asset("/KIT/bootstrap3/css/bootstrap.css") }}" rel="stylesheet" />
+	<link href="{{ asset("/KIT/assets/css/gsdk.css") }}" rel="stylesheet" />  
+    <link href="{{ asset("/KIT/assets/css/demo.css") }}" rel="stylesheet" /> 
+    
+    <!--     Font Awesome     -->
+    <link href="{{ asset("/KIT/bootstrap3/css/font-awesome.css") }}" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
 
 
 </head>
 
-<body class="hold-transition skin-blue layout-top-nav">
-    <header class="main-header">
-        <div class="container-fluid">
-            <nav class="navbar navbar-fixed-top navbar-default">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<body>
+        <div id="navbar-full">
+                <div id="navbar">
+                <div class="navigation-example">
+                     <nav class="navbar navbar-ct-blue navbar-transparent navbar-fixed-top" role="navigation">
+                      <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="{{route('welcome.page')}}"><i class="glyphicon glyphicon-send"></i>  <strong>  Need! </strong></a>
-                    </div>
-
+                          </button>
+                          <a class="navbar-brand" href="#gsdk"> NEED!</a>
+                        </div>
+                    
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <div class="row">
-                            <div class="col-lg-5 col-lg-offset-3">
-                                <ul class="nav navbar-nav ">
-                                    <li class=""><a href="/">Home <span class="sr-only">(current)</span></a></li>
-                                    @if(!Auth::guest())
-                                        <li><a href="{{route('seeker.dashboard')}}">Dashboard</a></li>
-
+                        <div class="collapse navbar-collapse" id="navigation-example-2">
+                          <ul class="nav navbar-nav">
+                            <li class="active"><a href="/">Home</a></li>
+                            <li class="dropdown">
+                                  <a href="#gsdk" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
+                                  <ul class="dropdown-menu">
+                                        @if(!Auth::guest())
+                                        <li><a href="/seeker/dashboard">Dashboard</a></li>
+                                        <li><a href="{{route('seeker.edit_cv')}}">My CV</a></li>
+                                        <li><a href="{{route('seeker.settings')}}">Settings</a></li>
                                     @endif
                                     <li><a href="{{route('seeker.find_jobs')}}">Find jobs</a></li>
-                                </ul>
-                            </div>
-                            <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                        <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Login As 
-                                <span class="caret"></span></a>
-                                <ul class="dropdown-menu" style="background-color: #3c8dbc;">
-                                    <li><a href="{{route('seeker.login')}}" style="color: white; text-align: center">Helper</a></li>
-                                    <li><a href="{{route('employer.login')}}" style="color: white; text-align: center">Seeker</a></li>
-                                </ul>
-                            </div>
-                            <!-- <div class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:#ffffff; font-size:15px; font-weight:bold; font-family:Monospace">
-                                    Login <span class="caret"></span>
-                                </a>
-                                <div class="dropdown-content">
-                                    <li><a href="{{route('seeker.login')}}">Login as Jobseeker</a></li>
-                                    <li><a href="{{route('employer.login')}}">Login as Employer</a></li>
+                                  </ul>
+                            </li>
+                          </ul>
+                           <form class="navbar-form navbar-left navbar-search-form" role="search">                  
+                             <div class="form-group">
+                                  <input type="text" value="" class="form-control" placeholder="Search...">
+                             </div> 
+                          </form>
+                          <ul class="nav navbar-nav navbar-right">
+                                <!-- Authentication Links -->
+                                @if (Auth::guest())
+                                    <li><a href="{{ route('seeker.login') }}">Login</a></li>
+                                    <li><a href="{{ route('seeker.register') }}" class="btn btn-round btn-default">Sign Up</a></li>
+                                    <li id="for_emp"><a href="/employer">For Employer</a></li>
+                                @else
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                            {{ Auth::user()->name }} <span class="caret"></span>
+                                        </a>
+        
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li>
+                                                <a href="{{ route('logout') }}"
+                                                    onclick="event.preventDefault();
+                                                             document.getElementById('logout-form').submit();">
+                                                    Logout
+                                                </a>
+        
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    {{ csrf_field() }}
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                @endif
+                           </ul>
+                          
+                        </div><!-- /.navbar-collapse -->
+            
+                      </div><!-- /.container-fluid -->
+                    </nav>        
+                    <div class="wrapper">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-12" style="padding-top: 200px;">
+                                                <h2 style="color:aliceblue;">NEED!</h2><br/>
+                                                <p style="color:aliceblue;">
+                                                    We Rise By Lifting Others
+                                                </p><br/>
+                                                <form class="form-inline" action="/seeker/keyword-wise-jobs" method="get">
+                                                    {{csrf_field()}}
+                                                      <div class="form-group">
+                                                            <div class="input-group margin">
+                                                                    <input type="text" class="form-control" name="searchQuery" class="form-control" placeholder="Keywords" value="{{ old('searchQuery') }}" style="padding-right: 50px;">
+                                                                        <span class="input-group-btn">
+                                                                          <button type="submit" class="btn btn-block btn-lg btn-info">Find jobs!</button>
+                                                                        </span>
+                                                                    </div>
+                                                        </div>
+                                                    </form>
+                                            </div>
+                                    </div>
                                 </div>
                             </div>
-                            <li><a href="{{ route('seeker.login') }}">Login</a></li>
-                            <li><a href="{{ route('seeker.register') }}">Sign Up</a></li>
-                            <li id="for_emp"><a href="{{route('employer.login')}}">For Employer</a></li> -->
-                        @else
-                            <li>
-                                <a href="{{route('seeker.view')}}">
-                                    {{ Auth::user()->name }}
-                                </a>
-                            </li>
-                            <li><a href="{{route('seeker.settings')}}" style="font-size: 10px">Change Password</a></li>
-                            <li>    
-                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="glyphicon glyphicon-off" style="padding-right: 5px;"></i>Logout</a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
-                            </li>
-                        @endif
-                    </ul>
-                        </div>
-                    </div>
-                    <!-- /.navbar-collapse -->
-                </div>
-                <!-- /.container-fluid -->
-            </nav>
-        </div>
-       <!-- first .contaienr-fluid ends here -->
-    <!--wrapper-->
-    </header>
-        {{-- Navbar Ends here --}}
+
+                </div><!--  end navbar -->
+            
+            </div> <!-- end menu-dropdown -->
+            
+
+        
+    
         <div class="content-wrapper" style="margin-top: 50px;">
         @section('content')
             @show
@@ -160,27 +168,51 @@
             </div>
         </div>
     </footer>
-    <script src="{{asset('/js/jquery-2.1.4.js')}}"></script>
-    <script src="{{asset('/js/bootstrap.min.js')}}"></script>    
-    @yield('script')
-
 <!-- REQUIRED JS SCRIPTS -->
 
-<!-- jQuery 2.1.3 -->
-<script src="{{ asset ("/bower_components/AdminLTE/plugins/jQuery/jQuery-2.2.3.min.js") }}"></script>
-<!-- Bootstrap 3.3.2 JS -->
-<script src="{{ asset ("/bower_components/AdminLTE/bootstrap/js/bootstrap.min.js") }}" type="text/javascript"></script>
-<!-- AdminLTE App -->
-<script src="{{ asset ("/bower_components/AdminLTE/dist/js/app.min.js") }}" type="text/javascript"></script>
-<!-- DataTables -->
-<script src="{{ asset ("/bower_components/AdminLTE/plugins/datatables/jquery.dataTables.min.js") }}"></script>
-<script src="{{ asset ("/bower_components/AdminLTE/plugins/datatables/dataTables.bootstrap.min.js") }}"></script>
+<script src="{{asset('/KIT/jquery/jquery-1.10.2.js')}} " type="text/javascript"></script>
+	<script src="{{asset('/KIT/assets/js/jquery-ui-1.10.4.custom.min.js')}}" type="text/javascript"></script>
 
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-      Both of these plugins are recommended to enhance the
-      user experience -->
+	<script src="{{ asset('/KIT/bootstrap3/js/bootstrap.js')}}" type="text/javascript"></script>
+	<script src="{{ asset('/KIT/assets/js/gsdk-checkbox.js')}}"></script>
+	<script src="{{ asset('/KIT/assets/js/gsdk-radio.js')}}"></script>
+	<script src="{{ asset('/KIT/assets/js/gsdk-bootstrapswitch.js')}}"></script>
+	<script src="{{ asset('/KIT/assets/js/get-shit-done.js')}}"></script>
+    <script src="{{ asset('/KIT/assets/js/custom.js')}}"></script>
 
-<!-- page script -->
+<script type="text/javascript">
+         
+    $('.btn-tooltip').tooltip();
+    $('.label-tooltip').tooltip();
+    $('.pick-class-label').click(function(){
+        var new_class = $(this).attr('new-class');  
+        var old_class = $('#display-buttons').attr('data-class');
+        var display_div = $('#display-buttons');
+        if(display_div.length) {
+        var display_buttons = display_div.find('.btn');
+        display_buttons.removeClass(old_class);
+        display_buttons.addClass(new_class);
+        display_div.attr('data-class', new_class);
+        }
+    });
+    $( "#slider-range" ).slider({
+		range: true,
+		min: 0,
+		max: 500,
+		values: [ 75, 300 ],
+	});
+	$( "#slider-default" ).slider({
+			value: 70,
+			orientation: "horizontal",
+			range: "min",
+			animate: true
+	});
+	$('.carousel').carousel({
+      interval: 4000
+    });
+      
+    
+</script>
 </body>
 
 </html>
