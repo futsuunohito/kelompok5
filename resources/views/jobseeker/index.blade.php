@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    ini bakal jadi info, profil
   <!--  <section id="home_first_section" class="top" style="margin-top: 50px;">
         <div class="container-fluid">
         <br><br>
