@@ -9,18 +9,18 @@
                     <div id="extras">
                         <div class="space"></div>
                         <div class="row">
-                            <div class="col-md-7 col-md-offset-0 col-sm-10 col-sm-offset-1">
+                            <div class="col-md-5 col-md-offset-0 col-sm-0 col-sm-offset-1">
                                 <div class="text-center">
-                                    <img src="{{ asset('/KIT/assets/img/dulau.jpg')}}" alt="Rounded Image" class="img-rounded img-responsive img-dog">
+                                    <img src="{{ asset('/KIT/assets/img/Untitled-1cek.jpg')}}" alt="Rounded Image" class="img-rounded img-responsive img-dog">
                                 </div>
                             </div>
-                            <div class="col-md-5 col-sm-12">
+                            <div class="col-md-7 col-sm-12">
                                             <h1 class="text-center">About <strong>NEED!</strong>
                                             
                                             <small class="subtitle">Get to know us</small></h1>
                                             <hr>
                                             <p>
-                                                Need.com is the world's largest freelancing and crowdsourcing marketplace by number of users and projects. We connect over 28,548,469 employers and freelancers globally from over 247 countries, regions and territories. Through our marketplace, employers can hire freelancers to do work in areas such as software development, writing, data entry and design right through to engineering, the sciences, sales and marketing, accounting and legal services.
+                                            Mahasiswa sering sekali sulit dalam melakukan suatu hal. Bukan hanya karena suatu masalah yang rumit, melainkan mereka belum memiliki keahlian untuk menyelesaikannya. Maka dari itu, dibutuhkan bantuan dari orang lain untuk melakukan hal tersebut. Kebutuhan mahasiswa sangatlah beragam, dimulai dari memasak, mengerjakan tugas, mengembangkan softskill, mengajar dan sebagainya. Setiap mahasiswa juga memiliki keahlian yang berbeda-beda. Aplikasi ini diharapkan dapat membantu mahasiswa yang membutuhkan suatu jasa untuk menemukan mahasiswa lain yang memang berniat membantu dan memiliki pengetahuan serta keahlian yang dibutuhkan untuk memenuhinya. 
                                             </p>
                                             <p>
                                                 The pink lines indicate where projects are being posted by employers, and the blue lines indicate where the projects are being performed by freelancers. Thicker lines indicate a higher dollar volume of work. White dots indicate the location of Freelancer's users. </p>
