@@ -20,12 +20,12 @@
                                             <small class="subtitle">Get to know us</small></h1>
                                             <hr>
                                             <p>
-                                            Mahasiswa sering sekali sulit dalam melakukan suatu hal. Bukan hanya karena suatu masalah yang rumit, melainkan mereka belum memiliki keahlian untuk menyelesaikannya. Maka dari itu, dibutuhkan bantuan dari orang lain untuk melakukan hal tersebut. Kebutuhan mahasiswa sangatlah beragam, dimulai dari memasak, mengerjakan tugas, mengembangkan softskill, mengajar dan sebagainya. Setiap mahasiswa juga memiliki keahlian yang berbeda-beda. Aplikasi ini diharapkan dapat membantu mahasiswa yang membutuhkan suatu jasa untuk menemukan mahasiswa lain yang memang berniat membantu dan memiliki pengetahuan serta keahlian yang dibutuhkan untuk memenuhinya. 
+                                                Pernah merasa sulit untuk lakukan suatu hal karena hal tersebut bukan passionmu? Atau Anda punya bakat dan keahlian tapi bingung menyalurkannya kemana? 
                                             </p>
                                             <p>
-                                                The pink lines indicate where projects are being posted by employers, and the blue lines indicate where the projects are being performed by freelancers. Thicker lines indicate a higher dollar volume of work. White dots indicate the location of Freelancer's users. </p>
+                                                Need! hadir sebagai solusi untuk masalahmu. Kami mempertemukan para seeker dan helper untuk saling membantu satu sama lain. Seeker adalah orang yang membutuhkan suatu jasa. Helper adalah orang yang ahli dalam suatu bidang tertentu yang akan membantu seeker memecahkan masalahnya. Ayo berpetualang dan berkarya bersama kami!</p>
                                             <p>
-                                            We take great interest in how our customers use our resources and offer strong support and unlimited updates. We are constantly thinking about how to make our products intuitive, beautiful and extremely easy to understand, so feel free to tell us your thoughts!                                   
+                                                We Rise by Lifting Other.<br><br>Best Regards, <br>NEED!    
                                             </p>
             
                             </div>
