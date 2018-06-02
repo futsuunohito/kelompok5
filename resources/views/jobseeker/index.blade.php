@@ -25,7 +25,7 @@
                                             <p>
                                                 Need! hadir sebagai solusi untuk masalahmu. Kami mempertemukan para seeker dan helper untuk saling membantu satu sama lain. Seeker adalah orang yang membutuhkan suatu jasa. Helper adalah orang yang ahli dalam suatu bidang tertentu yang akan membantu seeker memecahkan masalahnya. Ayo berpetualang dan berkarya bersama kami!</p>
                                             <p>
-                                                We Rise by Lifting Other.<br><br>Best Regards, <br>NEED!    
+                                               <br> We Rise by Lifting Other.<br>NEED!    
                                             </p>
             
                             </div>
