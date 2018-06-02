@@ -49,8 +49,8 @@
                                         @if(!Auth::guest())
                                         <li><a href="{{route('employer.dashboard')}}">Dashboard</a></li>
                                         <li><a href="{{route('employer_cv_view')}}">CV Search</a></li>
-                                    @endif
-                                    <li><a href="{{route('employer.post_job')}}">Post a Job</a></li>
+                                        @endif
+                                        <li><a href="{{route('employer.post_job')}}">Post a Job</a></li>
                                   </ul>
                             </li>
                           </ul>

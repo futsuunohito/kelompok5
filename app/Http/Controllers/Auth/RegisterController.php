@@ -85,6 +85,7 @@ class RegisterController extends Controller
                             //to where i want to redirect after jobseeker registration 
                                 //with logged in
     }
+    
    
 //---------------------------------------------------------------------
     /**
@@ -146,4 +147,5 @@ class RegisterController extends Controller
             'seeker' => $data['seeker'],
         ]);
     }
+
 }

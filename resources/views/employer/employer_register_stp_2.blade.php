@@ -21,28 +21,23 @@
                 </div>
                 <div class="col-lg-10">
                     <!-- -----------------First section------------------ -->
-                    <div class="form-horizontal" id="company_form">
+                    <div class="form-horizontal">
+                    <form action="{{route('employer.company')}}" method="post">
+                    {{csrf_field()}}
                         <div class="form-group{{$errors->has('name')?' has-error':''}}">
-                            <label for="name" class="col-sm-2 control-label">Name: </label>
+                            <label for="name" class="col-sm-2 control-label">Re-enter email: </label>
                             <div class="col-sm-10">
-                                <input type="text" name="name" value="" class="form-control" id="name" placeholder="Enter Your Name" required>
-                                @if($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{$errors->first('name')}}</strong>
-                                    </span>
-                                @endif
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your Name" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" id="save" class="btn btn-warning">Save</button>
-                                <br>
-                                <br>
+                                <input type="submit" class="btn btn-warning" value="save"></input>
                             </div>
                         </div>
+                    </form>
                     </div>
                 </div>
-            </div>
             <!-- row ends here -->
         </div>
         <!-- First container-fluid ends here -->
@@ -70,13 +65,8 @@
             $(document).on('click','#save', function(event) {
                 event.preventDefault();
                 var name = $('#name').val();
-                var country = $('#country').val();
-                var city = $('#city').val();
-                var industry = $('#industry').val();
-                var website = $('#website').val();
-                var about = $('#about').val();
 
-                $.post('{{route('employer.company')}}',{'_token':$('input[name=_token]').val(),'name':name,'country':country,'city':city,'industry':industry,'website':website,'about':about}, function(data) {
+                $.post('{{route('employer.company')}}',{'_token':$('input[name=_token]').val(),'name':name}, function(data) {
                     $('#company_form').load(location.href + ' #company_form');
                     console.log(data);
                 });

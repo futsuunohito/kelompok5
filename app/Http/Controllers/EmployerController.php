@@ -43,14 +43,27 @@ class EmployerController extends Controller
     	if(Company::where('user_id', Auth::id())->get()->isEmpty()){
             $newCompany->name = $request->name;
     		$newCompany->user_id = Auth::id();
-    		$newCompany->save();
+            $newCompany->save();
     	}else{
     		Company::where('user_id', Auth::id())->update(['name'=>$request->name]);
     	}
-        return redirect()->route('employer.dashboard')->with('msg',"Profile Changed Successfully");
+        return redirect()->route('employer.dashboard');
     }
 
-
+    public function uploadImage(Request $request){//ini id di tabel teams
+        $this->validate($request,[
+            'image' => 'image|mimes:jpeg,png,jpg,svg|max:2048'
+        ]);
+        $id = $request->input('id');
+        $user=User::where('user_id',$id)->first();
+        if($request->hasFile('image')){
+            $name = Storage::disk('local')->put('images', $request->image);
+            $user->image = $name; 
+        }
+        $user->save();
+        return redirect()->route('employer.dashboard');
+    }
+    
     //store employer image
     public function storeImage(Request $request){
     	$user_image = $request->file('image');
@@ -60,7 +73,7 @@ class EmployerController extends Controller
     	}
     	Company::where('user_id', Auth::id())->update(['image'=>$image_original_name]);
 
-    	return redirect()->route('employer.reg_stp2')->with('msg',"Profile Picture Changed Successfully");
+    	return redirect()->route('employer.dashboard')->with('msg',"Profile Picture Changed Successfully");
     }
     //show Post Job Form
     public function showPostJobForm(){

@@ -36,7 +36,7 @@
                         <form action="{{route('employer.image')}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
                             <input type="file" name="image" class="btn-xs" style="margin-top: 5px;">
-                            <input type="submit" class="btn-xs btn-danger" style="margin-top: 5px;" id="upload" value="UPLOAD">
+                            <input type="submit" class="btn-xs btn-white" style="margin-top: 5px;" id="upload" value="UPLOAD">
                         </form>
                     </div>
                 <div class="col-lg-10">
