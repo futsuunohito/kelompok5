@@ -22,7 +22,7 @@
         <h3><strong>My Profile</strong></h3>
         <div class="row">
             <div class="col-lg-2">
-                <img src="{{asset('/img/user.jpg')}}" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
+                <img src="{{asset('/img/kucing.jpg')}}" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
             </div>
             <div class="col-lg-10">
                 <strong style="font-size:26px"><i  class="fa fa-circle text-success"></i>     {{$user->name}}</strong>
@@ -91,47 +91,47 @@
                 
 
 
-                    
-                        
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h4><strong>Skills</strong></h4>    
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="panel panel-primary">
-                                            <div class="panel-heading">
-                                                Skills
-                                            </div>
-                                            <div class="panel-body" id="skill">
-                                                <ul class="list-group">
-                                                @foreach($skills as $skill)
-                                                    <li class="list-group-item">
-                                                        <div class="row">
-                                                            <div class="col-lg-6">
-                                                                <strong>Skill: </strong>{{$skill->name}}<br>
-                                                                <strong>Level: </strong>{{$skill->level}}<br>
-                                                                <strong>Experience: </strong>{{$skill->experience}}
-                                                            </div>
-                                                            {{--<form action="{{ route('post.destroy', $post) }}" method="post">
-                                                            {{ csrf_field() }}
-                                                            {{ method_field('DELETE') }}
-                                                            <button type="submit" class="byn btn-xs btn-danger">Delete</button>
-                                                            </form> --}}
-                                                            <div class="col-lg-6 pull-right">
-                                                                <button type="submit" id="delete_btn" class="btn-s btn-danger">DELETE</button>
-                                                            </div>
-                                                        </div>
-                                                        {{-- <input type="hidden" id="{{$skill->id}}"> --}}
-                                                    </li>
-                                                @endforeach
-                                                </ul>
-
-                                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModalSkills">+ ADD SKILLS</button>
-
-                                            </div>
-                                        </div>
-                                    </div>
+        
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4><strong>Skills</strong></h4>    
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    Skills
                                 </div>
+                                <div class="panel-body" id="skill">
+                                    <ul class="list-group">
+                                    @foreach($skills as $skill)
+                                        <li class="list-group-item">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <strong>Skill: </strong>{{$skill->name}}<br>
+                                                    <strong>Level: </strong>{{$skill->level}}<br>
+                                                    <strong>Experience: </strong>{{$skill->experience}}
+                                                </div>
+                                                {{--<form action="{{ route('post.destroy', $post) }}" method="post">
+                                                {{ csrf_field() }}
+                                                {{ method_field('DELETE') }}
+                                                <button type="submit" class="byn btn-xs btn-danger">Delete</button>
+                                                </form> --}}
+                                                <div class="col-lg-6 pull-right">
+                                                    <button type="submit" id="delete_btn" class="btn-s btn-danger">DELETE</button>
+                                                </div>
+                                            </div>
+                                            {{-- <input type="hidden" id="{{$skill->id}}"> --}}
+                                        </li>
+                                    @endforeach
+                                    </ul>
+
+                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModalSkills">+ ADD SKILLS</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
                                 <!-- <table class="table">
@@ -181,22 +181,9 @@
                 </div>
             </div>
 
-            {{--<div class="row">
-                    <div class="col-lg-12">
-                        <h4><strong>Attachments</strong></h4>
-                        @foreach($attachments as $attachment)
-                        <a href="/seeker/download-cv/{{$attachment->id}}">{{$attachment->name}}</a> <br>
-                        @endforeach
-                        <h4><strong>Links</strong></h4>
-                        @foreach($links as $link)
-                        <a href="http://{{$link->url}}" target="_blank">{{$link->name}}</a><br>
-                        @endforeach
-                        <br><br><br>
-                    </div>
-                </div>
-            </div> --}}
-                <!--First container-fluid ends here -->
-            </section>
+
+    <!--First container-fluid ends here -->
+    </section>
 
 
      <!-- Modal for ADD COMPANY/POSITION -->

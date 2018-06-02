@@ -81,8 +81,6 @@ class SeekerController extends Controller
     	$newWork->job_title = $request->job_title;
     	$newWork->job_role = $request->job_role;
     	$newWork->activity = $request->activity;
-    	// $newWork->from = $request->from;
-    	// $newWork->to = $request->to;
     	$newWork->user_id = Auth::id();
     	$newWork->save();
     	return $request->all();

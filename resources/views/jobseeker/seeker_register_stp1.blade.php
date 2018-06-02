@@ -1,6 +1,6 @@
 @extends('layout.seeker_main')
 
-@section('title', 'Register')
+@section('title', 'Helper Register')
 
 @section('content')
 

@@ -67,6 +67,7 @@ Route::group(['middleware'=>['auth', 'employer']], function(){
 	Route::get('/employer/post-job', 'EmployerController@showPostJobForm')->name('employer.post_job');
 	Route::post('/employer/post-job', 'EmployerController@storePostedJob');
 	Route::get('/employer/dashboard', 'EmployerController@showEmployerDashboard')->name('employer.dashboard');
+	Route::get('/employer/profilepicture', 'EmployerController@profilePicture')->name('employer.profilepicture');
 	Route::get('/employer/job/delete/{id}', 'EmployerController@deleteJob');
 	Route::get('/employer/job/edit/{id}', 'EmployerController@showEditJobForm');
 	Route::post('/employer/job/store/{id}', 'EmployerController@storeEditedJob');

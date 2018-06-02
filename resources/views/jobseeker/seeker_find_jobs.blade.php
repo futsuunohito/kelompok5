@@ -19,25 +19,10 @@
             {{session('msg')}}
         </div>
         @endif
-            <!-- <div class="row">
-                <div class="col-lg-6 col-lg-offset-3">
-                    <form class="form-inline" action="/seeker/keyword-wise-jobs" method="get">
-                    {{csrf_field()}}
-                        <div class="form-group">
-                            <div class="input-group margin">
-                                    <input type="text" class="form-control" name="searchQuery" class="form-control" placeholder="masih salah Search" value="{{ old('searchQuery') }}" style="padding-left: 20px;padding-right: 400px;">
-                                        <span class="input-group-btn">
-                                            <button type="submit" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
-                                        </span>
-                                    </div>
-                        </div>
-                    </form>
-                </div>
-            </div> -->
-
-            <div class="row top" style="margin-top:18px">
-                <div class="col-lg-4">
-                    <div class="box box-primary">
+        
+            <!-- <div class="row top" style="margin-top: 18px;">
+                <div class="col-lg-4" >
+                    <div class="box box-primary" style="background-color: #87acf2; border-style: solid; border-color: #075dc6">
                         <div class="box-header with-border">
                             <h3 class="panel-title">Job Location</h3>
                         </div>
@@ -93,7 +78,7 @@
                     </div>
 
                     <div class="box box-success">
-                        <div class="box-header with-border">
+                        <div class="box-header with-border" >
                             <h3 class="panel-title">Category/Industry</h3>
                         </div>
                         <div class="panel-body">
@@ -147,13 +132,17 @@
                             
                         </div>
                     </div>
-            </div>
+            </div> -->
 <!-- ---------Section for Jobs--------------------------- -->
-                <div class="col-lg-6 ">
+                <div class="col-lg-6 col-md-offset-3">
+                <h3 align="center"> List of jobs you can apply </h3>
                 @foreach($jobs as $job)
-                    <div class="box box-primary">
+                    <div class="box box-primary" style="margin-top: 20px; margin-bottom: 30px; border-style: dotted; border-color: #075dc6">
                         <div class="box-header with-border" style="text-align: center">
-                        <h3 class="panel-title" style="font-weight: bold;"> <img src="{{asset('/img/'.$job->user->company->image)}}" alt="Profile Picture" class="img-circle" style="height: 30px; width: 30px;"> {{$job->user->company->name}}</h3>
+                            <h3 class="panel-title" style="font-weight: bold;">
+{{--                            <img src="{{asset('/img/'.$job->user->company->image)}}" alt="Profile Picture" class="img-circle" style="height: 30px; width: 30px;"> --}}
+                            {{$job->user->name}}
+                        </h3>
                         </div>
                         <div class="panel-body">
                             <div class="row">

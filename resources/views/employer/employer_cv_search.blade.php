@@ -11,14 +11,13 @@
                 <div class="col-lg-8 col-lg-offset-2">
                 <h3 style="text-align: center;"><strong> Public CV List </strong></h3>
                 @foreach($users as $user)
-                    <div class="box box-primary" style="margin-top: 20px;">
+                    <div class="box box-primary" style="margin-top: 20px; border-style: solid; border-color: #075dc6">
                         <div class="box-header with-border" style="text-align: center">
                             <h3 class="panel-title" style="font-weight: bold;"><img src="/img/kucing.jpg" alt="Profile Picture" class="img-circle" style="height: 30px; width: 30px;">    {{$user->name}}</h3>
                         </div>
                         <div class="panel-body">
                                 <div class="col-lg-3"><i class="fa fa-envelope"></i> {{$user->email}}</div> 
-                                <div class="col-lg-3"><i class="fa fa-location-arrow"></i> {{$user->activity->location}}</div> 
-                                <div class="col-lg-3"><i class="fa fa-phone"></i> {{$user->activity->interest}}</div>
+                                <div class="col-lg-3"><i class="fa fa-location-arrow"></i> {{$user->location}}</div> 
                                 <div class="col-lg-2">
                                     <div class="form-group">
                                         <div class="col-sm-offset-6 col-sm-10">

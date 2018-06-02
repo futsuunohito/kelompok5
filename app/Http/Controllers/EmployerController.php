@@ -47,7 +47,7 @@ class EmployerController extends Controller
     	}else{
     		Company::where('user_id', Auth::id())->update(['name'=>$request->name]);
     	}
-        return redirect()->route('employer.dashboard');
+        return redirect()->route('employer.profilepicture');
     }
 
     public function uploadImage(Request $request){//ini id di tabel teams
@@ -63,7 +63,9 @@ class EmployerController extends Controller
         $user->save();
         return redirect()->route('employer.dashboard');
     }
-    
+    public function profilePicture(){
+        return view('employer.employer_profilepicture');
+    }
     //store employer image
     public function storeImage(Request $request){
     	$user_image = $request->file('image');

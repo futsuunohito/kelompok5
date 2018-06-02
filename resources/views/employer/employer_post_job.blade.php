@@ -1,6 +1,6 @@
-@extends('layout.employer_navbar')
+@extends('layout.employer_main')
 
-@section('title', 'Post a job')
+@section('title', 'Post Job')
 
 @section('content')
 

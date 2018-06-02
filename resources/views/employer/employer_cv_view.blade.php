@@ -13,7 +13,7 @@
                 <strong style="font-size:26px">     {{$user->name}}</strong>
                 <br>
                 <br>
-                <p><strong>Lives in: </strong>{{$activity->location}}</p>
+                <p><strong>Lives in: </strong>{{$user->location}}</p>
                 <p><strong>Email: </strong>{{$user->email}}</p>
                 <p><strong>Phone: </strong>{{$user->phone}}</p>
                 <div> 
@@ -31,20 +31,6 @@
 
             <!-- row ends here -->
         
-        <div class="row">
-            <div class="col-lg-12">
-                <!-- <h4><Strong>About me</Strong><button name="personal_2" data-toggle="modal" data-target="#myModalAboutMe"class="btn-xs btn-warning" style="border-radius: 0; margin-left: 20px"><i class="fa fa-pencil-square-o"></i>EDIT</button></h4> -->
-                <p style="text-align:center; font-weight: bold; font-size: 17px">{{$activity->about_me}}</p>
-            </div>
-
-            
-            </div> <!-- row ends here---- -->
-            
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- <h4><strong>Work experience</strong> <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModalCompany">+ ADD COMPANY/POSITION</button></h4> -->
-
-
             <div class="row">
                 <div class="col-lg-12">
                     <h4><strong>Work Experience</strong></h4>
@@ -110,13 +96,11 @@
                         </div>
                         <div class="panel-body" id="works">
                             <ul class="list-group">
-
-                                <li class="list-group-item"><strong>Institution Name:</strong> {{$activity->college}}
                                 <ul>
-                                    <li><strong>Field of Study:</strong> {{$activity->field}}</li>
-                                    {{-- <li><strong>From:</strong> </li>
-                                    <li><strong>To:</strong> </li> --}}
-                                    <li><strong>Grade: </strong>{{$activity->grade}}</li>
+                                {{--     <li><strong>Field of Study:</strong> {{$activity->field}}</li>
+                                    <li><strong>From:</strong> </li>
+                                    <li><strong>To:</strong> </li>
+                                    <li><strong>Grade: </strong>{{$activity->grade}}</li>  --}}
                                 </ul>
                                 </li>
 
@@ -133,16 +117,6 @@
             </div>
             <!-- row ends here -->
                 
-                <!-- <div class="row">
-                    <div class="col-lg-12">
-                        <h4><strong>Education</strong> <a href="{{route('seeker.edu')}}"><button type="button" class="btn btn-warning" >+EDIT EDUCATION INFO</button></h4></a>
-                        <h5><strong>{{$activity->college}}</strong></h5>
-                        <p>{{$activity->degree}}</p>
-                        <p>Field of study: <strong>{{$activity->field}}</strong></p>
-                        <p>Grade: <strong>{{$activity->grade}}</strong></p>
-                    </div>
-                    </div>  -->
-                    <!-- row ends here ---- -->
                     
                         
                         <div class="row">
@@ -181,107 +155,8 @@
                                 </div>
 
 
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h4><strong>Languages</strong></h4>
-                            <p>{{$activity->language}}</p>
-                        </div>
-                        </div>
-                        <!-- row ends here ---- -->
-                                                    
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <h4><strong>Interests &amp; Activities</strong></h4>
-                                    <p>{{$activity->interest}}</p>
-                                </div>
-                                </div> <!-- row ends here -->
-                                
 
                             <!--First container-fluid ends here -->
                         </section>
 
                         @endsection
-
-
-
-@section('script')
-
-<script type="text/javascript">
-    // seeker_edit_cv page js
-jQuery(document).ready(function($) {
-  
-        $('#personal_1').click(function(event) {
-                var name = $('#name').val();
-                var location = $('#location').val();
-                var phone = $('#phone').val();
-                var gender = $('input[name=gender]:checked').val();
-                
-                $.post('{{route('seeker.edit_cv')}}', {'_token': $('input[name=_token]').val(), 'name': name,'location':location,'phone':phone,'gender':gender}, function(data) {
-                    $('#sec_1').load(location.href + ' #sec_1');
-                    console.log(data);
-                });
-            });
-
-           //This is for SAVING Skills data
-            $('#skill-btn').click(function(event) {
-                var skillName = $('#skill_name').val();
-                var level = $('#level').val();
-                var experience = $('#experience').val();
-                $.post('{{route('seeker.skill')}}', {'name':skillName,'level':level,'experience':experience,'_token':$('input[name=_token]').val()}, function(data) {
-                    $('#skill').load(location.href + ' #skill');
-                    console.log(data);
-                });
-            });
-            //This function is for SAVING work experience data 
-            $('#save').click(function(event) {
-                var job_title= $('#job_title').val();
-                var company_name= $('#company_name').val();
-                var country= $('#country').val();
-                var industry= $('#industry').val();
-                var job_role= $('#job_role').val();
-                var activity= $('#activity').val();
-                // var vfrom= $('#from').val();
-                // var vto= $('#to').val();
-                // console.log(vto);
-                $.post('{{route('seeker.work')}}', {'_token':$('input[name=_token]').val(), 'job_title':job_title,'company_name':company_name,'country':country,'industry':industry,'job_role':job_role,'activity':activity }, function(data) {
-                    $('#works').load(location.href + ' #works');
-                    console.log(data);
-                });
-                //'_token':$('meta[name="csrf-token"]').attr('content'), <-this is for the meta tag csrf_token() which is same as normal csrf_field() useness.
-            });
-
-            //About me button ajax
-            $('#about_me_btn').click(function(event) {
-                var about = $('#about_me').val();
-                $.post('{{route('seeker.about')}}', {'_token':$('input[name=_token]').val(), 'about_me':about}, function(data) {
-                    $('#about').load(location.href + ' #about');
-                    console.log(data);
-                });
-            });
-            //Education data ajax
-            $('#edu_save').click(function(event) {
-                var clg = $('#college').val();
-                var degree = $('#degree_level').val();
-                var field = $('#field').val();
-                var grade = $('#grade').val();
-                var country = $('#country').val();
-                var language = $('#language').val();
-                var interest = $('#interest').val();
-                $.post('{{route('seeker.edu')}}',{'_token':$('input[name=_token]').val(), 'college':clg, 'degree':degree, 'field':field, 'grade':grade, 'country':country, 'language':language, 'interest':interest}, function(data) {
-                    $('#edu').load(location.href + ' #edu');
-                    console.log(data);
-                });
-            });
-            //Links data upload ajax
-            $('#link_save').click(function(event) {
-                var link_name = $('#link_name').val();
-                var link_url = $('#url').val();
-                $.post('{{route('seeker.link')}}',{'_token':$('input[name=_token]').val(), 'link_name':link_name, 'url':link_url}, function(data) {
-                    $('#link').load(location.href + ' #link');
-                    console.log(data);
-                });
-            });
-
-});
-</script>
-@endsection

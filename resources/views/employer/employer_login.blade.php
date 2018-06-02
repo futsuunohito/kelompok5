@@ -1,6 +1,6 @@
-@extends('layout.employer_navbar')
+@extends('layout.employer_main')
 
-@section('title', 'Log in')
+@section('title', 'Seeker Login')
 
 @section('content')
 
@@ -8,8 +8,6 @@
        <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4 col-lg-offset-4">
-              <h1 style="text-align:center"><strong>Seeker</strong></h1>
-               <h4 style="text-align:center"><strong>Log in and Explore yourself !</strong></h4>
                 <form class="form-horizontal" role="form" method="POST" action="{{ route('employer.login') }}">
                 {{csrf_field()}}
                   <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">

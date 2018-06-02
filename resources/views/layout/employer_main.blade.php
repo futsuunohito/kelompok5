@@ -67,7 +67,6 @@
                                             {{ Auth::user()->name }}
                                         </a>
                                     </li>
-                                    <li><a href="{{route('employer.company_profile')}}">Change profile</a></li>
                                     <li>
                                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="glyphicon glyphicon-off" style="padding-right: 5px;"></i>Logout</a>
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

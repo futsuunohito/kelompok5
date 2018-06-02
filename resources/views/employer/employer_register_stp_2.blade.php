@@ -1,37 +1,27 @@
 @extends('layout.employer_main')
 
-@section('title', 'Create new company')
+@section('title', 'Interest')
 
 @section('content')
 
     <section class="top" style="margin-top: 50px;">
         <div class="container-fluid">
-            <h3 style="text-align:center;"><strong>PROFILE PICTURE</strong></h3>
+            <h3 style="text-align:center;"><strong>Let us know about your interest</strong></h3>
             <br>
             <div class="row">
-                <div class="col-lg-2 col-md-offset-5">
-                    <img src="" alt="Company Brand Image" class="img-thumbnail img-responsive" style="height: 180px; width: 500px;">
-                    <br>
-                    <form action="{{route('employer.image')}}" method="post" enctype="multipart/form-data">
-                    {{csrf_field()}}
-                        <input type="file" name="image">
-                        <br>
-                        <input type="submit" class="btn btn-primary" id="upload" value="UPLOAD">
-                    </form><br>
-                </div>
                 <div class="col-lg-10">
                     <!-- -----------------First section------------------ -->
                     <div class="form-horizontal">
                     <form action="{{route('employer.company')}}" method="post">
                     {{csrf_field()}}
                         <div class="form-group{{$errors->has('name')?' has-error':''}}">
-                            <label for="name" class="col-sm-2 control-label">Re-enter email: </label>
+                            <label for="name" class="col-sm-2 control-label">Interest: </label>
                             <div class="col-sm-10">
-                                <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your Name" required>
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your Interest" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
+                            <div class="col-md-8 col-md-offset-2">
                                 <input type="submit" class="btn btn-warning" value="save"></input>
                             </div>
                         </div>

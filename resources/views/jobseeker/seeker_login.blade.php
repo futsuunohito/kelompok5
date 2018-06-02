@@ -1,6 +1,6 @@
-@extends('layout.seeker_navbar')
+@extends('layout.seeker_main')
 
-@section('title', 'Log in')
+@section('title', 'Helper Login')
 
 @section('content')
 
