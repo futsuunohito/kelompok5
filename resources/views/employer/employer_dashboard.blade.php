@@ -10,6 +10,22 @@
         $(this).remove(); 
     });
 }, 2000);
+
+    function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(175)
+                        .height(175);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
 </script>
 
     <section class="top" style="margin-top: 50px;">
@@ -31,11 +47,11 @@
         @endif
             <div class="row" style="margin-top: 20px;">
                 <div class="col-lg-2">
-                    <img src="{{asset('/img/'.$company->image)}}" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
+                    <img id="blah" src="{{asset('/img/'.$company->image)}}" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
                         <br>
                         <form action="{{route('employer.image')}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
-                            <input type="file" name="image" class="btn-xs" style="margin-top: 5px;">
+                            <input type="file" accept=".jpg" name="image" class="btn-xs" style="margin-top: 5px;" onchange="readURL(this);">
                             <input type="submit" class="btn-xs btn-white" style="margin-top: 5px;" id="upload" value="UPLOAD">
                         </form>
                     </div>

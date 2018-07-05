@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 class SeekerController extends Controller
 {
+    
     public function personalInfo(Request $request){
     	$this->validate($request, [
     		'phone' => 'required|max:14',

@@ -1,6 +1,6 @@
 @extends('layout.employer_main')
 
-@section('title', 'CV Search')
+@section('title', 'Public CV')
 
 @section('content')
 
@@ -9,7 +9,6 @@
             <div class="row top">
 <!-- ---------Section for cv list--------------------------- -->
                 <div class="col-lg-8 col-lg-offset-2">
-                <h3 style="text-align: center;"><strong> Public CV List </strong></h3>
                 @foreach($users as $user)
                     <div class="box box-primary" style="margin-top: 20px; border-style: solid; border-color: #075dc6">
                         <div class="box-header with-border" style="text-align: center">

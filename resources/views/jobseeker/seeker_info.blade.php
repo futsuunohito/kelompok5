@@ -13,7 +13,6 @@
                     <br>
                     <form action="#" method="post" enctype="multipart/form-data">
                     {{csrf_field()}}
-                    <!-- {{ method_field('put') }} -->
                         <input type="file" name="image">
                         <br>
                         <input type="submit" class="btn btn-primary" id="upload" value="UPLOAD">
@@ -24,34 +23,32 @@
                     <p style="text-align: center;"><strong>We want to know about your personal information</strong></p>
                     <br><form action="{{route('reg_stp_2')}}" method="post" class="form-horizontal">
                     {{csrf_field()}}
-                        <div class="form-group{{$errors->has('phone')? ' has-error': ''}}">
-                            <label for="phone" class="col-sm-4 control-label">Phone Number:*</label>
+                    <div class="col-md-offset-1">
+                        <div class="form-group{{$errors->has('phone')?' has-error': ''}}">
+                            <label for="phone" class="col-sm-3">Phone Number:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter phone number">
-                                 @if($errors->has('phone'))
+                                <input type="text" class="form-control" id="phone" placeholder="Enter your phone no." name="phone">
+                                @if($errors->has('phone'))
                                     <span class="help-block">
                                         <strong>{{$errors->first('phone')}}</strong>
                                     </span>
-                            @endif
+                                @endif
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-4 control-label">Current Location:*</label>
+                        <div class="form-group{{$errors->has('location')?' has-error': ''}}">
+                            <label for="location" class="col-sm-3">Location:</label>
                             <div class="col-sm-8">
-                                 <select name="location" class="form-control">
-                                    <option value="Babakan Raya">Babakan Raya</option>
-                                    <option value="Babakan Tengah">Babakan Tengah</option>
-                                    <option value="Cibanteng">Cibanteng</option>
-                                    <option value="Dramaga Cantik">Dramaga Cantik</option>
-                                    <option value="Puri D'kost">Puri D'kost</option>
-                                    <option value="IPB Dramaga">IPB Dramaga</option>
-                                    <option value="IPB Baranangsiang">IPB Baranangsiang</option>
-                                </select>
+                                <input type="text" class="form-control" id="location" placeholder="Enter your location" name="location">
+                                @if($errors->has('location'))
+                                    <span class="help-block">
+                                        <strong>{{$errors->first('location')}}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
-                        
+                    </div>
                         <div class="form-group">
-                            <div class="col-sm-offset-4 col-sm-8">
+                            <div class="col-sm-offset-3 col-sm-8">
                                <p style="text-align: right;">* Mandatory field</p>
                                 <button type="submit" class="btn btn-warning form-control" style="text-transform: uppercase;border-radius:0;">Save Changes</button><br><br><br>
                             </div>

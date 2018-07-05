@@ -1,6 +1,6 @@
 @extends('layout.seeker_main')
 
-@section('title', 'Jobseeker education')
+@section('title', 'Education')
 
 @section('content')
 
@@ -8,9 +8,9 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
-                   <h4 style="text-align: center"><strong>Your Education</strong></h4>
                     <form action="{{route('seeker.edu')}}" method="post">
                     {{csrf_field()}}
+                        <input type="hidden" name="id" value="{{$user_id}}">
                         <div class="form-group">
                             <label for="degree_level">Degree Level</label>
                              <select name="degree_level" class="form-control" id="degree_level">

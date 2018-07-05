@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row" style="margin-top: 15px;">
                 <div class="col-lg-2">
-                    <img src="/img/user.png" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
+                    <img src="/img/kucing.jpg" alt="Profile Picture" class="img-thumbnail" style="height: 180px; width: 500px;">
                 </div>
                 <div class="col-lg-10">
                     <strong style="font-size:26px"><i  class="fa fa-circle text-success"></i>     {{$user->name}}</strong>

@@ -22,14 +22,6 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
 
 <body class="background">
-    <!-- <div class="row">
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <div class="col-md-3 col-md-offset-1"><a href="{{ route('seeker.login')}}" class="btn btn-warning form-control button-text">me as a SEEKER !</a></div>
-        <div class="col-md-3"><a href="{{ route('employer.login')}}" class="btn btn-primary form-control button-text">me as a HELPER !</a></div>
-    </div>
-
- -->
-
 <div class="container">
 	<div class="row">
       <div class="col-md-9 col-md-offset-4">
@@ -37,7 +29,7 @@
           <ul class="list-inline" id="options">
             <li class="option">
               <button class="material-button option1" type="button">
-                <a href="{{ route('seeker.login')}}" style="text-decoration: none;"><span class="button-text" aria-hidden="true" > Helper </span></a>
+                <a href="/" style="text-decoration: none;"><span class="button-text" aria-hidden="true" > Helper </span></a>
               </button>
             </li>
             <li class="option">
@@ -47,12 +39,12 @@
             </li>
             <li class="option">
               <button class="material-button option3" type="button">
-                <a href="{{ route('employer.login')}}" style="text-decoration: none;"><span class="button-text" aria-hidden="true"> Seeker </span></a>
+                <a href="/employer" style="text-decoration: none;"><span class="button-text" aria-hidden="true"> Seeker </span></a>
               </button>
             </li>
           </ul>
           <button class="material-button material-button-toggle" type="button">
-            <span class="button-text" aria-hidden="true">LOGIN AS</span>
+            <span class="button-text" aria-hidden="true">ROLE</span>
           </button>
         </div>
       </div>

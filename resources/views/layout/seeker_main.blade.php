@@ -37,7 +37,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                           </button>
-                          <a class="navbar-brand" href="#gsdk"> NEED!</a>
+                          <a class="navbar-brand" href="/welcome"> NEED!</a>
                         </div>
                     
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -50,7 +50,6 @@
                                         @if(!Auth::guest())
                                         <li><a href="/seeker/dashboard">Dashboard</a></li>
                                         <li><a href="{{route('seeker.view')}}">My CV</a></li>
-                                        <li><a href="{{route('seeker.settings')}}">Settings</a></li>
                                     @endif
                                     <li><a href="{{route('seeker.find_jobs')}}">Find jobs</a></li>
                                   </ul>
@@ -60,7 +59,7 @@
                           <ul class="nav navbar-nav navbar-right">
                                 <!-- Authentication Links -->
                                 @if (Auth::guest())
-                                    <li id="for_emp"><a href="/employer">Seeker</a></li>
+                                    <li id="for_emp"><a href="/employer">Change to Seeker</a></li>
                                     <li><a href="{{ route('seeker.login') }}" class="btn btn-round btn-default">Login</a></li>
                                     <li><a href="{{ route('seeker.register') }}" class="btn btn-round btn-default">Sign Up</a></li>
                                 @else

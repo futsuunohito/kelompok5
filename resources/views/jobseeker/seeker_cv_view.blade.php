@@ -69,9 +69,6 @@
                             <ul class="list-group">
                             @foreach($works as $work)
                                 <li class="list-group-item"><strong>Title:</strong> {{$work->job_title}}
-                                <div class="col-lg-6 pull-right">
-                                        <button type="submit" id="delete_btn" class="btn-s btn-danger">DELETE</button>
-                                </div>
                                 <ul> 
                                     <li><strong>Position:</strong> {{$work->job_role}}</li>
                                     <li><strong>Activities:</strong> {{$work->activity}}</li>
@@ -117,9 +114,6 @@
                                                 {{ method_field('DELETE') }}
                                                 <button type="submit" class="byn btn-xs btn-danger">Delete</button>
                                                 </form> --}}
-                                                <div class="col-lg-6 pull-right">
-                                                    <button type="submit" id="delete_btn" class="btn-s btn-danger">DELETE</button>
-                                                </div>
                                             </div>
                                             {{-- <input type="hidden" id="{{$skill->id}}"> --}}
                                         </li>
@@ -163,7 +157,8 @@
 
                                 <li class="list-group-item"><strong>Institution Name:</strong> IPB
                                 <ul>
-
+                                    {{-- <li><b>Degree:</b>{{$activity->degree}}</li>
+                                    <li><b>Major:</b>{{$activity->field}}</li> --}}
                                 </ul>
                                 </li>
 
@@ -182,8 +177,8 @@
             </div>
 
 
-    <!--First container-fluid ends here -->
-    </section>
+                <!--First container-fluid ends here -->
+            </section>
 
 
      <!-- Modal for ADD COMPANY/POSITION -->
