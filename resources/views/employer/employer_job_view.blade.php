@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h3>{{$jobData->title}}</h3>
-                <p><i class="fa fa-eye-slash"></i> <b>Posted by:</b> {{$jobData->user->name}}} </p>
+                <p><i class="fa fa-eye-slash"></i> <b>Posted by:</b> {{$jobData->user->name}} </p>
                 <p><strong>Application Deadline: </strong>{{$jobData->deadline}}</p>
                 
                 <div class="row">

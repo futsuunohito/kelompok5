@@ -68,6 +68,9 @@ class EmployerController extends Controller
     }
     //store employer image
     public function storeImage(Request $request){
+        $this->validate($request,[
+            'image' => 'image|mimes:jpeg,png,jpg,svg|max:2048'
+        ]);
     	$user_image = $request->file('image');
     	if($request->hasFile('image')){
     		$image_original_name = $user_image->getClientOriginalName();
@@ -77,6 +80,7 @@ class EmployerController extends Controller
 
     	return redirect()->route('employer.dashboard')->with('msg',"Profile Picture Changed Successfully");
     }
+
     //show Post Job Form
     public function showPostJobForm(){
     	return view('employer.employer_post_job');
